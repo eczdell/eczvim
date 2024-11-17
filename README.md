@@ -46,160 +46,117 @@ This document lists the key mappings and shortcuts configured for your Neovim se
 
 ### **General Key Mappings**
 
-- **Save File**:  
-  `<leader>w` → `:w`
-
-- **Quit Neovim**:  
-  `<leader>q` → `:q`
-
-- **Force Quit Neovim**:  
-  `<leader>Q` → `:qa!`
-
-- **Toggle NvimTree (File Explorer)**:  
-  `<leader>e` → `:NvimTreeToggle`
-
-- **Show Lazy Plugin Manager**:  
-  `<leader>l` → `:Lazy show`
-
-- **Open LazyGit**:  
-  `<leader>gg` → `:LazyGit`
+| Action                        | Key Mapping           | Command                 |
+|-------------------------------|-----------------------|-------------------------|
+| Save File                     | `<leader>w`           | `:w`                    |
+| Quit Neovim                   | `<leader>q`           | `:q`                    |
+| Force Quit Neovim             | `<leader>Q`           | `:qa!`                  |
+| Toggle NvimTree (File Explorer) | `<leader>e`           | `:NvimTreeToggle`       |
+| Show Lazy Plugin Manager      | `<leader>l`           | `:Lazy show`            |
+| Open LazyGit                  | `<leader>gg`          | `:LazyGit`              |
 
 ---
 
 ### **Buffer Navigation**
 
-- **Next Buffer**:  
-  `<Tab>` → `:bnext`
-
-- **Previous Buffer**:  
-  `<S-Tab>` → `:bprev`
-
-- **Close Current Buffer**:  
-  `<leader>bd` → `:bd`
+| Action                        | Key Mapping           | Command                 |
+|-------------------------------|-----------------------|-------------------------|
+| Next Buffer                   | `<Tab>`               | `:bnext`                |
+| Previous Buffer               | `<S-Tab>`             | `:bprev`                |
+| Close Current Buffer          | `<leader>bd`          | `:bd`                   |
 
 ---
 
 ### **LSP (Language Server Protocol) Key Mappings**
 
-- **Go to Definition**:  
-  `gd` → `:lua vim.lsp.buf.definition()`
-
-- **Go to References**:  
-  `gr` → `:lua vim.lsp.buf.references()`
-
-- **Show Hover Information**:  
-  `K` → `:lua vim.lsp.buf.hover()`
-
-- **Go to Implementation**:  
-  `gi` → `:lua vim.lsp.buf.implementation()`
-
-- **Signature Help**:  
-  `<C-Space>` → `:lua vim.lsp.buf.signature_help()`
-
-- **Code Action**:  
-  `<leader>a` → `:lua vim.lsp.buf.code_action()`
-
-- **Rename Symbol**:  
-  `<leader>r` → `:lua vim.lsp.buf.rename()`
-
-- **Go to Previous Diagnostic**:  
-  `[d` → `:lua vim.lsp.diagnostic.goto_prev()`
-
-- **Go to Next Diagnostic**:  
-  `]d` → `:lua vim.lsp.diagnostic.goto_next()`
+| Action                        | Key Mapping           | Command                         |
+|-------------------------------|-----------------------|---------------------------------|
+| Go to Definition              | `gd`                  | `:lua vim.lsp.buf.definition()` |
+| Go to References              | `gr`                  | `:lua vim.lsp.buf.references()` |
+| Show Hover Information        | `K`                   | `:lua vim.lsp.buf.hover()`      |
+| Go to Implementation          | `gi`                  | `:lua vim.lsp.buf.implementation()` |
+| Signature Help                | `<C-Space>`           | `:lua vim.lsp.buf.signature_help()` |
+| Code Action                   | `<leader>a`           | `:lua vim.lsp.buf.code_action()` |
+| Rename Symbol                 | `<leader>r`           | `:lua vim.lsp.buf.rename()`    |
+| Go to Previous Diagnostic     | `[d`                  | `:lua vim.lsp.diagnostic.goto_prev()` |
+| Go to Next Diagnostic         | `]d`                  | `:lua vim.lsp.diagnostic.goto_next()` |
 
 ---
 
 ### **Telescope (Fuzzy Finder)**
 
-- **Find File**:  
-  `<leader>f` → `:Telescope find_files`
-
-- **Live Grep (Search in Files)**:  
-  `<leader>F` → `:Telescope live_grep`
-
-- **Buffers**:  
-  `<leader>fb` → `:Telescope buffers`
-
-- **Help Tags**:  
-  `<leader>fh` → `:Telescope help_tags`
-
-- **Diagnostics**:  
-  `<leader>fd` → `:Telescope diagnostics`
+| Action                        | Key Mapping           | Command                      |
+|-------------------------------|-----------------------|------------------------------|
+| Find File                     | `<leader>f`           | `:Telescope find_files`      |
+| Live Grep (Search in Files)   | `<leader>F`           | `:Telescope live_grep`       |
+| Buffers                       | `<leader>fb`          | `:Telescope buffers`         |
+| Help Tags                     | `<leader>fh`          | `:Telescope help_tags`       |
+| Diagnostics                   | `<leader>fd`          | `:Telescope diagnostics`     |
 
 ---
 
 ### **Miscellaneous Key Mappings**
 
-- **Comment Out Line**:  
-  `<leader>/` → `/expand("<cword>")`
-
-- **Toggle Line Numbering (Relative/Absolute)**:  
-  `<leader>nr` → `:set nu! rnu!`
-
-- **Disable Search Highlighting**:  
-  `<leader>n` → `:noh`
+| Action                        | Key Mapping           | Command                   |
+|-------------------------------|-----------------------|---------------------------|
+| Comment Out Line              | `<leader>/`           | `/expand("<cword>")`      |
+| Toggle Line Numbering         | `<leader>nr`          | `:set nu! rnu!`           |
+| Disable Search Highlighting   | `<leader>n`           | `:noh`                    |
 
 ---
 
 ### **Window Management**
 
-- **Move Window Focus**:
-  - **Left**: `<C-h>` → Move to left window
-  - **Down**: `<C-j>` → Move to bottom window
-  - **Up**: `<C-k>` → Move to top window
-  - **Right**: `<C-l>` → Move to right window
-
-- **Resize Windows**:
-  - **Increase Height**: `<C-Up>` → `:resize +2`
-  - **Decrease Height**: `<C-Down>` → `:resize -2`
-  - **Increase Width**: `<C-Right>` → `:vertical resize +2`
-  - **Decrease Width**: `<C-Left>` → `:vertical resize -2`
+| Action                        | Key Mapping           | Command                |
+|-------------------------------|-----------------------|------------------------|
+| Move Window Focus Left        | `<C-h>`               | Move to left window    |
+| Move Window Focus Down        | `<C-j>`               | Move to bottom window  |
+| Move Window Focus Up          | `<C-k>`               | Move to top window     |
+| Move Window Focus Right       | `<C-l>`               | Move to right window   |
+| Increase Height               | `<C-Up>`              | `:resize +2`           |
+| Decrease Height               | `<C-Down>`            | `:resize -2`           |
+| Increase Width                | `<C-Right>`           | `:vertical resize +2`  |
+| Decrease Width                | `<C-Left>`            | `:vertical resize -2`  |
 
 ---
 
 ### **Text Editing**
 
-- **Move Line Up**:  
-  `<A-k>` → `:m .-2`
-
-- **Move Line Down**:  
-  `<A-j>` → `:m .+1`
-
-- **Move Selected Lines Up** (Visual Mode):  
-  `<A-k>` → `:move '<-2`
-
-- **Move Selected Lines Down** (Visual Mode):  
-  `<A-j>` → `:move '>+1`
-
-- **Escape Insert Mode**:  
-  `jk` → `Esc` (in insert mode)
+| Action                        | Key Mapping           | Command             |
+|-------------------------------|-----------------------|---------------------|
+| Move Line Up                  | `<A-k>`               | `:m .-2`            |
+| Move Line Down                | `<A-j>`               | `:m .+1`            |
+| Move Selected Lines Up        | `<A-k>` (Visual Mode) | `:move '<-2`        |
+| Move Selected Lines Down      | `<A-j>` (Visual Mode) | `:move '>+1`        |
+| Escape Insert Mode            | `jk`                  | `Esc`               |
 
 ---
 
 ### **Clipboard Operations**
 
-- **Yank to System Clipboard**:
-  - **Normal Mode**: `y` → `"+y`
-  - **Visual Mode**: `y` → `"+y`
-  - **Insert Mode**: `<C-y>` → `"+y`
+| Action                        | Key Mapping           | Command             |
+|-------------------------------|-----------------------|---------------------|
+| Yank to System Clipboard      | Normal Mode: `y`      | `"+y`               |
+|                               | Visual Mode: `y`      | `"+y`               |
+|                               | Insert Mode: `<C-y>`  | `"+y`               |
 
 ---
 
 ### **Plugin Manager (Lazy.nvim)**
 
-- **Update Plugins**:  
-  `<leader>l` → `:Lazy show`
+| Action                        | Key Mapping           | Command             |
+|-------------------------------|-----------------------|---------------------|
+| Update Plugins                | `<leader>l`           | `:Lazy show`        |
 
 ---
 
 ### **Autopairs & Snippets**
 
-- **Fast Wrap**:  
-  `<M-e>` → Close the nearest pair (`{`, `[`, `(`, etc.)
+| Action                        | Key Mapping           | Command             |
+|-------------------------------|-----------------------|---------------------|
+| Fast Wrap                     | `<M-e>`               | Close nearest pair (`{`, `[`, `(`, etc.) |
 
 ---
-
 This document summarizes all the used plugins and the most frequently used key mappings in your Neovim configuration.
 
 Happy coding! 😊
