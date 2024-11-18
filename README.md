@@ -11,6 +11,7 @@ To set up Neovim with the `eczvim` configuration, clone this repository into you
 
 ```bash
 git clone git@github.com:eczdell/eczvim.git ~/.config/nvim
+```
 
 # Neovim Keybindings & Plugin Setup
 

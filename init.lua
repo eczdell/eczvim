@@ -33,6 +33,29 @@ require('lazy').setup({
   { 'williamboman/mason.nvim', config = function() require("mason").setup() end },
   { 'williamboman/mason-lspconfig.nvim' },
 { 'kyazdani42/nvim-web-devicons' },  -- For icons
+  {
+  'akinsho/bufferline.nvim',
+  dependencies = { 'kyazdani42/nvim-web-devicons' },
+  config = function()
+    require('bufferline').setup {
+      options = {
+        offsets = {
+          {
+            filetype = "NvimTree",  -- Optional: adjust for file explorer
+            text = "File Explorer", -- Optional: customize the offset text
+            highlight = "Directory", -- Optional: highlight for file explorer
+            text_align = "left",     -- Optional: align the text to the left
+          },
+        },
+        separator_style = "thin",  -- Optional: defines the separator style (thin, slant, etc.)
+        always_show_bufferline = true, -- Always show the bufferline
+        show_buffer_icons = true,     -- Show icons for buffers
+        show_buffer_close_icons = true,  -- Show close icons for buffers
+        show_tab_indicators = true,   -- Show tab indicators for active buffer
+      }
+    }
+  end,
+},
   -- Autocompletion
   { 'hrsh7th/nvim-cmp' },
   { 'hrsh7th/cmp-nvim-lsp' },
