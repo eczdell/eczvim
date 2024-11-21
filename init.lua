@@ -8,6 +8,9 @@ vim.opt.tabstop = 2
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.g.mapleader = " "  -- Set leader key to spacebar
+-- Set case-insensitive search
+vim.opt.ignorecase = true
+
 
 -- Set up Lazy.nvim plugin manager
 -- Bootstrap lazy.nvim if it's not already installed
@@ -32,7 +35,7 @@ require('lazy').setup({
   { 'neovim/nvim-lspconfig' },    -- LSP configurations
   { 'williamboman/mason.nvim', config = function() require("mason").setup() end },
   { 'williamboman/mason-lspconfig.nvim' },
-{ 'kyazdani42/nvim-web-devicons' },  -- For icons
+  { 'kyazdani42/nvim-web-devicons' },  -- For icons
   {
   'akinsho/bufferline.nvim',
   dependencies = { 'kyazdani42/nvim-web-devicons' },
@@ -86,12 +89,12 @@ require('lazy').setup({
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
   { 'nvim-treesitter/nvim-treesitter-refactor' },
 
--- File explorer sidebar with icons
-{ 
-  'nvim-tree/nvim-tree.lua', 
-  dependencies = { 
-    'nvim-lua/plenary.nvim',  -- Required for nvim-tree functionality
-    'nvim-tree/nvim-web-devicons',  -- Icons for nvim-tree
+  -- File explorer sidebar with icons
+  { 
+    'nvim-tree/nvim-tree.lua', 
+    dependencies = { 
+      'nvim-lua/plenary.nvim',  -- Required for nvim-tree functionality
+      'nvim-tree/nvim-web-devicons',  -- Icons for nvim-tree
   },
   config = function()
     -- Set up nvim-tree with icons and other customizations
@@ -132,8 +135,8 @@ require('lazy').setup({
   end 
 },
 
-  -- Linting and formatting
-  { 'jose-elias-alvarez/null-ls.nvim', config = function() require('null-ls').setup() end },
+ -- Linting and formatting
+ { 'jose-elias-alvarez/null-ls.nvim', config = function() require('null-ls').setup() end },
 
  { 'goolord/alpha-nvim', config = function() 
       local alpha = require('alpha')
@@ -198,7 +201,7 @@ require('nvim-autopairs').setup({
 
 -- Treesitter configuration
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { "javascript", "typescript", "tsx", "json" },
+  ensure_installed = { "javascript", "typescript", "tsx", "json", "dockerfile"},
   highlight = { enable = true },
   indent = { enable = true },
 })
@@ -329,8 +332,7 @@ vim.api.nvim_set_keymap('n', '<leader>bd', ':bd<CR>', opts)     -- Close current
 -- NvimTree keymap
 vim.api.nvim_set_keymap('n', '<leader>e', '<Cmd>NvimTreeToggle<CR>', opts)
 
--- LSP keymaps
-vim.api.nvim_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+-- LSP keymaps vim.api.nvim_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
 vim.api.nvim_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
