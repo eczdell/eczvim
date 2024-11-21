@@ -351,11 +351,11 @@ vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>q', '<Cmd>q<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>Q', '<Cmd>qa!<CR>', opts)
 
--- Split navigation keymaps
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', opts)
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', opts)
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', opts)
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', opts)
+-- Split navigation keymaps (able to switch using leader and hjkl)
+vim.api.nvim_set_keymap('n', '<leader>h', '<C-w>h', opts)
+vim.api.nvim_set_keymap('n', '<leader>j', '<C-w>j', opts)
+vim.api.nvim_set_keymap('n', '<leader>k', '<C-w>k', opts)
+vim.api.nvim_set_keymap('n', '<leader>l', '<C-w>l', opts)
 
 -- Resize windows
 vim.api.nvim_set_keymap('n', '<C-Up>', '<Cmd>resize +2<CR>', opts)
