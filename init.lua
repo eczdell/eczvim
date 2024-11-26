@@ -330,7 +330,7 @@ vim.api.nvim_set_keymap('n', '<S-Tab>', ':bprev<CR>', opts)     -- Previous buff
 vim.api.nvim_set_keymap('n', '<leader>bd', ':bd<CR>', opts)     -- Close current buffe
 
 -- NvimTree keymap
-vim.api.nvim_set_keymap('n', '<leader>e', '<Cmd>NvimTreeToggle<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>e', '<Cmd>NvimTreeFindFileToggle<CR>', opts)
 
 -- LSP keymaps vim.api.nvim_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
 vim.api.nvim_set_keymap('n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
