@@ -10,6 +10,8 @@ vim.opt.autoindent = true
 vim.g.mapleader = " "  -- Set leader key to spacebar
 -- Set case-insensitive search
 vim.opt.ignorecase = true
+vim.opt.statusline = "%f [%{expand('%:e')} File] %= %y | Line: %l/%L | Col: %c"
+
 
 
 -- Set up Lazy.nvim plugin manager
@@ -31,10 +33,11 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
   underline = true,
   update_in_insert = true,
 })
+
 require('lazy').setup({
   { 'neovim/nvim-lspconfig' },    -- LSP configurations
-  { 'williamboman/mason.nvim', config = function() require("mason").setup() end },
   { 'williamboman/mason-lspconfig.nvim' },
+  { 'williamboman/mason.nvim', config = function() require("mason").setup() end },
   { 'kyazdani42/nvim-web-devicons' },  -- For icons
   {
   'akinsho/bufferline.nvim',
@@ -50,7 +53,7 @@ require('lazy').setup({
             text_align = "left",     -- Optional: align the text to the left
           },
         },
-        separator_style = "thin",  -- Optional: defines the separator style (thin, slant, etc.)
+        separator_style = "slant",  -- Optional: defines the separator style (thin, slant, etc.)
         always_show_bufferline = true, -- Always show the bufferline
         show_buffer_icons = true,     -- Show icons for buffers
         show_buffer_close_icons = true,  -- Show close icons for buffers
@@ -59,6 +62,19 @@ require('lazy').setup({
     }
   end,
 },
+ { 'vim-airline/vim-airline-themes' },
+{
+    'vim-airline/vim-airline',
+    config = function()
+      -- Optional: Configure vim-airline settings
+      vim.g.airline_powerline_fonts = 1  -- Use powerline fonts for better aesthetics
+      vim.g.airline_theme = 'gruvbox'  -- Set the theme for airline (change as you prefer)
+      -- Configure airline extensio  -- Set the separator style to arrow
+    vim.g.airline_left_sep = ''  -- Powerline right arrow
+    vim.g.airline_right_sep = '' -- Powerline left arrowns
+      vim.g.airline_extensions = { 'branch', 'hunks', 'quickfix', 'fugitive' }  -- Add desired extensions
+    end
+  },
   -- Autocompletion
   { 'hrsh7th/nvim-cmp' },
   { 'hrsh7th/cmp-nvim-lsp' },
@@ -201,7 +217,7 @@ require('nvim-autopairs').setup({
 
 -- Treesitter configuration
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { "javascript", "typescript", "tsx", "json", "dockerfile"},
+  ensure_installed = { "javascript", "typescript", "tsx", "json", "dockerfile", "terraform"},
   highlight = { enable = true },
   indent = { enable = true },
 })
