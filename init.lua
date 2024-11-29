@@ -12,7 +12,6 @@ vim.opt.ignorecase = true
 vim.opt.statusline = "%f [%{expand('%:e')} File] %= %y | Line: %l/%L | Col: %c"
 -- Automatically delete the swap file if it exists
 vim.o.swapfile = false
-
 -- Set up Lazy.nvim plugin manager
 -- Bootstrap lazy.nvim if it's not already installed
 local lazypath = vim.fn.stdpath('data') .. '/site/pack/packer/start/lazy.nvim'
@@ -108,7 +107,20 @@ require('lazy').setup({
   { 'hrsh7th/cmp-buffer' },
   { 'L3MON4D3/LuaSnip' },
   { 'saadparwaiz1/cmp_luasnip' },
- -- Adding the lazygit.nvim plugin
+  {
+  'tpope/vim-fugitive',
+  config = function()
+    -- Optional configuration for fugitive
+  end
+},
+{
+  'airblade/vim-gitgutter',
+  config = function()
+    -- Optional: configure gitgutter settings
+  end
+},
+  -- Adding the lazygit.nvim plugin
+ 
   {
     'kdheepak/lazygit.nvim',   -- Plugin name
     dependencies = { 'nvim-lua/plenary.nvim' },  -- plenary is required by lazygit.nvim
