@@ -1,4 +1,3 @@
--- Set Neovim options
 vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.relativenumber = true
@@ -11,8 +10,8 @@ vim.g.mapleader = " "  -- Set leader key to spacebar
 -- Set case-insensitive search
 vim.opt.ignorecase = true
 vim.opt.statusline = "%f [%{expand('%:e')} File] %= %y | Line: %l/%L | Col: %c"
-
-
+-- Automatically delete the swap file if it exists
+vim.o.swapfile = false
 
 -- Set up Lazy.nvim plugin manager
 -- Bootstrap lazy.nvim if it's not already installed
@@ -27,7 +26,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 -- Prepend lazy.nvim to runtimepath
 vim.opt.runtimepath:prepend(lazypath)
-
+-- TODO: hello
 -- Enable LSP diagnostics (if not already configured)
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,
@@ -75,6 +74,34 @@ require('lazy').setup({
       vim.g.airline_extensions = { 'branch', 'hunks', 'quickfix', 'fugitive' }  -- Add desired extensions
     end
   },
+  -- todo-comments plugin for managing TODO comments
+  {
+    'folke/todo-comments.nvim',
+    config = function()
+      -- Set up the plugin with default settings
+      require('todo-comments').setup {
+        -- Optional: You can customize the signs for different types of comments
+        signs = true,
+        keywords = {
+          TODO = { icon = "", color = "info" },
+          FIX = { icon = "", color = "error" },
+          HACK = { icon = "⚡", color = "warning" },
+        },
+      }
+
+      -- FIX :hello
+      -- HACK: sabin
+      -- TODO: sabin 
+
+      -- Keybindings for managing TODO comments
+      vim.api.nvim_set_keymap('n', '<leader>tn', ':TodoNext<CR>', { noremap = true, silent = true })  -- Jump to the next TODO comment
+      vim.api.nvim_set_keymap('n', '<leader>tp', ':TodoPrev<CR>', { noremap = true, silent = true })  -- Jump to the previous TODO comment
+      vim.api.nvim_set_keymap('n', '<leader>tl', ':TodoLocList<CR>', { noremap = true, silent = true })  -- Open location list with all TODO comments
+      -- Close the Todo Location List with a keybinding (in Lua)
+      vim.api.nvim_set_keymap('n', '<leader>tc', ':close<CR>', { noremap = true, silent = true })
+
+    end,
+  },
   -- Autocompletion
   { 'hrsh7th/nvim-cmp' },
   { 'hrsh7th/cmp-nvim-lsp' },
@@ -87,6 +114,9 @@ require('lazy').setup({
     dependencies = { 'nvim-lua/plenary.nvim' },  -- plenary is required by lazygit.nvim
     config = function()
       -- Configuration block for lazygit (can be customized further)
+      -- Close the Todo Location List with a keybinding (in Lua)
+      vim.api.nvim_set_keymap('n', '<leader>gb', ':Telescope git_branches<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<leader>gc', ':Telescope git_commits<CR>', { noremap = true, silent = true })
     end,
   },
   -- Telescope for fuzzy searching
