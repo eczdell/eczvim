@@ -8,7 +8,8 @@ vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.g.mapleader = " "  -- Set leader key to spacebar
 -- Set case-insensitive search
-vim.opt.ignorecase = true
+vim.opt.ignorecase = false
+-- vim.opt.ignorecase = true
 vim.opt.statusline = "%f [%{expand('%:e')} File] %= %y | Line: %l/%L | Col: %c"
 -- Automatically delete the swap file if it exists
 vim.o.swapfile = false
@@ -381,6 +382,7 @@ vim.api.nvim_set_keymap('n', '<leader>F', '<Cmd>Telescope live_grep<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>fb', '<Cmd>Telescope buffers<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>fh', '<Cmd>Telescope help_tags<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>fd', '<Cmd>Telescope diagnostics<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader>fk', '<Cmd>Telescope keymaps<CR>', opts)
 
 -- Buffer navigation and closing keymaps
 vim.api.nvim_set_keymap('n', '<Tab>', ':bnext<CR>', opts)       -- Next buffer
