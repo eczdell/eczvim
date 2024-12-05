@@ -19,6 +19,18 @@ This document lists the key mappings and shortcuts configured for your Neovim se
 
 ---
 
+# Install Prettier
+npm install -g prettier
+
+# Install ESLint
+npm install -g eslint
+
+# Install TypeScript and TSServer (for JavaScript/TypeScript)
+npm install -g typescript typescript-language-server
+
+# Install LazyGit
+sudo apt install lazygit
+
 ## **Plugins Used**
 
 1. **[lazy.nvim](https://github.com/folke/lazy.nvim)** - A plugin manager for Neovim that allows for lazy loading of plugins.
