@@ -391,6 +391,11 @@ vim.api.nvim_set_keymap('n', '<leader>r', '<Cmd>lua vim.lsp.buf.rename()<CR>', o
 vim.api.nvim_set_keymap('n', '[d', '<Cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
 vim.api.nvim_set_keymap('n', ']d', '<Cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 
+-- Key mappings for Lazy Plugin Manager and opening the config file
+vim.keymap.set('n', '<Leader>pm', ':Lazy<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>pc', ':e $MYVIMRC<CR>', { noremap = true, silent = true })
+
+
 -- Key mapping for opening LazyGit inside Neovim
 -- '<leader>gg' will launch lazygit in a new window
 vim.api.nvim_set_keymap('n', '<leader>gg', ':LazyGit<CR>', opts)
