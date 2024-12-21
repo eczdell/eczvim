@@ -65,6 +65,15 @@ require('lazy').setup({
     }
   end,
 },
+
+   -- nvim-ts-autotag plugin
+  { 
+    'windwp/nvim-ts-autotag', 
+    config = function()
+      -- Configure nvim-ts-autotag
+      require('nvim-ts-autotag').setup()
+    end,
+  },
  { 'vim-airline/vim-airline-themes' },
     -- Install vim-fugitive plugin
   {
@@ -207,8 +216,9 @@ lspconfig.pyright.setup{}
 -- ts_ls for TypeScript/JavaScript (updated)
 lspconfig.ts_ls.setup({
   on_attach = function(client, bufnr)
-
       -- Set LSP keymaps
+    --
+      local opts = { noremap = true, silent = true }
       vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
       vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
       vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
@@ -421,4 +431,22 @@ vim.api.nvim_set_keymap('n', '<C-Right>', '<Cmd>vertical resize +2<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>/', '/<C-R>=expand("<cword>")<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>n', ':noh<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>nr', ':set nu! rnu!<CR>', opts)
+
+-- Toggle full-screen width for current window
+function _G.toggle_full_screen_width()
+  local is_full_screen_width = vim.g.is_full_screen_width or false
+
+  if is_full_screen_width then
+    -- Restore the window to its original width (default value, e.g., 80 columns)
+    vim.cmd('vertical resize 80')  -- Set the window width back to 80 columns
+    vim.g.is_full_screen_width = false
+  else
+    -- Maximize the window width (make it as wide as possible)
+    vim.cmd('vertical resize 9999')  -- Set a large window width to make it full screen
+    vim.g.is_full_screen_width = true
+  end
+end
+
+-- Keybinding for full-screen width toggle
+vim.api.nvim_set_keymap('n', '<leader>/', ':lua toggle_full_screen_width()<CR>', { noremap = true, silent = true })
 
