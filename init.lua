@@ -7,6 +7,13 @@ vim.opt.tabstop = 2
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.g.mapleader = " "  -- Set leader key to spacebar
+-- vim.o.foldlevel = 1 -- Collapse all folds by default
+vim.o.foldlevel = 99 -- Set foldlevel to 99 to unfold all folds by default
+-- Enable Treesitter folding
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'  -- Use Treesitter for folding
+
+
 -- Set case-insensitive search
 vim.opt.ignorecase = false
 -- vim.opt.ignorecase = true
@@ -249,6 +256,11 @@ require('nvim-treesitter.configs').setup({
   ensure_installed = {  "html", "javascript","typescript", "tsx", "json", "dockerfile", "terraform"},
   highlight = { enable = true },
   indent = { enable = true },
+ folding = {
+    enable = true,  -- Enable folding using treesitter
+    disable = {},   -- Optionally disable certain languages from using folding
+    -- folding based on treesitter syntax parsing
+  },
   autotag = {
     enable = true,  -- Enable auto-closing HTML tags
     filetypes = { "html", "javascript", "typescript", "jsx", "tsx", "xml" },  -- Filetypes where auto-closing will work
@@ -350,7 +362,6 @@ vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', opts)  -- Move line down
 -- Keymap for swapping lines in Visual mode (Multiple lines selection)
 vim.api.nvim_set_keymap('x', '<A-k>', ":move '<-2<CR>gv=gv", opts)  -- Move selected lines up
 vim.api.nvim_set_keymap('x', '<A-j>', ":move '>+1<CR>gv=gv", opts)  -- Move selected lines down
-
 
 -- Keybinding to quickly view diagnostics
 vim.api.nvim_set_keymap('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', opts)
