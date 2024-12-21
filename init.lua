@@ -81,6 +81,50 @@ require('lazy').setup({
       require('nvim-ts-autotag').setup()
     end,
   },
+    -- Install nvim-comment for easy commenting
+  { 'numToStr/Comment.nvim',
+  config = function()
+    require('Comment').setup({
+      padding = true,          -- Adds padding around comments
+      sticky = true,           -- Keeps the comment on the same line if possible
+      toggler = {
+        line = '<leader>cc',   -- Toggle line comments
+        block = '<leader>cb',  -- Toggle block comments
+      },
+      opleader = {
+        line = '<leader>c',    -- Operator for line-wise comment
+        block = '<leader>b',   -- Operator for block-wise comment
+      },
+      mappings = {
+        basic = true,          -- Enable basic key mappings
+        extra = true,          -- Enable extra key mappings (visual mode)
+      },
+      -- Adding language-specific configurations
+      pre_hook = function(ctx)
+        local U = require('Comment.utils')
+
+        -- Determine whether it's a block comment or line comment
+        local filetype = vim.bo.filetype
+        if filetype == 'html' then
+          -- For HTML, use <!-- --> for block comments
+          return {
+            start = '<!-- ',
+            ["end"] = ' -->',  -- 'end' needs to be quoted since it's a keyword in Lua
+          }
+        elseif filetype == 'javascript' or filetype == 'typescript' or filetype == 'javascriptreact' or filetype == 'typescriptreact' then
+          -- For React (JSX/TSX), use { /* */ } for block comments
+          if ctx.ctype == U.ctype.block then
+            return {
+              start = '{/* ',
+              ["end"] = ' */}', -- 'end' needs to be quoted here too
+            }
+          end
+        end
+      end,
+    })
+  end
+}
+,
  { 'vim-airline/vim-airline-themes' },
     -- Install vim-fugitive plugin
   {
@@ -442,6 +486,7 @@ vim.api.nvim_set_keymap('n', '<C-Right>', '<Cmd>vertical resize +2<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>/', '/<C-R>=expand("<cword>")<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>n', ':noh<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>nr', ':set nu! rnu!<CR>', opts)
+
 
 -- Toggle full-screen width for current window
 function _G.toggle_full_screen_width()
