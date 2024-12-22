@@ -71,8 +71,8 @@ sudo apt install lazygit
 | Toggle NvimTree (File Explorer) | `<leader>e`           | `:NvimTreeToggle`       |
 | Show Lazy Plugin Manager      | `<leader>l`           | `:Lazy show`            |
 | Open LazyGit                  | `<leader>gg`          | `:LazyGit`              |
-| git commits                   | `<leader>gg`          | `:LazyGit`              |
-| git branches                  | `<leader>gg`          | `:LazyGit`              |
+| git commits                   | `<leader>gc`          | `:LazyGit`              |
+| git branches                  | `<leader>gb`          | `:LazyGit`              |
 
 ---
 
@@ -194,7 +194,7 @@ sudo apt install lazygit
 | Action                        | Key Mapping           | Command             |
 |-------------------------------|-----------------------|---------------------|
 | Update Plugins                | `<leader>pm`          | `:Lazy show`        |
-| Vim Configuration             | `<leader>pc`          |`:Lazy show`        |
+| Vim Configuration             | `<leader>pc`          |`:Lazy show`         |
 
 ---
 
@@ -204,7 +204,38 @@ sudo apt install lazygit
 |-------------------------------|-----------------------|---------------------|
 | Fast Wrap                     | `<M-e>`               | Close nearest pair (`{`, `[`, `(`, etc.) |
 
----
+# Basic Vim Key Mappings
+
+## Basic Navigation (hjkl)
+
+| Key | Action           | Description                                |
+|-----|------------------|--------------------------------------------|
+| h   | Move left        | Move the cursor one character to the left. |
+| j   | Move down        | Move the cursor one line down.             |
+| k   | Move up          | Move the cursor one line up.               |
+| l   | Move right       | Move the cursor one character to the right. |
+| w   | Move to next word| Move the cursor to the start of the next word. |
+| e   | Move to end of word | Move the cursor to the end of the current word. |
+| b   | Move to previous word | Move the cursor to the start of the previous word. |
+
+## Text Operations
+
+| Action              | Key Mapping | Command                                                   |
+|---------------------|-------------|-----------------------------------------------------------|
+| yap (Yank a paragraph) | yap         | Yank the entire paragraph (from } to }).                  |
+| vap (Visual a paragraph) | vap         | Visually select the entire paragraph (from } to }).       |
+| caw (Change a word)    | caw         | Change the word under the cursor, entering insert mode.    |
+| yaw (Yank a word)      | yaw         | Yank the word under the cursor.                           |
+| vaw (Visual a word)    | vaw         | Visually select the word under the cursor.                |
+
+## Movement to Specific File Locations
+
+| Action                       | Key Mapping | Command                                                |
+|------------------------------|-------------|--------------------------------------------------------|
+| Go to the beginning of the file | gg          | Moves the cursor to the top of the file.               |
+| Go to the end of the file      | G           | Moves the cursor to the bottom of the file.            |
+| Go to the 10th line of the file| 10G         | Moves the cursor to line 10 of the file.               |
+
 This document summarizes all the used plugins and the most frequently used key mappings in your Neovim configuration.
 
 Happy coding! 😊
