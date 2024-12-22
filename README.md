@@ -240,6 +240,16 @@ sudo apt install lazygit
 | Go to the end of the file      | G           | Moves the cursor to the bottom of the file.            |
 | Go to the 10th line of the file| 10G         | Moves the cursor to line 10 of the file.               |
 
+## Nvim Tree Commands
+
+| Action                         | Key Mapping   | Command                                                   |
+|--------------------------------|---------------|-----------------------------------------------------------|
+| Open Nvim Tree                 | `<leader>e`   | Open the Nvim Tree file explorer.                         |
+| Create a new file              | `a`           | Create a new file in the current directory.               |
+| Delete a file or folder        | `d`           | Delete the selected file or folder (confirm with `y`).    |
+| Cut (move) a file or folder    | `x`           | Cut the selected file or folder (move it).                |
+| Paste a file or folder         | `p`           | Paste the cut file or folder into the current directory.  |
+| Rename a file or folder        | `r`           | Rename the selected file or folder.                       |
 
 
 This document summarizes all the used plugins and the most frequently used key mappings in your Neovim configuration.
