@@ -72,7 +72,19 @@ sudo apt install lazygit
 | Toggle NvimTree (File Explorer) | `<leader>e`           | `:NvimTreeToggle`       |
 | Show Lazy Plugin Manager      | `<leader>l`           | `:Lazy show`            |
 | Open LazyGit                  | `<leader>gg`          | `:LazyGit`              |
+| git commits                   | `<leader>gg`          | `:LazyGit`              |
+| git branches                  | `<leader>gg`          | `:LazyGit`              |
 
+---
+
+### **Todo Notes**
+
+| Action         | Key Mapping           | Command                 |
+|----------------|-----------------------|-------------------------|
+| Todo List      | `<leader>tl`          | `:TodoLocList`          |
+| Todo Next      | `<leader>tn`          | `:TodoNext`             |
+| Todo Prev      | `<leader>tp`          | `:TodoPrev`             |
+| Todo Close     | `<leader>tc`          | `:close`                |
 ---
 
 ### **Buffer Navigation**
@@ -89,8 +101,8 @@ sudo apt install lazygit
 
 | Action                        | Key Mapping           | Command                 |
 |-------------------------------|-----------------------|-------------------------|
-| Close code Fold               | `<leader>zc`               | `:bnext`                |
-| open  code Fold               | `<leader>zo`               | `:bnext`                |
+| Close code Fold               | `<leader>zc`          | `:bnext`                |
+| open  code Fold               | `<leader>zo`          | `:bnext`                |
 
 ---
 ### **LSP (Language Server Protocol) Key Mappings**
