@@ -21,7 +21,6 @@ This document lists the key mappings and shortcuts configured for your Neovim se
 
 ```
 
-
 # Install Prettier
 npm install -g prettier
 
