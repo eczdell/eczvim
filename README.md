@@ -179,6 +179,16 @@ sudo apt install lazygit
 
 ---
 
+### **LSP Symbol**
+
+| Action                        | Key Mapping           | Command             |
+|-------------------------------|-----------------------|---------------------|
+| lsp workspace symbols         | `<leader><leader>ws`  | `:Lazy show`        |
+| lsp document symbols          | `<leader><leader>ds`  | `:Lazy show`        |
+
+---
+---
+
 ### **Plugin Manager (Lazy.nvim)**
 
 | Action                        | Key Mapping           | Command             |

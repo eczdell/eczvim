@@ -487,6 +487,8 @@ vim.api.nvim_set_keymap('n', '<C-Right>', '<Cmd>vertical resize +2<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>/', '/<C-R>=expand("<cword>")<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>n', ':noh<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>nr', ':set nu! rnu!<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader><leader>ds', ':Telescope lsp_document_symbols<CR>', opts)
+vim.api.nvim_set_keymap('n', '<leader><leader>ws', ':Telescope lsp_workspace_symbols<CR>', opts)
 
 
 -- Toggle full-screen width for current window
