@@ -85,6 +85,14 @@ sudo apt install lazygit
 
 ---
 
+### **Treesitter**
+
+| Action                        | Key Mapping           | Command                 |
+|-------------------------------|-----------------------|-------------------------|
+| Close code Fold               | `<leader>zc`               | `:bnext`                |
+| open  code Fold               | `<leader>zo`               | `:bnext`                |
+
+---
 ### **LSP (Language Server Protocol) Key Mappings**
 
 | Action                        | Key Mapping           | Command                         |
@@ -117,7 +125,6 @@ sudo apt install lazygit
 
 | Action                        | Key Mapping           | Command                   |
 |-------------------------------|-----------------------|---------------------------|
-| Comment Out Line              | `<leader>/`           | `/expand("<cword>")`      |
 | Toggle Line Numbering         | `<leader>nr`          | `:set nu! rnu!`           |
 | Disable Search Highlighting   | `<leader>n`           | `:noh`                    |
 
@@ -135,6 +142,7 @@ sudo apt install lazygit
 | Decrease Height               | `<C-Down>`            | `:resize -2`           |
 | Increase Width                | `<C-Right>`           | `:vertical resize +2`  |
 | Decrease Width                | `<C-Left>`            | `:vertical resize -2`  |
+| Full Width toggle             | `<leader>/`            | `:vertical resize -2`  |
 
 ---
 
@@ -164,7 +172,8 @@ sudo apt install lazygit
 
 | Action                        | Key Mapping           | Command             |
 |-------------------------------|-----------------------|---------------------|
-| Update Plugins                | `<leader>l`           | `:Lazy show`        |
+| Update Plugins                | `<leader>pm`          | `:Lazy show`        |
+| Vim Configuration             | `<leader>pc`          |`:Lazy show`        |
 
 ---
 

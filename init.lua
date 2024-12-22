@@ -181,6 +181,7 @@ require('lazy').setup({
   },
   -- Telescope for fuzzy searching
   { 'nvim-telescope/telescope.nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
+   { 'nvim-telescope/telescope-symbols.nvim' },
 
   -- Syntax highlighting and code navigation
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' },
