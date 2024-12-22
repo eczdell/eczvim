@@ -227,7 +227,11 @@ sudo apt install lazygit
 | caw (Change a word)    | caw         | Change the word under the cursor, entering insert mode.    |
 | yaw (Yank a word)      | yaw         | Yank the word under the cursor.                           |
 | vaw (Visual a word)    | vaw         | Visually select the word under the cursor.                |
-
+| ciw (Change inner word) | ciw         | Change the word under the cursor, excluding surrounding spaces. |
+| A   | A            | Move to the end of the current line and enter insert mode. |
+| I   | I            | Move to the beginning of the current line and enter insert mode. |
+| O   | O            | Insert a new line above the current line and enter insert mode. |
+| o   | o            | Insert a new line below the current line and enter insert mode. |
 ## Movement to Specific File Locations
 
 | Action                       | Key Mapping | Command                                                |
@@ -235,6 +239,8 @@ sudo apt install lazygit
 | Go to the beginning of the file | gg          | Moves the cursor to the top of the file.               |
 | Go to the end of the file      | G           | Moves the cursor to the bottom of the file.            |
 | Go to the 10th line of the file| 10G         | Moves the cursor to line 10 of the file.               |
+
+
 
 This document summarizes all the used plugins and the most frequently used key mappings in your Neovim configuration.
 
