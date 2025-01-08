@@ -49,6 +49,17 @@ require('lazy').setup({
     'windwp/nvim-autopairs',
     event = 'InsertEnter',  -- Ensure it loads when entering insert mode
   },
+    {
+    'norcalli/nvim-colorizer.lua',
+    config = function()
+      -- Colorizer setup configuration
+      require('colorizer').setup({
+        '*', -- Highlight all file types
+        css = { rgb_fn = true }, -- Enable rgb() functions in CSS
+        html = { names = false }, -- Disable color name parsing for HTML
+      })
+    end
+  },
   {
   'akinsho/bufferline.nvim',
   dependencies = { 'kyazdani42/nvim-web-devicons' },
