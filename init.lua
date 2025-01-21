@@ -10,7 +10,7 @@ require('diagnostics')
 require('autopairs_config')
 require('treesitter_config')
 
-require('lsp_config_config') 
+require('lsp_config') 
 require('cmp_config')
 require('null_ls_config') 
 
