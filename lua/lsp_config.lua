@@ -37,3 +37,6 @@ lspconfig.rust_analyzer.setup({
   end
 })
 
+vim.api.nvim_set_keymap('n', '<leader>le', '<cmd>lua require("telescope.builtin").diagnostics({severity = vim.lsp.protocol.DiagnosticSeverity.Error})<CR>', { noremap = true, silent = true })
+
+

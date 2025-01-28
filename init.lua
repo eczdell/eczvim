@@ -13,4 +13,4 @@ require('treesitter_config')
 require('lsp_config') 
 require('cmp_config')
 require('null_ls_config') 
-
+require('toggleterm') 

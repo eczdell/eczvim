@@ -4,6 +4,12 @@ return require('lazy').setup({
     cmd= "Git",  -- Only load when required (you can adjust this as needed)
   { 'williamboman/mason-lspconfig.nvim' },
   { 'williamboman/mason.nvim', config = function() require("mason").setup() end },
+  {
+     "akinsho/toggleterm.nvim",
+     config = function()
+         require("toggleterm_config")  -- Load the terminal config from this file
+     end,
+  },
   { 'kyazdani42/nvim-web-devicons' },  -- For icons
    {
     'windwp/nvim-autopairs',
@@ -120,7 +126,7 @@ return require('lazy').setup({
       -- Configure airline extensio  -- Set the separator style to arrow
     vim.g.airline_left_sep = ''  -- Powerline right arrow
     vim.g.airline_right_sep = '' -- Powerline left arrowns
-      vim.g.airline_extensions = { 'branch', 'hunks', 'quickfix', 'fugitive' }  -- Add desired extensions
+      vim.g.airline_extensions = { 'branch', 'hunks', 'quickfix'  }  -- Add desired extensions
     end
   },
   -- todo-comments plugin for managing TODO comments
