@@ -223,6 +223,7 @@ sudo apt install lazygit
 | Action              | Key Mapping | Command                                                   |
 |---------------------|-------------|-----------------------------------------------------------|
 | yap (Yank a paragraph) | yap         | Yank the entire paragraph (from } to }).                  |
+| dat (delete a paragraph) | dat | delete the around html tag).                  |
 | vap (Visual a paragraph) | vap         | Visually select the entire paragraph (from } to }).       |
 | caw (Change a word)    | caw         | Change the word under the cursor, entering insert mode.    |
 | yaw (Yank a word)      | yaw         | Yank the word under the cursor.                           |

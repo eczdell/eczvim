@@ -61,13 +61,14 @@ return require('lazy').setup({
 },
 
    -- nvim-ts-autotag plugin
-  { 
-    'windwp/nvim-ts-autotag', 
+  {
+    'windwp/nvim-ts-autotag',
     config = function()
       -- Configure nvim-ts-autotag
-      require('nvim-ts-autotag').setup()
+      require('nvim-ts-autotag').setup()  -- This is the updated setup method
     end,
   },
+
     -- Install nvim-comment for easy commenting
   { 'numToStr/Comment.nvim',
   config = function()
