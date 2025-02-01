@@ -68,11 +68,13 @@ sudo apt install lazygit
 | Save File                     | `<leader>w`           | `:w`                    |
 | Quit Neovim                   | `<leader>q`           | `:q`                    |
 | Force Quit Neovim             | `<leader>Q`           | `:qa!`                  |
-| Toggle NvimTree (File Explorer) | `<leader>e`           | `:NvimTreeToggle`       |
+| Toggle NvimTree (File Explorer) | `<leader>e`         | `:NvimTreeToggle`       |
 | Show Lazy Plugin Manager      | `<leader>l`           | `:Lazy show`            |
 | Open LazyGit                  | `<leader>gg`          | `:LazyGit`              |
 | git commits                   | `<leader>gc`          | `:LazyGit`              |
 | git branches                  | `<leader>gb`          | `:LazyGit`              |
+| move to git prev change       | `[c`                  |                         |
+| move to git next change       | `]c`                  |                         |
 
 ---
 
