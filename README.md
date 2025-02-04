@@ -72,6 +72,7 @@ sudo apt install lazygit
 | Show Lazy Plugin Manager      | `<leader>l`           | `:Lazy show`            |
 | Open LazyGit                  | `<leader>gg`          | `:LazyGit`              |
 | git commits                   | `<leader>gc`          | `:LazyGit`              |
+| gitsign blame                 | `<C-b>`               | `:       `              |
 | git branches                  | `<leader>gb`          | `:LazyGit`              |
 | move to git prev change       | `[c`                  |                         |
 | move to git next change       | `]c`                  |                         |
