@@ -1,3 +1,4 @@
+vim.opt.termguicolors = true
 -- load plugin manager
 require('plugin_manager')
 -- load plugin setup from plugins.lua

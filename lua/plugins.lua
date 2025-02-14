@@ -12,11 +12,16 @@ return require('lazy').setup({
      end,
   },
   { 'kyazdani42/nvim-web-devicons' },  -- For icons
-   {
+  {
     'windwp/nvim-autopairs',
-    event = 'InsertEnter',  -- Ensure it loads when entering insert mode
+    config = function()
+      require('nvim-autopairs').setup({
+        check_ts = true, -- Enable Treesitter support (for JSX/TSX)
+        disable_filetype = { "TelescopePrompt" }, -- Disable in certain filetypes
+      })
+    end,
   },
-    {
+  {
     'norcalli/nvim-colorizer.lua',
     config = function()
       -- Colorizer setup configuration
@@ -62,14 +67,17 @@ return require('lazy').setup({
 },
 
    -- nvim-ts-autotag plugin
-  {
-    'windwp/nvim-ts-autotag',
-    config = function()
-      -- Configure nvim-ts-autotag
-      require('nvim-ts-autotag').setup()  -- This is the updated setup method
-    end,
-  },
-
+  -- {
+  --   'windwp/nvim-ts-autotag',
+  --   config = function()
+  --     -- Configure nvim-ts-autotag
+  --   require('nvim-ts-autotag').setup({
+  --     enable = true,  -- Enable the plugin
+  --     filetypes = { 'html','ts', 'xml', 'javascript', 'typescript', 'tsx', 'jsx' },  -- Filetypes to enable autotag for
+  --   })
+  --   end,
+  -- },
+  --
     -- Install nvim-comment for easy commenting
   { 'numToStr/Comment.nvim',
   config = function()

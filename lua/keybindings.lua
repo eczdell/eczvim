@@ -3,6 +3,11 @@
 vim.g.mapleader = " "  -- Set leader key to spacebar
 local opts = { noremap = true, silent = true }
 
+-- quick fix list next and previous keybinding
+vim.api.nvim_set_keymap('n', ']q', ':cnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '[q', ':cprev<CR>', { noremap = true, silent = true })
+
+
 -- keybindings.lua
 
       -- keybinding

@@ -148,10 +148,10 @@ sudo apt install lazygit
 
 | Action                        | Key Mapping           | Command                |
 |-------------------------------|-----------------------|------------------------|
-| Move Window Focus Left        | `<C-h>`               | Move to left window    |
-| Move Window Focus Down        | `<C-j>`               | Move to bottom window  |
-| Move Window Focus Up          | `<C-k>`               | Move to top window     |
-| Move Window Focus Right       | `<C-l>`               | Move to right window   |
+| Move Window Focus Left        | `<leader>h`               | Move to left window    |
+| Move Window Focus Down        | `<leader>j`               | Move to bottom window  |
+| Move Window Focus Up          | `<leader>k`               | Move to top window     |
+| Move Window Focus Right       | `<leader>l`               | Move to right window   |
 | Increase Height               | `<C-Up>`              | `:resize +2`           |
 | Decrease Height               | `<C-Down>`            | `:resize -2`           |
 | Increase Width                | `<C-Right>`           | `:vertical resize +2`  |
