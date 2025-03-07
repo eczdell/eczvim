@@ -42,6 +42,9 @@ vim.api.nvim_set_keymap('x', '<A-j>', ":move '>+1<CR>gv=gv", opts)  -- Move sele
 
 -- Keybinding to quickly view diagnostics
 vim.api.nvim_set_keymap('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', opts)
+vim.api.nvim_set_keymap('n', ']d', ':lua vim.diagnostic.goto_next()<CR>', opts)
+vim.api.nvim_set_keymap('n', '[d', ':lua vim.diagnostic.goto_prev()<CR>', opts)
+
 
 -- Map 'jk' to Escape in insert mode
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', opts)
@@ -131,7 +134,9 @@ function _G.toggle_full_screen_width()
     vim.cmd('vertical resize 80')  -- Set the window width back to 80 columns
     vim.g.is_full_screen_width = false
   else
-    -- Maximize the window width (make it as wide as possible) vim.cmd('vertical resize 9999')  -- Set a large window width to make it full screen
+    -- Maximize the window width (make it as wide as possible) 
+     vim.cmd('vertical resize 9999')  
+    -- Set a large window width to make it full screen
     vim.g.is_full_screen_width = true
   end
 end
