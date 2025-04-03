@@ -5,6 +5,47 @@ return require('lazy').setup({
   { 'williamboman/mason-lspconfig.nvim' },
   { 'williamboman/mason.nvim', config = function() require("mason").setup() end },
   {'prisma/vim-prisma'},
+{
+  "vinnymeller/swagger-preview.nvim",
+  cmd = { "SwaggerPreview", "SwaggerPreviewStop", "SwaggerPreviewToggle" },
+  build = "npm i",
+  config = function()
+    require("swagger-preview").setup({
+      -- The port to run the preview server on
+      port = 8000,
+      -- The host to run the preview server on
+      host = "localhost",
+    })
+  end,
+},
+{
+  "jackMort/ChatGPT.nvim",
+  dependencies = {
+    "MunifTanjim/nui.nvim",
+    "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope.nvim"
+  },
+  config = function()
+    require("chatgpt").setup({
+    api_key = os.getenv("OPENAI_API_KEY"),  -- Ensure this is set correctly
+    model = "gpt-3.5-turbo",  -- Change model to the free-tier GPT-3.5
+      })
+  end
+}
+,
+  {
+    "mfussenegger/nvim-dap",
+    config = function()
+      require("dapui").setup()
+      require("nvim-dap-virtual-text").setup()
+    end,
+    dependencies = {
+      "rcarriga/nvim-dap-ui",
+      "theHamsta/nvim-dap-virtual-text",
+        "nvim-neotest/nvim-nio"
+    },
+  }
+,
   {
      "akinsho/toggleterm.nvim",
      config = function()
@@ -86,7 +127,7 @@ return require('lazy').setup({
       sticky = true,           -- Keeps the comment on the same line if possible
       toggler = {
         line = '<leader>cc',   -- Toggle line comments
-        block = '<leader>cb',  -- Toggle block comments
+        block = '<leader>b',  -- Toggle block comments
       },
       opleader = {
         line = '<leader>c',    -- Operator for line-wise comment
@@ -112,8 +153,8 @@ return require('lazy').setup({
           -- For React (JSX/TSX), use { /* */ } for block comments
           if ctx.ctype == U.ctype.block then
             return {
-              start = '{/* ',
-              ["end"] = ' */}', -- 'end' needs to be quoted here too
+              start = '/{/* ',
+              ["end"] = ' /*/}', -- 'end' needs to be quoted here too
             }
           end
         end

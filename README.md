@@ -255,6 +255,23 @@ sudo apt install lazygit
 | Paste a file or folder         | `p`           | Paste the cut file or folder into the current directory.  |
 | Rename a file or folder        | `r`           | Rename the selected file or folder.                       |
 
+## Golang-Specific Nvim Commands  
+
+| Action                        | Key Mapping   | Command                                           |  
+|--------------------------------|--------------|---------------------------------------------------|  
+| Go to definition              | `gd`         | Jump to the definition of the symbol under cursor. |  
+| Show references               | `gr`         | List all references to the symbol under cursor.   |  
+| Show hover information        | `K`          | Show documentation for the symbol under cursor.   |  
+| Rename symbol                 | `<leader>rn` | Rename the symbol under cursor.                   |  
+| Go to previous diagnostic     | `[d`         | Jump to the previous error or warning.            |  
+| Go to next diagnostic         | `]d`         | Jump to the next error or warning.                |  
+| Show code actions             | `<leader>ca` | Show available code actions (fixes, refactoring). |  
+| Format code                   | `<leader>f`  | Format the current buffer using `gopls`.          |  
+| Run tests in the file         | `<leader>tt` | Run all tests in the current Go file.             |  
+| Run nearest test function     | `<leader>tn` | Run the test function under cursor.               |  
+| Open test output in quickfix  | `<leader>to` | Show test results in quickfix window.             |  
+| Toggle test coverage          | `<leader>tc` | Show test coverage highlights.                    |  
+| Restart `gopls` LSP           | `<leader>rs` | Restart the `gopls` language server.              |  
 
 This document summarizes all the used plugins and the most frequently used key mappings in your Neovim configuration.
 
