@@ -59,7 +59,8 @@ return {
               "-y",
               "@supabase/mcp-server-supabase@latest",
               "--access-token",
-              "sbp_7ae873ffb6ef1d94b91ccdb5888d0378d55b1aa6"
+              "sbp_7ae873ffb6ef1d94b91ccdb5888d0378d55b1aa6",
+               os.getenv("OPENAI_API_KEY")
             }
           }
         }
