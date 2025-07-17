@@ -1,38 +1,43 @@
+---- plugins.lua
+local ai_plugins = require('ai.ai_config')
 -- plugins.lua
 return require('lazy').setup({
-  { 'neovim/nvim-lspconfig' },    -- LSP configurations
-    cmd= "Git",  -- Only load when required (you can adjust this as needed)
+  git = {
+    url_format = "git@github.com:%s.git"
+  },
+{
+    "ravitemer/mcphub.nvim",
+    config = function()
+      require("mcphub").setup({
+        servers = {
+          supabase = {
+            env = {
+              SUPABASE_ACCESS_TOKEN = "Bearer sbp_7ae873ffb6ef1d94b91ccdb5888d0378d55b1aa6"
+            }
+          }
+        }
+      })
+    end
+  },
+  -- Spread in all AI plugins from your ai_config.lua file
+{ 'neovim/nvim-lspconfig', cmd = "Git" },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'williamboman/mason.nvim', config = function() require("mason").setup() end },
   {'prisma/vim-prisma'},
-{
-  "vinnymeller/swagger-preview.nvim",
-  cmd = { "SwaggerPreview", "SwaggerPreviewStop", "SwaggerPreviewToggle" },
-  build = "npm i",
-  config = function()
-    require("swagger-preview").setup({
-      -- The port to run the preview server on
-      port = 8000,
-      -- The host to run the preview server on
-      host = "localhost",
-    })
-  end,
-},
-{
-  "jackMort/ChatGPT.nvim",
-  dependencies = {
-    "MunifTanjim/nui.nvim",
-    "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope.nvim"
-  },
-  config = function()
-    require("chatgpt").setup({
-    api_key = os.getenv("OPENAI_API_KEY"),  -- Ensure this is set correctly
-    model = "gpt-3.5-turbo",  -- Change model to the free-tier GPT-3.5
+  unpack(ai_plugins),
+  {
+    "vinnymeller/swagger-preview.nvim",
+    cmd = { "SwaggerPreview", "SwaggerPreviewStop", "SwaggerPreviewToggle" },
+    build = "npm i",
+    config = function()
+      require("swagger-preview").setup({
+        -- The port to run the preview server on
+        port = 8000,
+        -- The host to run the preview server on
+        host = "localhost",
       })
-  end
-}
-,
+    end,
+  },
   {
     "mfussenegger/nvim-dap",
     config = function()
@@ -126,7 +131,6 @@ return require('lazy').setup({
       padding = true,          -- Adds padding around comments
       sticky = true,           -- Keeps the comment on the same line if possible
       toggler = {
-        line = '<leader>cc',   -- Toggle line comments
         block = '<leader>b',  -- Toggle block comments
       },
       opleader = {

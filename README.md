@@ -120,6 +120,9 @@ sudo apt install lazygit
 | Rename Symbol                 | `<leader>r`           | `:lua vim.lsp.buf.rename()`    |
 | Go to Previous Diagnostic     | `[d`                  | `:lua vim.lsp.diagnostic.goto_prev()` |
 | Go to Next Diagnostic         | `]d`                  | `:lua vim.lsp.diagnostic.goto_next()` |
+| Go to Previous Quickfix Item  | `[q`                  | `:cprevious<CR>`                      |
+| Go to Next Quickfix Item      | `]q`                  | `:cnext<CR>`                          |
+
 
 ---
 
