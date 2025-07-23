@@ -31,7 +31,7 @@ vim.api.nvim_set_keymap("n", "<leader>mc", "<cmd>MCPHub config<CR>", opts)  -- O
 --         servers = {
 --           supabase = {
 --             env = {
---               SUPABASE_ACCESS_TOKEN = "sbp_7ae873ffb6ef1d94b91ccdb5888d0378d55b1aa6"
+--        SUPABASE_ACCESS_TOKEN = "your_supabase_token_here"
 --             }
 --           }
 --         }
