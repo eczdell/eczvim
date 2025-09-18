@@ -1,9 +1,10 @@
-local lspconfig = require("lspconfig")
+-- Go LSP (gopls) configuration - Neovim 0.11+ style
 
-lspconfig.gopls.setup({
-  cmd = {"gopls"},
-  filetypes = {"go", "gomod", "gowork"},
-  root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+vim.lsp.config({
+  name = "gopls",
+  cmd = { "gopls" },
+  filetypes = { "go", "gomod", "gowork" },
+  root_markers = { "go.work", "go.mod", ".git" },
   settings = {
     gopls = {
       analyses = {
@@ -16,17 +17,18 @@ lspconfig.gopls.setup({
       gofumpt = true, -- Use gofumpt for better formatting
     },
   },
+}).setup({
   on_attach = function(client, bufnr)
-    local opts = { noremap = true, silent = true }
-    local keymap = vim.api.nvim_buf_set_keymap
+    local opts = { noremap = true, silent = true, buffer = bufnr }
 
-    keymap(bufnr, "n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>", opts)
-    keymap(bufnr, "n", "gr", "<Cmd>lua vim.lsp.buf.references()<CR>", opts)
-    keymap(bufnr, "n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>", opts)
-    keymap(bufnr, "n", "<leader>rn", "<Cmd>lua vim.lsp.buf.rename()<CR>", opts)
-    keymap(bufnr, "n", "[d", "<Cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-    keymap(bufnr, "n", "]d", "<Cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-    keymap(bufnr, "n", "<leader>ca", "<Cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+    -- Keymaps
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+    vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+    vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 
     -- Format on save
     if client.server_capabilities.documentFormattingProvider then

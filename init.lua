@@ -9,12 +9,9 @@ pcall(require, 'diagnostics')
 
 -- Load Rust-specific configurations
 pcall(require, 'rust.lsp_config')
-pcall(require, 'rust.null_ls_config')
 
-pcall(require, 'ai.config')
 -- Load go-specific configurations
 pcall(require, 'go.lsp_config')
-pcall(require, 'go.null_ls_config')
 pcall(require, 'go.dap_config')
 pcall(require, 'go.treesitter_config')
 
@@ -24,6 +21,5 @@ pcall(require, 'treesitter_config')
 
 pcall(require, 'lsp_config')
 pcall(require, 'cmp_config')
-pcall(require, 'null_ls_config')
 pcall(require, 'toggleterm')
 

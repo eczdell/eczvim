@@ -1,42 +1,24 @@
--- LSP configuration
-local lspconfig = require('lspconfig')
+-- lsp_config.lua
+local on_attach = function(_, bufnr)
+  print(">>> LSP attached to buffer")
+  local opts = { buffer = bufnr, noremap = true, silent = true }
+  vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+  vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
+  vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+end
 
--- Pyright for Python
-lspconfig.pyright.setup{}
-
--- ts_ls for TypeScript/JavaScript (updated)
-lspconfig.ts_ls.setup({
-  on_attach = function(client, bufnr)
-      -- Set LSP keymaps
-    --
-      local opts = { noremap = true, silent = true }
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    -- Enable completion for the current buffer
-    require('cmp').setup.buffer({
-      sources = { { name = 'nvim_lsp' } }
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  callback = function(args)
+    vim.lsp.start({
+      name = "tsserver",
+      cmd = { "typescript-language-server", "--stdio" },
+      root_dir = vim.fs.dirname(vim.fs.find(
+        { "package.json", "tsconfig.json", ".git" },
+        { upward = true, path = args.file }
+      )[1]),
+      on_attach = on_attach,
     })
-
-  end
+  end,
 })
-
--- Rust setup with rust-analyzer
-lspconfig.rust_analyzer.setup({
-  on_attach = function(client, bufnr)
-    local opts = { noremap = true, silent = true }
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<Cmd>lua vim.lsp.buf.references()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    -- Enable completion for the current buffer
-    require('cmp').setup.buffer({
-      sources = { { name = 'nvim_lsp' } }
-    })
-  end
-})
-
-vim.api.nvim_set_keymap('n', '<leader>le', '<cmd>lua require("telescope.builtin").diagnostics({severity = vim.lsp.protocol.DiagnosticSeverity.Error})<CR>', { noremap = true, silent = true })
-
 

@@ -1,31 +1,12 @@
 ---- plugins.lua
-local ai_plugins = require('ai.ai_config')
 -- plugins.lua
 return require('lazy').setup({
   git = {
     url_format = "git@github.com:%s.git"
   },
-{
-    "ravitemer/mcphub.nvim",
-    config = function()
-      require("mcphub").setup({
-        servers = {
-          supabase = {
-            env = {
---        SUPABASE_ACCESS_TOKEN = "your_supabase_token_here"
-               os.getenv("SUPABASE_ACCESS_TOKEN"),
-            }
-          }
-        }
-      })
-    end
-  },
   -- Spread in all AI plugins from your ai_config.lua file
-{ 'neovim/nvim-lspconfig', cmd = "Git" },
-  { 'williamboman/mason-lspconfig.nvim' },
   { 'williamboman/mason.nvim', config = function() require("mason").setup() end },
   {'prisma/vim-prisma'},
-  unpack(ai_plugins),
   {
     "vinnymeller/swagger-preview.nvim",
     cmd = { "SwaggerPreview", "SwaggerPreviewStop", "SwaggerPreviewToggle" },
@@ -80,15 +61,6 @@ return require('lazy').setup({
     end
   },
   -- for rust languages
-{ 
-  'williamboman/mason-lspconfig.nvim', 
-  config = function() 
-    require("mason").setup()
-    require("mason-lspconfig").setup({
-      ensure_installed = { "rust_analyzer" }, -- Ensure rust-analyzer is installed
-    })
-  end 
-},
   {
   'akinsho/bufferline.nvim',
   dependencies = { 'kyazdani42/nvim-web-devicons' },
@@ -323,7 +295,6 @@ return require('lazy').setup({
 },
 
  -- Linting and formatting
- { 'jose-elias-alvarez/null-ls.nvim', config = function() require('null-ls').setup() end },
 
  { 'goolord/alpha-nvim', config = function() 
       local alpha = require('alpha')
