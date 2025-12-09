@@ -11,3 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 -- Prepend lazy.nvim to runtimepath
 vim.opt.runtimepath:prepend(lazypath)
+
+-- Initialize lazy.nvim and load plugins
+require("lazy").setup(require("plugins"))

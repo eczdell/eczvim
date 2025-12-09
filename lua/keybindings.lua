@@ -32,12 +32,12 @@ vim.api.nvim_set_keymap('n', '[q', ':cprev<CR>', { noremap = true, silent = true
       vim.api.nvim_set_keymap('n', '<leader>tc', ':close<CR>', opts)
 
 
--- Keymap for swapping lines with Alt+Up and Alt+Down (Normal mode)
-vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', opts)  -- Move line up
+-- Keymap for swapping lines with Ctrl+Up and Ctrl+Down (Normal mode)
+vim.api.nvim_set_keymap('n', 'A-k', ':m .-2<CR>==', opts)  -- Move line up
 vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', opts)  -- Move line down
 
 -- Keymap for swapping lines in Visual mode (Multiple lines selection)
-vim.api.nvim_set_keymap('x', '<A-k>', ":move '<-2<CR>gv=gv", opts)  -- Move selected lines up
+vim.api.nvim_set_keymap('x', 'A-k', ":move '<-2<CR>gv=gv", opts)  -- Move selected lines up
 vim.api.nvim_set_keymap('x', '<A-j>', ":move '>+1<CR>gv=gv", opts)  -- Move selected lines down
 
 -- Keybinding to quickly view diagnostics
@@ -65,6 +65,10 @@ vim.api.nvim_set_keymap('i', '<C-y>', '<Esc>"+y', opts)
 -- Lazy.nvim plugin management key mappings
 vim.api.nvim_set_keymap('n', '<leader>l', ':Lazy show<CR>', opts)  -- Update plugins
 
+
+
+-- Keybinding for formatting
+vim.api.nvim_set_keymap('n', '<leader>fm', '<Cmd>lua vim.lsp.buf.format()<CR>', opts)
 
 -- Telescope keymaps
 vim.api.nvim_set_keymap('n', '<leader>f', '<Cmd>Telescope find_files<CR>', opts)
