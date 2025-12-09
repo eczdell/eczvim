@@ -29,8 +29,6 @@ require("mason-lspconfig").setup({
     "rust_analyzer",
     "terraformls",
     "tflint",
-    "tsserver",
-    "typescript-language-server",
   },
   automatic_installation = true,
 })

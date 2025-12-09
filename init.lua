@@ -1,5 +1,6 @@
 vim.opt.termguicolors = true
 
+pcall(require, 'settings')
 -- lazy.nvim bootstrap
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -12,6 +13,7 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 -- load plugin manager
@@ -20,7 +22,6 @@ pcall(require, 'plugin-manager')
 require("lazy").setup("plugins")
 
 -- pcall(require, 'null-ls')
-pcall(require, 'settings')
 pcall(require, 'keybindings')
 pcall(require, 'diagnostics')
 
@@ -28,7 +29,6 @@ pcall(require, 'diagnostics')
 -- pcall(require, 'rust.lsp_config')
 
 pcall(require, "terraform.lsp_config")
-
 
 -- Load js-specific configurations
 pcall(require, "js.lsp_config")
