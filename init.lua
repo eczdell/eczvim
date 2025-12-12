@@ -31,7 +31,7 @@ pcall(require, 'diagnostics')
 pcall(require, "terraform.lsp_config")
 
 -- Load js-specific configurations
-pcall(require, "js.lsp_config")
+--
 pcall(require, "js.formatter")
 
 -- Load python-specific configurations
