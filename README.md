@@ -59,6 +59,21 @@ sudo apt install lazygit
 
 ---
 
+## Installing fornt (devicons)
+````
+notepad.exe "C:\Users\ssilw\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+
+sabin@DESKTOP-AR0IPN8:/mnt/c/Users/ssilw/Downloads/0xProto$ pwd
+/mnt/c/Users/ssilw/Downloads/0xProto
+sabin@DESKTOP-AR0IPN8:/mnt/c/Users/ssilw/Downloads/0xProto$
+
+"font":
+{
+  "face": "0xProto Nerd Font Mono",
+  "size": 11
+}
+```
+
 ## **Key Mappings & Shortcuts**
 
 ### **General Key Mappings**
@@ -132,6 +147,7 @@ sudo apt install lazygit
 |-------------------------------|-----------------------|------------------------------|
 | Find File                     | `<leader>f`           | `:Telescope find_files`      |
 | Live Grep (Search in Files)   | `<leader>F`           | `:Telescope live_grep`       |
+| visual (Search in Files)      | `<leader>F`           | `:Telescope live_grep`       |
 | Buffers                       | `<leader>fb`          | `:Telescope buffers`         |
 | Help Tags                     | `<leader>fh`          | `:Telescope help_tags`       |
 | Diagnostics                   | `<leader>fd`          | `:Telescope diagnostics`     |
