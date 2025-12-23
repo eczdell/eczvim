@@ -72,7 +72,7 @@ vim.api.nvim_set_keymap('n', '<leader>fm', '<Cmd>lua vim.lsp.buf.format()<CR>', 
 -- Telescope keymaps
 vim.api.nvim_set_keymap('n', '<leader>f', '<Cmd>Telescope find_files<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>F', '<Cmd>Telescope live_grep<CR>', opts)
-vim.keymap.set("v", "<leader>gsw", function()
+vim.keymap.set("v", "<leader>F", function()
   local word = vim.fn.expand("<cword>")
   require("telescope.builtin").live_grep({ default_text = word })
 end, { silent = true })
