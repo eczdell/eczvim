@@ -94,6 +94,13 @@ sabin@DESKTOP-AR0IPN8:/mnt/c/Users/ssilw/Downloads/0xProto$
 
 ---
 
+--<leader>m
+Cursor jumps between:
+-- jumps between matching pairs: {},[],()
+( ↔ )
+{ ↔ }
+[ ↔ ]
+
 ### **Todo Notes**
 
 | Action         | Key Mapping           | Command                 |

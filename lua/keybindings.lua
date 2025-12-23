@@ -3,10 +3,6 @@
 vim.g.mapleader = " "  -- Set leader key to spacebar
 local opts = { noremap = true, silent = true }
 
--- quick fix list next and previous keybinding
-vim.api.nvim_set_keymap('n', ']q', ':cnext<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '[q', ':cprev<CR>', { noremap = true, silent = true })
-
 
 -- keybindings.lua
 
@@ -39,6 +35,14 @@ vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', opts)  -- Move line up
 -- Keymap for swapping lines in Visual mode (Multiple lines selection)
 vim.api.nvim_set_keymap('x', '<A-j>', ":move '>+1<CR>gv=gv", opts)  -- Move selected lines down
 vim.api.nvim_set_keymap('x', '<A-k>', ":move '<-2<CR>gv=gv", opts)  -- Move selected lines up
+
+-- quick fix list next and previous keybinding
+vim.api.nvim_set_keymap('n', ']q', ':cnext<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '[q', ':cprev<CR>', { noremap = true, silent = true })
+
+-- jumps between matching pairs:
+vim.keymap.set('n', '<leader>m', '%', { desc = 'Match pair' })
+
 -- Keybinding to quickly view diagnostics
 vim.api.nvim_set_keymap('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', opts)
 vim.api.nvim_set_keymap('n', ']d', ':lua vim.diagnostic.goto_next()<CR>', opts)
@@ -98,8 +102,8 @@ vim.api.nvim_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', 
 vim.api.nvim_set_keymap('n', '<C-Space>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>a', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>r', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
-vim.api.nvim_set_keymap('n', '[d', '<Cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-vim.api.nvim_set_keymap('n', ']d', '<Cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Previous diagnostic' })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Next diagnostic' })
 
 -- Key mappings for Lazy Plugin Manager and opening the config file
 vim.keymap.set('n', '<Leader>pm', ':Lazy<CR>', { noremap = true, silent = true })
