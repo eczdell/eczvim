@@ -66,7 +66,7 @@ vim.api.nvim_set_keymap('v', 'y', '"+y', opts)
 vim.api.nvim_set_keymap('i', '<C-y>', '<Esc>"+y', opts)
 
 -- Lazy.nvim plugin management key mappings
-vim.api.nvim_set_keymap('n', '<leader>l', ':Lazy show<CR>', opts)  -- Update plugins
+vim.api.nvim_set_keymap('n', '<leader>p', ':Lazy show<CR>', opts)  -- Update plugins
 
 
 
