@@ -1,0 +1,56 @@
+REST API Target
+│
+├─ 1. Reconnaissance            — Identify API existence
+│   ├─ DNS / Subdomains         — api.*, v1.*, dev.*
+│   ├─ ping                    — Host reachability
+│   └─ TLS / Cert Info         — API host metadata
+│
+├─ 2. Enumeration              — Discover API surface
+│   ├─ Open Ports              — 80, 443, 8080, 8443
+│   ├─ Base Paths              — /api, /v1, /v2
+│   └─ Versioning              — Deprecated endpoints
+│
+├─ 3. Mapping                  — Understand API structure
+│   ├─ Endpoints               — /users, /orders
+│   ├─ HTTP Methods            — GET, POST, PUT, DELETE
+│   ├─ Content Types           — JSON, XML
+│   └─ Status Codes            — Behavior clues
+│
+├─ 4. Input Discovery          — Identify controllable input
+│   ├─ Query Parameters        — ?id=, ?filter=
+│   ├─ Path Parameters         — /users/{id}
+│   ├─ JSON Body Fields        — request payload
+│   └─ Headers                 — Auth, custom headers
+│
+├─ 5. Authentication Analysis  — Access control model
+│   ├─ API Keys                — Static secrets
+│   ├─ JWT Tokens              — Claims & expiry
+│   ├─ OAuth Flows             — Token issuance
+│   └─ Session Handling        — Stateless vs stateful
+│
+├─ 6. Authorization Testing    — Who can do what
+│   ├─ Object‑level access     — ID‑based controls
+│   ├─ Function‑level access   — Admin vs user
+│   └─ Tenant isolation        — Multi‑tenant risk
+│
+├─ 7. Weakness Detection       — Identify security gaps
+│   ├─ Broken Object Level Auth (BOLA)
+│   ├─ Excessive Data Exposure
+│   ├─ Mass Assignment
+│   └─ Rate‑limit weaknesses
+│
+├─ 8. Exploitation Validation  — Confirm impact
+│   ├─ Unauthorized data access
+│   ├─ Privilege escalation
+│   └─ Business logic abuse
+│
+├─ 9. Traffic & Behavior       — Runtime observation
+│   ├─ Request / response flow
+│   ├─ Error patterns
+│   └─ Token reuse behavior
+│
+└─ 10. Automation & Scaling    — Repeat across APIs
+    ├─ Endpoint lists
+    ├─ Spec‑driven scanning
+    └─ Continuous monitoring
+

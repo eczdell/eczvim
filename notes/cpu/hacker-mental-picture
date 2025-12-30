@@ -1,0 +1,49 @@
+Target System              — Attack surface
+ ├─ Network Exposure       — Reachability
+ │   ├─ IP Address         — Discovery target
+ │   ├─ Open Port          — Entry point
+ │   │   ├─ Service        — Running daemon
+ │   │   └─ Protocol       — TCP / UDP
+ │   │
+ │   └─ Firewall Rules     — Filtering
+ │
+ ├─ Application Layer      — Primary attack vector
+ │   ├─ Protocol           — HTTP / HTTPS / SSH / FTP
+ │   ├─ REST API           — Endpoint surface
+ │   │   ├─ Endpoint       — URL path
+ │   │   ├─ Method         — GET / POST / PUT / DELETE
+ │   │   ├─ Parameters     — User input
+ │   │   └─ Payload        — JSON / Form data
+ │   │
+ │   ├─ Auth Mechanism     — Tokens / Sessions / Keys
+ │   └─ Input Handling     — Validation
+ │
+ ├─ Transport Layer        — Session control
+ │   ├─ TCP Connection     — State tracking
+ │   ├─ TLS               — Encryption boundary
+ │   └─ Timing             — Side channels
+ │
+ ├─ Process Space          — Execution context
+ │   ├─ Service Process    — Target PID
+ │   ├─ Threads            — Concurrency model
+ │   ├─ Memory             — Heap / Stack
+ │   └─ File Descriptors   — Sockets / Files
+ │
+ ├─ OS Layer               — Privilege boundary
+ │   ├─ User               — Permission level
+ │   ├─ Capabilities       — Partial privileges
+ │   ├─ Syscalls           — Kernel interface
+ │   └─ Sandbox            — Containment
+ │
+ ├─ Kernel                 — Trust boundary
+ │   ├─ Sockets            — Network objects
+ │   ├─ Buffers            — Data handling
+ │   ├─ Scheduler          — CPU time
+ │   └─ Drivers            — Hardware interface
+ │
+ └─ Hardware               — Physical limits
+     ├─ CPU                — Side-channel target
+     ├─ Memory             — Row / cache attacks
+     └─ NIC                — Packet injection / sniffing
+
+IP → Port → Service → Protocol → API Endpoint → Input → Process → Memory → Privilege → Kernel → Hardware

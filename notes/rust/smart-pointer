@@ -1,0 +1,85 @@
+1. Variables and Mutability
+let x = 5;          // immutable
+let mut y = 10;     // mutable .ie. changable
+
+
+By default, variables are immutable.
+
+mut allows modification.
+---------------------------------
+
+let x = 42;                 // Stack value
+let b = Box::new(42);       // Heap value; `b` pointer on stack, 42 on heap
+let v = vec![1, 2, 3];      // Heap array; `v` pointer + length + capacity on stack, elements on heap
+let s = String::from("Hi"); // Heap string; `s` pointer + length + capacity on stack, chars on heap
+let r = Rc::new(10);        // Heap value; reference-count metadata also on heap, pointer on stack
+let a = Arc::new(20);       // Heap value; atomic reference-count metadata on heap, pointer on stack
+let w = Rc::downgrade(&r);  // Weak reference; non-owning pointer to heap, doesn't increment count
+let c = std::cell::Cell::new(30);      // Stack value with interior mutability, no heap
+let rc_ref = std::cell::RefCell::new(vec![1,2]); // Stack pointer, interior mutability; value on heap if inner is heap
+let pinned = std::pin::Pin::new(Box::new(50));  // Heap value pinned; pointer on stack, value fixed on heap
+
+
+
+// `_` is a wildcard for all other cases
+
+
+
+
+
+
+
+
+-------------------------
+match is Rust’s pattern matching construct.
+
+It’s like a more powerful switch statement, but much safer and more flexible.
+
+You can match on:
+    Option<T>
+    Result<T, E>
+    Enums
+    Tuples
+    Structs
+    Literalsw w
+
+let number = 2;
+match number {
+    1 => println!("One"),
+    2 => println!("Two"),
+    3 => println!("Three"),
+    _ => println!("Other"), // `_` is a wildcard for all other cases
+}
+-0--------------------------
+
+1. What is mpsc?
+
+mpsc stands for:
+
+m = multiple
+p = producer
+s = single
+c = consumer
+
+So, it’s a channel for multiple producers and a single consumer.
+Channels are Rust’s safe way to send data between threads.
+Rust ensures ownership and memory safety when passing data.
+
+
+use std::sync::mpsc;
+use std::thread;
+
+fn main() {
+    // Create a channel
+    let (tx, rx) = mpsc::channel();
+
+    // Spawn a thread and send a message
+    thread::spawn(move || {
+        tx.send("Hello from thread").unwrap();
+    });
+
+    // Receive the message in main thread
+    let message = rx.recv().unwrap();
+    println!("Received: {}", message);
+}
+-------------------------------------------------------------

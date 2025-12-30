@@ -1,0 +1,16 @@
+stateless rule engine
+
+
+WAF-style URL inspection. :web app firewall rules
+
+suricata,
+zeek bro
+Wazuh
+snort
+------------
+siem
+
+correlation engine
+ids
+
+

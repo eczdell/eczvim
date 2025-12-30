@@ -1,0 +1,70 @@
+AWS Account                — Trust boundary
+ ├─ IAM                    — Identity control
+ │   ├─ User               — Human credentials
+ │   ├─ Role               — Temporary permissions
+ │   ├─ Policy             — Allowed actions
+ │   └─ Access Key         — Programmatic entry
+ │
+ ├─ Network (VPC)          — Isolation boundary
+ │   ├─ VPC                — Virtual network
+ │   ├─ Subnet             — Network segment
+ │   ├─ Route Table        — Traffic direction
+ │   ├─ Internet Gateway   — Public exposure
+ │   ├─ NAT Gateway        — Outbound access
+ │   └─ VPC Peering        — Lateral movement
+ │
+ ├─ Edge Layer             — First contact
+ │   ├─ Route53            — DNS discovery
+ │   ├─ CloudFront         — CDN & cache
+ │   ├─ WAF                — Request filtering
+ │   └─ Load Balancer      — Traffic distributor
+ │
+ ├─ Compute                — Execution target
+ │   ├─ EC2                — Virtual machine
+ │   │   ├─ OS             — Privilege boundary
+ │   │   ├─ Process        — Running service
+ │   │   ├─ Thread         — Execution unit
+ │   │   └─ Memory         — Exploitable state
+ │   │
+ │   ├─ ECS / EKS          — Container runtime
+ │   │   ├─ Pod / Task     — Workload unit
+ │   │   └─ Container      — App sandbox
+ │   │
+ │   └─ Lambda             — Serverless execution
+ │       ├─ Handler        — Entry function
+ │       └─ Role           — Permission scope
+ │
+ ├─ Application Layer      — Main attack surface
+ │   ├─ API Gateway        — HTTP entry point
+ │   ├─ REST API           — Endpoints & methods
+ │   │   ├─ Endpoint       — URL path
+ │   │   ├─ Method         — GET / POST / PUT
+ │   │   ├─ Auth           — JWT / IAM / Cognito
+ │   │   └─ Payload        — JSON input
+ │   │
+ │   └─ Service Logic      — Business code
+ │
+ ├─ Data Layer             — High‑value target
+ │   ├─ S3                 — Object storage
+ │   ├─ RDS                — Relational database
+ │   ├─ DynamoDB           — NoSQL store
+ │   └─ Secrets Manager    — Credentials vault
+ │
+ ├─ Messaging              — Async attack paths
+ │   ├─ SQS                — Queue abuse
+ │   ├─ SNS                — Fan‑out injection
+ │   └─ EventBridge        — Trigger chaining
+ │
+ ├─ Observability          — Detection surface
+ │   ├─ CloudWatch         — Logs & metrics
+ │   ├─ CloudTrail         — API activity
+ │   └─ VPC Flow Logs      — Network traces
+ │
+ └─ Metadata & Control     — Privilege escalation
+     ├─ Instance Metadata  — IAM role leakage
+     ├─ STS                — Temporary creds
+     └─ Control Plane APIs — Full account access
+
+
+Hacker’s AWS Kill‑Chain (One‑Line)
+DNS → ALB → API → Input → Compute → IAM Role → Metadata → AWS APIs → Data

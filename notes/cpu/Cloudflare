@@ -1,0 +1,63 @@
+Cloudflare Account         — Control boundary
+ ├─ Identity & Access      — Account security
+ │   ├─ User               — Human login
+ │   ├─ API Token          — Programmatic access
+ │   ├─ Permissions        — Allowed scope
+ │   └─ Audit Logs         — Activity trail
+ │
+ ├─ DNS Layer              — Target discovery
+ │   ├─ Zone               — Domain ownership
+ │   ├─ DNS Records        — IP exposure
+ │   ├─ Proxy Status       — Orange/Gray cloud
+ │   └─ TTL                — Cache behavior
+ │
+ ├─ Edge Network           — First contact surface
+ │   ├─ Anycast IP         — Global entry point
+ │   ├─ POP                — Edge location
+ │   ├─ TLS Termination    — Encryption boundary
+ │   └─ HTTP Parsing       — Request handling
+ │
+ ├─ Security Layer         — Filtering & defense
+ │   ├─ WAF                — Request inspection
+ │   ├─ Firewall Rules     — IP / ASN / Geo rules
+ │   ├─ Rate Limiting      — Abuse control
+ │   ├─ Bot Management     — Automation detection
+ │   └─ DDoS Protection    — Traffic absorption
+ │
+ ├─ Application Layer      — Main attack surface
+ │   ├─ HTTP / HTTPS       — Transport protocol
+ │   ├─ REST API           — Endpoint exposure
+ │   │   ├─ Path           — URL structure
+ │   │   ├─ Method         — GET / POST / PUT
+ │   │   ├─ Headers        — Metadata input
+ │   │   └─ Body           — JSON / Form payload
+ │   │
+ │   └─ Origin Logic       — Backend behavior
+ │
+ ├─ Edge Compute           — Execution boundary
+ │   ├─ Workers            — Serverless code
+ │   ├─ Durable Objects    — Stateful logic
+ │   └─ Cron Triggers      — Scheduled execution
+ │
+ ├─ Origin Infrastructure  — Hidden backend
+ │   ├─ Load Balancer      — Traffic routing
+ │   ├─ Origin IP          — Real server address
+ │   ├─ Cloud / On‑prem    — Hosting environment
+ │   └─ Private Network    — Bypass target
+ │
+ ├─ Data Layer             — High‑value assets
+ │   ├─ KV                 — Key‑value storage
+ │   ├─ R2                 — Object storage
+ │   ├─ D1                 — SQL database
+ │   └─ Secrets            — Sensitive config
+ │
+ ├─ Networking Services    — Lateral paths
+ │   ├─ Tunnel (cloudflared)— Origin exposure
+ │   ├─ Zero Trust         — Access control plane
+ │   └─ Spectrum           — TCP/UDP proxying
+ │
+ └─ Observability          — Detection surface
+     ├─ Logs               — Request visibility
+     ├─ Analytics          — Traffic patterns
+     └─ Alerts             — Security signals
+

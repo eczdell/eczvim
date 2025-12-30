@@ -1,0 +1,62 @@
+Objective
+│
+├─ 1. Reconnaissance            — Learn without touching
+│   ├─ Passive Recon           — No interaction
+│   │   ├─ OSINT               — Public data
+│   │   ├─ DNS records         — Infrastructure clues
+│   │   └─ Certificate logs    — Hidden subdomains
+│   │
+│   └─ Active Recon            — Minimal interaction
+│       ├─ ping                — Host alive
+│       ├─ traceroute          — Network path
+│       └─ HTTP probing        — Service presence
+│
+├─ 2. Asset Enumeration         — Define attack surface
+│   ├─ IP ranges               — Network scope
+│   ├─ Subdomains              — Entry points
+│   ├─ Ports                   — Open doors
+│   └─ Services                — What’s running
+│
+├─ 3. Surface Mapping           — Understand exposure
+│   ├─ Web routes              — URLs & endpoints
+│   ├─ APIs                    — Methods & schemas
+│   ├─ Auth flows              — Login & tokens
+│   └─ Third‑party services    — SaaS dependencies
+│
+├─ 4. Input Discovery           — Where data enters
+│   ├─ Parameters              — Query / body fields
+│   ├─ Headers                 — Trust boundaries
+│   ├─ Cookies                 — Session control
+│   └─ File uploads            — Binary input
+│
+├─ 5. Weakness Detection        — Find cracks
+│   ├─ Misconfiguration        — Defaults, exposed panels
+│   ├─ Known vulnerabilities   — CVEs
+│   ├─ Logic flaws             — Broken workflows
+│   └─ Access control gaps     — Missing authorization
+│
+├─ 6. Validation                — Is it real?
+│   ├─ Proof of concept        — Minimal impact
+│   ├─ Impact confirmation     — Data / control
+│   └─ False‑positive removal  — Noise reduction
+│
+├─ 7. Exploitation (If any)     — Use the weakness
+│   ├─ Privilege escalation    — More access
+│   ├─ Lateral movement        — New assets
+│   └─ Persistence             — Continued access
+│
+├─ 8. Post‑Exploitation         — Maximize value
+│   ├─ Data access             — Sensitive info
+│   ├─ Credential harvesting   — Reuse paths
+│   └─ Infrastructure mapping  — Cloud / internal
+│
+├─ 9. Cover & Control           — Stay hidden
+│   ├─ Noise reduction         — Slow & selective
+│   ├─ Log evasion             — Blend with normal traffic
+│   └─ Cleanup                 — Remove traces
+│
+└─ 10. Automation & Scaling     — Repeat efficiently
+    ├─ Tool chaining           — Pipelines
+    ├─ Templates               — Reusable logic
+    └─ Continuous scanning     — New exposure
+

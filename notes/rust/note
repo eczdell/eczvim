@@ -1,0 +1,155 @@
+// ==================== VARIABLES & MUTABILITY ====================
+let x = 5;        // immutable
+let mut y = 10;   // mutable
+const Z: i32 = 42; // constant
+
+// ==================== OWNERSHIP & BORROWING ====================
+let s = String::from("Hello"); // owns heap
+let r = &s;                     // immutable borrow
+let mut r2 = &mut s;            // mutable borrow
+
+// ==================== STACK VS HEAP ====================
+// Stack: i32, f64
+// Heap: Box, Vec, String, Rc, Arc
+
+// ==================== SMART POINTERS ====================
+let b = Box::new(42);
+let v = vec![1,2,3];
+let s = String::from("Hi");
+let r = std::rc::Rc::new(10);  // single-threaded shared
+let a = std::sync::Arc::new(10); // multi-threaded shared
+
+// ==================== CLOSURES ====================
+let c = || println!("{}", x);      // borrow
+let c2 = move || println!("{}", x); // move ownership
+
+// ==================== OPTION & RESULT ====================
+let some_val: Option<i32> = Some(10);
+let val = some_val.unwrap_or(0); // default if None
+
+let res: Result<i32, &str> = Ok(5);
+let val2 = res.unwrap_or(0);
+
+// ==================== PATTERN MATCHING ====================
+match some_val {
+    Some(v) => println!("Got {}", v),
+    None => println!("No value"),
+}
+
+let point = (0, 7);
+match point {
+    (0, y) => println!("X=0, Y={}", y),
+    (_, 0) => println!("Y=0"),   // ignore X
+    _ => println!("Other"),
+}
+
+// ==================== LOOPS ====================
+for i in 0..5 { println!("{}", i); }   // range loop
+let mut n = 0;
+while n < 5 { println!("{}", n); n += 1; } // while loop
+loop { break; }                         // infinite loop with break
+
+// ==================== IF / ELSE ====================
+if x > 5 { println!("x>5"); }
+else if x == 5 { println!("x=5"); }
+else { println!("x<5"); }
+
+// ==================== THREADS & CONCURRENCY ====================
+use std::thread;
+let handle = thread::spawn(move || println!("Hello thread"));
+handle.join().unwrap();
+
+// Channels (mpsc)
+use std::sync::mpsc;
+let (tx, rx) = mpsc::channel();
+tx.send(42).unwrap();
+let val = rx.recv().unwrap();
+
+// Shared state
+use std::sync::{Arc, Mutex};
+let counter = Arc::new(Mutex::new(0));
+
+// ==================== STRUCTS & IMPL ====================
+struct Circle { radius: f64 }
+
+impl Circle {
+    fn new(radius: f64) -> Self { Self { radius } }   // constructor
+    fn area(&self) -> f64 { 3.14 * self.radius * self.radius } // method
+}
+
+// ==================== ENUMS ====================
+enum Color { Red, Green, Blue }
+let c = Color::Red;
+
+// ==================== TRAITS ====================
+trait Speak { fn speak(&self); }
+struct Dog;
+impl Speak for Dog { fn speak(&self) { println!("Woof"); } }
+
+// ==================== GENERICS ====================
+fn generic_fn<T>(val: T) { println!("Value!"); }
+
+// ==================== LIFETIMES ====================
+fn lifetime_example<'a>(s: &'a str) -> &'a str { s }
+
+// ==================== MODULES ====================
+mod math {
+    pub fn add(a: i32, b: i32) -> i32 { a + b }
+}
+let sum = math::add(2,3);
+
+// ==================== RESULT COMBINATORS ====================
+let x: Result<i32, &str> = Ok(5);
+let y = x.map(|v| v + 1).unwrap_or(0); // map combinator
+
+// ==================== ASYNC / AWAIT ====================
+use tokio::time::{sleep, Duration};
+#[tokio::main]
+async fn main_async() {
+    let task = tokio::spawn(async {
+        sleep(Duration::from_secs(1)).await;
+        println!("Async done");
+    });
+    task.await.unwrap();
+}
+
+// ==================== PATTERN DESTRUCTURING ====================
+let (a, b) = (1, 2); // tuple destructuring
+let [x, y, z] = [1, 2, 3]; // array destructuring
+
+// ==================== CLI ARGUMENTS ====================
+// Using std::env
+use std::env;
+let args: Vec<String> = env::args().collect();
+println!("Args: {:?}", args);
+
+// Using clap crate (add clap = "4" in Cargo.toml)
+use clap::Parser;
+
+#[derive(Parser)]
+struct Cli {
+    #[clap(short, long)]
+    name: String,
+    #[clap(short, long, default_value_t = 1)]
+    count: u32,
+}
+
+let cli = Cli::parse();
+println!("Name: {}, Count: {}", cli.name, cli.count);
+
+// ==================== KEYWORDS SUMMARY ====================
+// mut       -> mutable variable
+// let       -> declare variable
+// const     -> compile-time constant
+// Box/Rc/Arc-> heap allocation / shared ownership
+// move      -> move ownership into closure/thread
+// unwrap    -> extract value (panic if missing)
+// unwrap_or -> extract value or default
+// match     -> pattern matching
+// _         -> wildcard / ignore value
+// impl      -> define methods or traits
+// enum      -> define custom types
+// trait     -> define interfaces
+// async/await -> asynchronous programming
+// clap      -> CLI argument parsing
+

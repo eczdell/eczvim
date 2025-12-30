@@ -1,0 +1,237 @@
+🔐 Top 100 API / Application Exploitation Categories
+
+🔑 Authorization & Access Control
+1. Broken Object Level Authorization (BOLA)
+   — Accessing other users’ data by changing object IDs
+   — Attacker thinks: “What if I change the ID?”
+   — Tools: burp, postman, curl
+
+2. Broken Function Level Authorization (BFLA)
+   — Calling admin or privileged functions as a normal user
+   — Attacker thinks: “What if I call admin APIs?”
+   — Tools: burp, postman, httpx
+
+3. Broken Object Property Level Authorization (BOPLA)
+   — Reading or writing restricted fields in objects
+   — Attacker thinks: “Can I see or modify hidden fields?”
+   — Tools: burp, jq, curl
+
+4. Missing Authorization Checks
+   — Endpoints lack access verification
+   — Attacker thinks: “Can I access this without permission?”
+   — Tools: burp, httpx
+
+5. Insecure Direct Object References (IDOR)
+   — Object access controlled only by identifiers
+   — Attacker thinks: “Does changing the ID expose data?”
+   — Tools: burp, ffuf, curl
+
+6. Privilege Escalation
+   — Gaining higher access than intended
+   — Attacker thinks: “Can I become admin?”
+   — Tools: burp, metasploit
+
+7. Horizontal Privilege Escalation
+   — Accessing peer user resources
+   — Attacker thinks: “Can I see other users’ stuff?”
+   — Tools: burp, paramspider
+
+8. Vertical Privilege Escalation
+   — Accessing higher‑role functions
+   — Attacker thinks: “Can I do admin actions?”
+   — Tools: burp, postman
+
+9. Cross‑Tenant Data Access
+   — Multi‑tenant isolation failure
+   — Attacker thinks: “Can I see another tenant’s data?”
+   — Tools: burp, nuclei
+
+10. Role Confusion
+    — Ambiguous or overlapping roles
+    — Attacker thinks: “Can I confuse the system about my role?”
+    — Tools: burp
+
+🔐 Authentication & Identity
+21. Broken Authentication
+    — Weak or missing identity verification
+    — Attacker thinks: “Can I skip login?”
+    — Tools: burp, hydra
+
+22. Weak Password Policy
+    — Predictable or short passwords
+    — Attacker thinks: “Are passwords guessable?”
+    — Tools: hydra, burp
+
+23. Credential Stuffing Exposure
+    — Reused credentials accepted
+    — Attacker thinks: “Will reused creds work?”
+    — Tools: hydra, custom scripts
+
+24. Missing Brute‑Force Protection
+    — Unlimited login attempts
+    — Attacker thinks: “Can I try endlessly?”
+    — Tools: hydra, ffuf
+
+25. Token Reuse
+    — Tokens valid longer than expected
+    — Attacker thinks: “Does this token still work?”
+    — Tools: burp, jwt‑tool
+
+26. Token Fixation
+    — Tokens not rotated properly
+    — Attacker thinks: “Can I force token reuse?”
+    — Tools: burp
+
+27. JWT Misconfiguration
+    — Weak signing or validation
+    — Attacker thinks: “Is JWT verification broken?”
+    — Tools: jwt‑tool, burp
+
+28. Missing Token Expiry
+    — Tokens never expire
+    — Attacker thinks: “Does this token live forever?”
+    — Tools: burp
+
+29. Insecure Refresh Tokens
+    — Refresh tokens not protected
+    — Attacker thinks: “Can I refresh forever?”
+    — Tools: burp
+
+30. OAuth Misconfiguration
+    — OAuth flows incorrectly implemented
+    — Attacker thinks: “Can I abuse OAuth flow?”
+    — Tools: burp, oauth‑tooling
+
+📦 Input & Injection
+36. Missing Input Validation
+    — Inputs accepted blindly
+    — Attacker thinks: “What if I send garbage?”
+    — Tools: burp, ffuf
+
+37. Mass Assignment
+    — Object fields auto‑mapped
+    — Attacker thinks: “Can I set hidden fields?”
+    — Tools: burp, jq
+
+38. Parameter Pollution
+    — Duplicate parameters mishandled
+    — Attacker thinks: “What if I send it twice?”
+    — Tools: burp
+
+39. Hidden Parameter Abuse
+    — Undocumented parameters accepted
+    — Attacker thinks: “What hidden inputs exist?”
+    — Tools: arjun, paramspider
+
+40. Type Confusion
+    — Weak type enforcement
+    — Attacker thinks: “What if I change types?”
+    — Tools: burp
+
+41. JSON Injection
+    — JSON structure abused
+    — Attacker thinks: “Can I break JSON logic?”
+    — Tools: burp
+
+42. XML External Entity (XXE)
+    — XML parsers allow entities
+    — Attacker thinks: “Does XML fetch external data?”
+    — Tools: burp
+
+43. Command Injection
+    — OS commands executed from input
+    — Attacker thinks: “Can input run commands?”
+    — Tools: burp, metasploit
+
+44. SQL Injection
+    — SQL queries built unsafely
+    — Attacker thinks: “Is SQL concatenated?”
+    — Tools: sqlmap
+
+45. NoSQL Injection
+    — Query operators abused
+    — Attacker thinks: “Can I inject operators?”
+    — Tools: burp
+
+🌐 Business Logic
+51. Business Logic Flaws
+    — Logical assumptions broken
+    — Attacker thinks: “Can logic be abused?”
+    — Tools: burp
+
+55. Race Conditions
+    — Concurrent requests mishandled
+    — Attacker thinks: “What if I race requests?”
+    — Tools: burp, turbo intruder
+
+56. Workflow Bypass
+    — Steps can be skipped
+    — Attacker thinks: “Can I skip steps?”
+    — Tools: burp
+
+59. Replay Attacks
+    — Requests replayable
+    — Attacker thinks: “Can I replay this?”
+    — Tools: burp
+
+⚙️ Resource, Infra, Network
+66. Unrestricted Resource Consumption
+    — Resource limits missing
+    — Attacker thinks: “What if I spam this?”
+    — Tools: ffuf, custom scripts
+
+67. Missing Rate Limiting
+    — No request throttling
+    — Attacker thinks: “Is there a limit?”
+    — Tools: ffuf
+
+78. Server‑Side Request Forgery (SSRF)
+    — Server fetches attacker‑controlled URLs
+    — Attacker thinks: “Can server fetch for me?”
+    — Tools: burp, nuclei
+
+82. Insecure CORS Policy
+    — Over‑permissive cross‑origin rules
+    — Attacker thinks: “Can another site call this?”
+    — Tools: burp
+
+☁️ Cloud, Inventory & Supply Chain
+93. Improper Inventory Management
+    — Old or undocumented APIs exposed
+    — Attacker thinks: “What did they forget to remove?”
+    — Tools: nmap, gau, amass
+
+94. Deprecated API Versions
+    — Legacy APIs still active
+    — Attacker thinks: “Is the old version weaker?”
+    — Tools: httpx, nuclei
+
+95. Shadow APIs
+    — Undocumented APIs exist
+    — Attacker thinks: “What APIs aren’t documented?”
+    — Tools: gau, waybackurls
+
+96. Unsafe Consumption of APIs
+    — Blind trust in upstream APIs
+    — Attacker thinks: “What does the system blindly trust?”
+    — Tools: burp
+
+97. Third‑Party API Trust Abuse
+    — External APIs trusted too much
+    — Attacker thinks: “Can I abuse a partner API?”
+    — Tools: burp
+
+98. Dependency Vulnerabilities
+    — Vulnerable libraries used
+    — Attacker thinks: “Is a dependency outdated?”
+    — Tools: snyk, osv‑scanner
+
+99. Hardcoded Secrets
+    — Secrets embedded in code
+    — Attacker thinks: “Can I extract secrets?”
+    — Tools: trufflehog, gitleaks
+
+100. Lack of Monitoring & Alerting
+     — Attacks go unnoticed
+     — Attacker thinks: “Will anyone notice?”
+     — Tools: (absence of SIEM/logs)

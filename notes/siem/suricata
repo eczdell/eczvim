@@ -1,0 +1,56 @@
+attack patterns:
+Suricata
+
+https://docs.suricata.io/en/latest/rules/index.html
+Snort vs Suricata vs Zeek
+
+monitors network traffic for suspicious activity and potential cyber threats.
+
+
+ controls access to a network, an IDS is designed to detect and alert security teams about potential intrusions.
+
+ DPI :Deep packet inspection
+Snort is a signature-based IDS that excels at detecting known attack patterns,
+Signature-based
+Processing Architecture :Multi-threading
+	Real-time IDS/IPS + NSM : detection and prevention
+Integration	pfSense, SIEM	SIEM, ELK Stack	SIEM, ELK Stack, Threat Hunting Platforms
+
+pfSense Zeek
+
+
+------------------
+snort rules
+
+
+Rule Structure
+
+Header: Defines basic match criteria.
+Action: alert, log, pass, drop, reject (e.g., alert triggers an event).
+Protocol: TCP, UDP, ICMP.
+Source/Destination: IP addresses (e.g., any, home_net), ports.
+Direction: -> (one way) or <> (bidirectional).
+
+Body (Options): Specifies inspection details in parentheses ().
+msg: The message to display when the rule triggers.
+sid: Unique Snort ID for versioning.
+rev: Revision number for the rule.
+content: Matches specific data in the packet payload (e.g., content:"malware";).
+classtype: Categorizes the attack type (e.g., attempted-recon). 
+
+Types of Rule Sets
+Community Rules: Free, community-developed.
+Registered Rules: Free with registration, better coverage.
+Subscriber Rules (Talos): Paid, real-time threat intelligence. 
+
+Example Rule
+alert tcp any any -> $HOME_NET 80 (msg:"ET EXPLOIT Possible SQL Injection Attempt"; flow:to_server,established; content:"' OR '1'='1"; sid:2010001; rev:1;)
+Action: alert (log the event).
+Protocol/Direction: tcp any any -> $HOME_NET 80 (TCP traffic to your network on port 80).
+Options: msg (SQLi message), flow (established connection), content (looking for ' OR '1'='1'), sid, rev. 
+
+Best Practices
+Comment rules for clarity.
+Tune rules to reduce false positives.
+Use unique SIDs and increment rev for updates.
+Test rules in isolation before deployment. 

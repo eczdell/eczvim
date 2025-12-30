@@ -1,0 +1,42 @@
+Machine                  — Physical hardware of the computer (OSI Layer 1)
+ ├─ CPU                  — Central Processing Unit, executes instructions (Layer 1)
+ │   ├─ Core             — Physical CPU core (Layer 1)
+ │   │   └─ Thread       — Logical execution unit / hyperthread (Layer 1)
+ │
+ ├─ Memory               — RAM, temporary data storage (Layer 1)
+ │
+ └─ NIC                  — Network Interface Card, handles network I/O (Layer 1/2)
+     └─ Queue            — Hardware queue for packets (Layer 2)
+
+Process                  — Running REST API server application (Layer 7 / Application)
+ ├─ Thread               — Execution unit inside server (Layer 7)
+ │   └─ Core             — CPU core scheduled to run thread (Layer 1)
+ │
+ ├─ Memory               — Virtual address space of server (Layer 7)
+ │
+ └─ Socket               — Endpoint for incoming/outgoing connections (Layer 4 / Transport)
+     ├─ Port             — Number identifying API service (e.g., 80, 443) (Layer 4)
+     └─ Address          — IP address bound to socket (Layer 3 / Network)
+
+Network                  — Communication and data transport
+ ├─ Transport Protocol   — TCP (reliable, connection-oriented) (Layer 4)
+ ├─ Application Protocol — HTTP/HTTPS for REST API, JSON or XML data (Layer 7)
+ ├─ Packet               — Unit of data transmitted over network (Layer 3/4)
+ └─ Connection           — Established TCP session between client and server (Layer 4)
+
+REST API Layer           — Logical representation of API communication
+ ├─ Endpoint             — URL path exposed by server (Layer 7)
+ ├─ Method               — HTTP method (GET, POST, PUT, DELETE) (Layer 7)
+ ├─ Request              — Data sent by client (Layer 7)
+ ├─ Response             — Data sent back by server (Layer 7)
+ └─ Headers / Body       — Metadata and content of API request/response (Layer 7)
+
+OSI Layers (for reference)
+ ├─ Layer 1 Physical      — Hardware, CPU, Memory, NIC
+ ├─ Layer 2 Data Link     — NIC queues, MAC addressing
+ ├─ Layer 3 Network       — IP addresses, routing, packets
+ ├─ Layer 4 Transport     — Socket, Port, TCP, Connection
+ ├─ Layer 5 Session       — TCP session management
+ ├─ Layer 6 Presentation  — Data serialization / encoding (JSON, XML)
+ └─ Layer 7 Application   — REST API server, HTTP, Endpoints, Methods, Headers/Body
+

@@ -48,6 +48,17 @@ vim.api.nvim_set_keymap('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>'
 vim.api.nvim_set_keymap('n', ']d', ':lua vim.diagnostic.goto_next()<CR>', opts)
 vim.api.nvim_set_keymap('n', '[d', ':lua vim.diagnostic.goto_prev()<CR>', opts)
 
+-- ERROR only
+vim.api.nvim_set_keymap('n', ']e', ':lua vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.ERROR })<CR>', opts)
+vim.api.nvim_set_keymap('n', '[e', ':lua vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.ERROR })<CR>', opts)
+
+-- WARN only
+vim.api.nvim_set_keymap('n', ']w', ':lua vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.WARN })<CR>', opts)
+vim.api.nvim_set_keymap('n', '[w', ':lua vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.WARN })<CR>', opts)
+
+-- INFO only
+vim.api.nvim_set_keymap('n', ']i', ':lua vim.diagnostic.goto_next({ severity = vim.diagnostic.severity.INFO })<CR>', opts)
+vim.api.nvim_set_keymap('n', '[i', ':lua vim.diagnostic.goto_prev({ severity = vim.diagnostic.severity.INFO })<CR>', opts)
 
 -- Map 'jk' to Escape in insert mode
 vim.api.nvim_set_keymap('i', 'jk', '<Esc>', opts)
@@ -102,8 +113,6 @@ vim.api.nvim_set_keymap('n', 'gi', '<Cmd>lua vim.lsp.buf.implementation()<CR>', 
 vim.api.nvim_set_keymap('n', '<C-Space>', '<Cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>a', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>r', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Previous diagnostic' })
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Next diagnostic' })
 
 -- Key mappings for Lazy Plugin Manager and opening the config file
 vim.keymap.set('n', '<Leader>pm', ':Lazy<CR>', { noremap = true, silent = true })

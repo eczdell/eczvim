@@ -1,0 +1,61 @@
+Target System                  — Asset under analysis
+│
+├─ Network Discovery           — Is it reachable?
+│   ├─ ping                    — Host availability (ICMP)
+│   ├─ fping                   — Fast host discovery
+│   └─ traceroute              — Network path mapping
+│
+├─ Name & Asset Discovery      — What is it called?
+│   ├─ DNS                     — Name resolution
+│   ├─ dig / nslookup          — DNS query tools
+│   ├─ amass                   — Asset & subdomain discovery
+│   └─ subfinder               — Passive subdomain enumeration
+│
+├─ Port & Service Mapping      — What is exposed?
+│   ├─ nmap                    — Port & service discovery
+│   ├─ masscan                 — Large‑scale port scanning
+│   └─ rustscan                — Fast port discovery
+│
+├─ Web Surface Enumeration     — What endpoints exist?
+│   ├─ httpx                   — HTTP service probing
+│   ├─ hakrawler               — URL crawling
+│   ├─ gau                     — Known URL collection
+│   └─ waybackurls             — Historical endpoints
+│
+├─ Parameter & Input Discovery — Where is user input?
+│   ├─ arjun                   — Parameter discovery
+│   ├─ paramspider             — Parameter mining
+│   └─ qsreplace               — Query manipulation
+│
+├─ Vulnerability Detection     — What is weak?
+│   ├─ nuclei                  — Template‑based scanning
+│   ├─ nikto                   — Web server checks
+│   ├─ testssl.sh              — TLS misconfiguration
+│   └─ wpscan                  — CMS‑specific scanning
+│
+├─ Exploitation Frameworks     — Can weakness be used?
+│   ├─ metasploit              — Exploit framework
+│   ├─ msfconsole              — Exploit orchestration
+│   └─ exploitdb               — Public exploit reference
+│
+├─ Post‑Discovery Analysis     — What data leaks?
+│   ├─ gf                      — Pattern‑based filtering
+│   ├─ anew                    — Deduplication
+│   └─ unfurl                  — URL component extraction
+│
+├─ Content & Secret Discovery  — What is exposed accidentally?
+│   ├─ ffuf                    — Content fuzzing
+│   ├─ dirsearch               — Directory discovery
+│   ├─ trufflehog              — Secret detection
+│   └─ git‑dumper               — Repo leakage detection
+│
+├─ Traffic & Behavior Analysis — How does it behave?
+│   ├─ burpsuite               — HTTP inspection
+│   ├─ mitmproxy               — Traffic interception
+│   └─ wireshark               — Packet analysis
+│
+└─ Reporting & Automation      — Scale & repeat
+    ├─ bash / python           — Automation glue
+    ├─ cron / CI               — Scheduled scanning
+    └─ dashboards              — Findings visibility
+
