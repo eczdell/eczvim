@@ -1,0 +1,309 @@
+// ==================== LIFETIMES ====================
+fn longest<'a>(a: &'a str, b: &'a str) -> &'a str { // tie lifetimes
+    if a.len() > b.len() { a } else { b }
+}
+
+// ==================== TRAITS ====================
+trait Speak {
+    fn speak(&self);
+    fn default_fn(&self) { println!("default"); } // default impl
+}
+
+struct Dog;
+impl Speak for Dog {
+    fn speak(&self) { println!("Woof"); }
+}
+
+// ==================== TRAIT BOUNDS ====================
+fn talk<T: Speak>(x: T) { x.speak(); }
+fn talk2<T>(x: T) where T: Speak { x.speak(); }
+
+// ==================== DYN TRAITS ====================
+fn speak_dyn(x: &dyn Speak) { x.speak(); } // runtime dispatch
+
+// ==================== ASSOCIATED TYPES ====================
+trait IteratorX {
+    type Item;
+    fn next(&mut self) -> Option<Self::Item>;
+}
+
+// ==================== GENERICS ====================
+fn id<T>(x: T) -> T { x }
+
+// ==================== ENUM ADVANCED ====================
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 }, // struct-like
+    Write(String),
+    Change(i32),
+}
+
+// ==================== IF LET / WHILE LET ====================
+if let Some(v) = Some(3) { println!("{}", v); }
+
+while let Some(v) = vec.pop() {
+    println!("{}", v);
+}
+
+// ==================== ERROR HANDLING ====================
+fn fallible() -> Result<i32, String> {
+    Ok(10)
+}
+
+let x = fallible()?; // propagate error
+
+// ==================== CUSTOM ERROR ====================
+#[derive(Debug)]
+enum MyError {
+    NotFound,
+    Invalid,
+}
+
+// ==================== SMART POINTER ADVANCED ====================
+use std::cell::RefCell;
+let x = RefCell::new(5);     // interior mutability
+*x.borrow_mut() += 1;
+
+// ==================== PIN ====================
+use std::pin::Pin;
+use std::future::Future;
+
+// ==================== ASYNC / AWAIT ====================
+async fn fetch() -> i32 { 10 }
+let v = fetch().await;
+
+// ==================== SEND & SYNC ====================
+// Send: safe to move between threads
+// Sync: safe to share between threads
+
+// ==================== UNSAFE ====================
+unsafe fn raw_ptr(p: *const i32) {
+    println!("{}", *p); // manual safety
+}
+
+// ==================== FFI ====================
+extern "C" {
+    fn printf(fmt: *const i8, ...) -> i32;
+}
+
+// ==================== MACROS ====================
+macro_rules! say {
+    () => { println!("Hello"); }
+}
+
+say!();
+
+// ==================== PROC MACRO (CONCEPT) ====================
+// #[derive(Debug)]
+// #[attribute]
+// function-like macros
+
+// ==================== PATTERN MATCHING ADV ====================
+let x = Some(5);
+match x {
+    Some(n @ 1..=5) => println!("1-5: {}", n),
+    _ => (),
+}
+
+// ==================== CONST GENERICS ====================
+struct Buffer<const N: usize> {
+    data: [u8; N],
+}
+
+// ==================== DROP ====================
+struct Resource;
+impl Drop for Resource {
+    fn drop(&mut self) {
+        println!("cleanup");
+    }
+}
+
+// ==================== PHANTOM DATA ====================
+use std::marker::PhantomData;
+struct Id<T> {
+    value: u32,
+    _marker: PhantomData<T>,
+}
+
+// ==================== ZERO-COST ABSTRACTION ====================
+// Traits + generics compile to zero runtime cost
+
+// ==================== ADV KEYWORDS SUMMARY ====================
+// trait      -> shared behavior
+// impl       -> implementation
+// dyn        -> runtime polymorphism
+// where      -> readable bounds
+// async/await-> async execution
+// unsafe     -> manual safety
+// Pin        -> immovable data
+// RefCell    -> runtime borrow checking
+// Send/Sync  -> thread safety
+// macro      -> code generation
+
+// ==================== TYPE SYSTEM (ADV) ====================
+
+// Never type
+fn crash() -> ! { panic!("never returns") }
+
+// Type alias
+type UserId = u64;
+
+// Newtype (zero-cost)
+struct Meters(u32);
+
+// ==================== HRTB (Higher-Rank Trait Bounds) ====================
+fn apply<F>(f: F)
+where
+    for<'a> F: Fn(&'a i32),
+{
+    let x = 10;
+    f(&x);
+}
+
+// ==================== GAT (Generic Associated Types) ====================
+trait LendingIterator {
+    type Item<'a> where Self: 'a;
+    fn next<'a>(&'a mut self) -> Option<Self::Item<'a>>;
+}
+
+// ==================== COHERENCE / ORPHAN RULE ====================
+// You can impl Trait for Type only if:
+// - Trait OR Type is local
+
+// ==================== AUTO TRAITS ====================
+// Send / Sync are auto traits
+
+// ==================== MARKER TRAITS ====================
+use std::marker::{PhantomData, Unpin};
+
+// ==================== DROP CHECK ====================
+struct Guard<'a>(&'a i32); // lifetime affects drop order
+
+// ==================== UNSAFE TRAITS ====================
+unsafe trait Zeroable {}
+unsafe impl Zeroable for i32 {}
+
+// ==================== RAW POINTERS ====================
+let x = 5;
+let p: *const i32 = &x;   // *const
+let m: *mut i32 = &x as *const _ as *mut _;
+
+// ==================== MANUALLY DROP ====================
+use std::mem::ManuallyDrop;
+let v = ManuallyDrop::new(vec![1,2,3]);
+
+// ==================== MAYBE UNINIT ====================
+use std::mem::MaybeUninit;
+let mut x = MaybeUninit::<i32>::uninit();
+// x.write(5);
+// let x = unsafe { x.assume_init() };
+
+// ==================== INTERIOR MUTABILITY (FULL SET) ====================
+// Cell<T>     -> Copy types
+// RefCell<T>  -> single-thread runtime borrow
+// Mutex<T>    -> multi-thread lock
+// RwLock<T>   -> read/write lock
+// Atomic<T>   -> lock-free
+
+// ==================== ATOMICS ====================
+use std::sync::atomic::{AtomicUsize, Ordering};
+let a = AtomicUsize::new(0);
+a.fetch_add(1, Ordering::SeqCst);
+
+// ==================== MEMORY ORDERING ====================
+// Relaxed | Acquire | Release | AcqRel | SeqCst
+
+// ==================== ASYNC INTERNLS ====================
+// async fn -> state machine
+// .await   -> poll()
+// Future   -> lazy, must be driven
+
+// ==================== PIN & SELF-REFERENTIAL ====================
+use std::pin::Pin;
+use std::marker::PhantomPinned;
+
+struct SelfRef {
+    data: String,
+    ptr: *const String,
+    _pin: PhantomPinned,
+}
+
+// ==================== TRAIT OBJECT SAFETY ====================
+// Object safe if:
+// - no generics
+// - no Self in return
+
+// ==================== VTABLE ====================
+// dyn Trait -> fat pointer (data + vtable)
+
+// ==================== MONOMORPHIZATION ====================
+// Generics duplicated per concrete type
+
+// ==================== CONST EVAL ====================
+const fn square(x: i32) -> i32 { x * x }
+const X: i32 = square(5);
+
+// ==================== LINKING ====================
+// static -> global memory
+static GLOBAL: i32 = 10;
+
+// ==================== NO_STD ====================
+// #![no_std]   // embedded / kernel
+
+// ==================== ALLOCATORS ====================
+use std::alloc::{alloc, Layout};
+
+// ==================== FFI SAFETY ====================
+#[repr(C)]
+struct CStruct {
+    a: i32,
+}
+
+// ==================== ABI ====================
+// extern "C"
+
+// ==================== MIR ====================
+// Rust → HIR → MIR → LLVM IR → ASM
+
+// ==================== MACRO HYGIENE ====================
+// macros don’t capture vars accidentally
+
+// ==================== BUILD SCRIPTS ====================
+// build.rs -> run before compile
+
+// ==================== FEATURE GATES ====================
+// #[cfg(feature = "foo")]
+
+// ==================== COVARIANCE ====================
+// &'a T is covariant
+// &'a mut T is invariant
+
+// ==================== BORROW SPLITTING ====================
+let mut arr = [1,2,3];
+let (a, b) = arr.split_at_mut(1);
+
+// ==================== STACK PINNING ====================
+// pin! macro (async)
+
+// ==================== RUST GUARANTEES ====================
+// ✔ no data races
+// ✔ no use-after-free
+// ✔ no double free
+// ✔ no null deref (safe code)
+
+// ==================== WHEN TO USE UNSAFE ====================
+// FFI
+// custom allocators
+// performance
+// OS / drivers
+
+
+// ====================EXPERT MENTAL MODEL===================
+Rust = Ownership + Types + Compile-time guarantees
+Unsafe = You promise correctness
+Async = Poll-based state machine
+Traits = Static contracts
+dyn = Runtime cost
+Generics = Zero-cost
+
+

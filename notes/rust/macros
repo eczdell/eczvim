@@ -1,0 +1,89 @@
+// ==================== OUTPUT / DEBUG ====================
+println!("Hello");          // stdout + newline
+print!("Hello");            // stdout
+eprintln!("Error");         // stderr
+eprint!("Error");           // stderr
+
+dbg!(x);                    // debug print + return value
+
+// ==================== FORMATTING ====================
+format!("Hi {}", name);     // String
+format_args!("x={}", x);    // formatting only
+
+// ==================== ASSERTIONS ====================
+assert!(x > 0);             // panic if false
+assert_eq!(a, b);           // ==
+assert_ne!(a, b);           // !=
+
+debug_assert!(x > 0);       // debug only
+debug_assert_eq!(a, b);
+
+// ==================== PANIC ====================
+panic!("fatal");            // crash program
+unreachable!();             // impossible path
+unimplemented!();           // placeholder
+todo!();                    // planned code
+
+// ==================== OPTION / RESULT ====================
+matches!(x, Some(_));       // pattern match check
+
+// ==================== CONTROL FLOW ====================
+if cfg!(unix) { }           // compile config check
+
+// ==================== COMPILE-TIME ====================
+include!("file.rs");        // include source
+include_str!("file.txt");   // include as &str
+include_bytes!("file.bin"); // include as &[u8]
+
+concat!("a", "b");          // compile-time concat
+env!("HOME");               // compile-time env var
+option_env!("HOME");        // Option<&'static str>
+
+line!();                    // line number
+file!();                    // file name
+column!();                  // column number
+module_path!();             // module path
+
+// ==================== TYPE / SIZE ====================
+stringify!(x + y);          // code → string
+type_name::<T>();           // type name
+size_of::<T>();             // bytes
+align_of::<T>();            // alignment
+
+// ==================== MEMORY ====================
+vec![1,2,3];                // Vec
+format_args_nl!("x");       // nightly
+
+// ==================== PATTERN MACROS ====================
+matches!(x, Ok(_));         // pattern check
+
+// ==================== MACRO UTILS ====================
+cfg!();                     // conditional compile
+compile_error!("fail");     // compile-time error
+
+// ==================== THREAD / ASYNC ====================
+thread_local! {             // thread-local storage
+    static X: i32 = 1;
+}
+
+// ==================== TESTING ====================
+#[test]                     // test function
+assert!(true);
+
+// ==================== DERIVE (BUILT-IN) ====================
+#[derive(Debug, Clone, Copy, Eq, PartialEq, Hash)]
+struct A;
+
+// ==================== ATTRIBUTE MACROS (BUILT-IN) ====================
+#[inline]
+#[cold]
+#[must_use]
+#[deprecated]
+#[allow(dead_code)]
+#[cfg(feature = "foo")]
+
+// ==================== MACRO CATEGORIES ====================
+// println!   -> function-like
+// #[derive]  -> derive macro
+// #[test]    -> attribute macro
+

@@ -6,6 +6,18 @@ let mut y = 10;     // mutable .ie. changable
 By default, variables are immutable.
 
 mut allows modification.
+
+2. Ownership and Borrowing
+let s = String::from("Hello"); // owns heap memory
+let r = &s;                     // borrow immutably
+let mut r2 = &mut s;            // borrow mutably
+
+
+Move: let x2 = x; → x ownership moves.
+
+Borrow: &T → immutable, &mut T → mutable.
+
+Rust ensures no dangling references.
 ---------------------------------
 
 let x = 42;                 // Stack value

@@ -1,0 +1,126 @@
+cfg conditions in Rust, including advanced logical combinations.
+
+# Rust `cfg` – Complete Reference (README)
+
+This document lists **all practical `#[cfg(...)]` conditions** used in Rust for
+platforms, builds, tests, features, and advanced logic.
+
+---
+
+## 1️⃣ Core Build / Mode Flags
+
+```rust
+#[cfg(test)]                  // cargo test
+#[cfg(debug_assertions)]       // debug build
+#[cfg(not(debug_assertions))]  // release build
+
+2️⃣ Test-Specific Flags
+#[cfg(test)]          // unit & integration tests
+#[cfg(doctest)]       // documentation tests
+#[cfg(bench)]         // benchmarks (cargo bench)
+
+3️⃣ Feature Flags (Cargo.toml)
+#[cfg(feature = "foo")]
+#[cfg(not(feature = "foo"))]
+
+
+Run:
+
+cargo test --features foo
+
+4️⃣ Operating System
+Generic
+#[cfg(unix)]
+#[cfg(windows)]
+
+Specific OS
+#[cfg(target_os = "linux")]
+#[cfg(target_os = "windows")]
+#[cfg(target_os = "macos")]
+#[cfg(target_os = "android")]
+#[cfg(target_os = "ios")]
+#[cfg(target_os = "freebsd")]
+
+5️⃣ Architecture
+#[cfg(target_arch = "x86")]
+#[cfg(target_arch = "x86_64")]
+#[cfg(target_arch = "arm")]
+#[cfg(target_arch = "aarch64")]
+#[cfg(target_arch = "wasm32")]
+
+6️⃣ Environment / ABI
+#[cfg(target_env = "gnu")]
+#[cfg(target_env = "msvc")]
+#[cfg(target_env = "musl")]
+
+#[cfg(target_abi = "eabi")]
+#[cfg(target_abi = "eabihf")]
+
+7️⃣ Pointer Width
+#[cfg(target_pointer_width = "32")]
+#[cfg(target_pointer_width = "64")]
+
+8️⃣ Endianness
+#[cfg(target_endian = "little")]
+#[cfg(target_endian = "big")]
+
+9️⃣ Atomic Support
+#[cfg(target_has_atomic = "8")]
+#[cfg(target_has_atomic = "16")]
+#[cfg(target_has_atomic = "32")]
+#[cfg(target_has_atomic = "64")]
+#[cfg(target_has_atomic = "ptr")]
+
+🔟 Panic Strategy
+#[cfg(panic = "unwind")]
+#[cfg(panic = "abort")]
+
+1️⃣1️⃣ Compiler / Language
+#[cfg(rustfmt)]
+#[cfg(clippy)]
+
+1️⃣2️⃣ Logical Operators (ADVANCED)
+all
+#[cfg(all(test, unix))]
+#[cfg(all(test, target_arch = "x86_64"))]
+
+any
+#[cfg(any(test, feature = "testing"))]
+
+not
+#[cfg(not(windows))]
+
+Combined (Real-World)
+#[cfg(all(test, not(feature = "integration")))]
+
+#[cfg(all(test, unix, target_arch = "x86_64"))]
+
+#[cfg(any(
+    all(unix, feature = "epoll"),
+    all(windows, feature = "iocp")
+))]
+
+1️⃣3️⃣ cfg!() Macro (Boolean Check)
+if cfg!(test) {
+    println!("Running tests");
+}
+
+
+⚠ Code is compiled, but condition is evaluated at compile time.
+
+1️⃣4️⃣ cfg_attr (Conditional Attributes)
+#[cfg_attr(debug_assertions, derive(Debug))]
+#[cfg_attr(test, allow(dead_code))]
+
+1️⃣5️⃣ Test-Only Helpers Pattern
+#[cfg(any(test, feature = "test-utils"))]
+mod test_helpers;
+
+1️⃣6️⃣ Visibility for Tests
+#[cfg(test)]
+use super::*;
+
+#[cfg(test)]
+pub(crate) fn helper() {}
+
+🧠 Summary Cheat List

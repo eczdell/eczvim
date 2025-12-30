@@ -151,5 +151,67 @@ println!("Name: {}, Count: {}", cli.name, cli.count);
 // enum      -> define custom types
 // trait     -> define interfaces
 // async/await -> asynchronous programming
-// clap      -> CLI argument parsing
+/# ==================== PROJECT ====================
+cargo new app_name        # new binary project
+cargo new lib_name --lib  # new library project
+cargo init                # init cargo in existing dir
+
+# ==================== BUILD & RUN ====================
+cargo build               # build (debug)
+cargo build --release     # optimized build
+cargo run                 # build + run
+cargo run --release       # optimized run
+cargo check               # fast compile check (no binary)
+
+# ==================== DEPENDENCIES ====================
+cargo add serde           # add dependency
+cargo add tokio --features full
+cargo remove serde        # remove dependency
+cargo update              # update Cargo.lock
+cargo tree                # dependency tree
+
+# ==================== TESTING ====================
+cargo test                # run tests
+cargo test test_name      # run specific test
+cargo bench               # run benchmarks
+
+# ==================== FORMATTING & LINT ====================
+cargo fmt                 # format code
+cargo clippy              # linter (best practices)
+cargo clippy --fix        # auto-fix warnings
+
+# ==================== DOCUMENTATION ====================
+cargo doc                 # generate docs
+cargo doc --open          # open docs in browser
+
+# ==================== CLEAN ====================
+cargo clean               # remove target/
+
+# ==================== PUBLISH ====================
+cargo login                # login to crates.io
+cargo publish              # publish crate
+
+# ==================== INSTALL ====================
+cargo install ripgrep      # install binary crate
+cargo uninstall ripgrep    # uninstall
+
+# ==================== WORKSPACES ====================
+cargo build -p crate_name  # build specific package
+cargo test -p crate_name   # test specific package
+
+# ==================== FEATURES ====================
+cargo build --features foo
+cargo build --all-features
+cargo build --no-default-features
+
+# ==================== TARGETS ====================
+cargo build --target x86_64-unknown-linux-gnu
+rustup target add wasm32-unknown-unknown
+
+# ==================== MISC ====================
+cargo metadata            # project metadata
+cargo version             # cargo version
+cargo help                # help
+cargo help run             # help for command
+/ clap      -> CLI argument parsing
 
