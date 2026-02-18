@@ -1,0 +1,460 @@
+{
+  "report": {
+    "+@xmlns": "http://developer.cognos.com/schemas/report/17.3/",
+    "+@expressionLocale": "en",
+    "+@useStyleVersion": "11.6",
+    "drillBehavior": null,
+    "layouts": {
+      "layout": {
+        "reportPages": {
+          "page": {
+            "+@name": "Page1",
+            "style": {
+              "defaultStyles": {
+                "defaultStyle": {
+                  "+@refStyle": "pg"
+                }
+              }
+            },
+            "pageBody": {
+              "style": {
+                "defaultStyles": {
+                  "defaultStyle": {
+                    "+@refStyle": "pb"
+                  }
+                }
+              },
+              "contents": {
+                "table": {
+                  "style": {
+                    "defaultStyles": {
+                      "defaultStyle": {
+                        "+@refStyle": "tb"
+                      }
+                    },
+                    "CSS": {
+                      "+@value": "width:100%;border-spacing:0;height:100%"
+                    }
+                  },
+                  "tableRows": {
+                    "tableRow": {
+                      "tableCells": {
+                        "tableCell": {
+                          "contents": {
+                            "list": {
+                              "+@horizontalPagination": "true",
+                              "+@name": "List1",
+                              "+@refQuery": "Query1",
+                              "noDataHandler": {
+                                "contents": {
+                                  "block": {
+                                    "contents": {
+                                      "textItem": {
+                                        "dataSource": {
+                                          "staticValue": "No Data Available"
+                                        }
+                                      }
+                                    },
+                                    "style": {
+                                      "CSS": {
+                                        "+@value": "padding:16px;"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "style": {
+                                "CSS": {
+                                  "+@value": "border-collapse:collapse"
+                                },
+                                "defaultStyles": {
+                                  "defaultStyle": {
+                                    "+@refStyle": "ls"
+                                  }
+                                }
+                              },
+                              "listColumns": {
+                                "listColumn": [
+                                  {
+                                    "listColumnTitle": {
+                                      "style": {
+                                        "defaultStyles": {
+                                          "defaultStyle": {
+                                            "+@refStyle": "lt"
+                                          }
+                                        }
+                                      },
+                                      "contents": {
+                                        "textItem": {
+                                          "dataSource": {
+                                            "dataItemLabel": {
+                                              "+@refDataItem": "CURRENT_YEAR"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "listColumnBody": {
+                                      "style": {
+                                        "defaultStyles": {
+                                          "defaultStyle": {
+                                            "+@refStyle": "lc"
+                                          }
+                                        }
+                                      },
+                                      "contents": {
+                                        "textItem": {
+                                          "dataSource": {
+                                            "dataItemValue": {
+                                              "+@refDataItem": "CURRENT_YEAR"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "listColumnTitle": {
+                                      "style": {
+                                        "defaultStyles": {
+                                          "defaultStyle": {
+                                            "+@refStyle": "lt"
+                                          }
+                                        }
+                                      },
+                                      "contents": {
+                                        "textItem": {
+                                          "dataSource": {
+                                            "dataItemLabel": {
+                                              "+@refDataItem": "QUARTER_KEY"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "listColumnBody": {
+                                      "style": {
+                                        "defaultStyles": {
+                                          "defaultStyle": {
+                                            "+@refStyle": "lc"
+                                          }
+                                        }
+                                      },
+                                      "contents": {
+                                        "textItem": {
+                                          "dataSource": {
+                                            "dataItemValue": {
+                                              "+@refDataItem": "QUARTER_KEY"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "listColumnTitle": {
+                                      "style": {
+                                        "defaultStyles": {
+                                          "defaultStyle": {
+                                            "+@refStyle": "lt"
+                                          }
+                                        }
+                                      },
+                                      "contents": {
+                                        "textItem": {
+                                          "dataSource": {
+                                            "dataItemLabel": {
+                                              "+@refDataItem": "SALES_TARGET"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "listColumnBody": {
+                                      "style": {
+                                        "defaultStyles": {
+                                          "defaultStyle": {
+                                            "+@refStyle": "lm"
+                                          }
+                                        }
+                                      },
+                                      "contents": {
+                                        "textItem": {
+                                          "dataSource": {
+                                            "dataItemValue": {
+                                              "+@refDataItem": "SALES_TARGET"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              "sortList": {
+                                "sortItem": {
+                                  "+@refDataItem": "QUARTER_KEY"
+                                }
+                              }
+                            }
+                          },
+                          "style": {
+                            "CSS": {
+                              "+@value": "height:100%;width:100%"
+                            },
+                            "defaultStyles": {
+                              "defaultStyle": {
+                                "+@refStyle": "ContentDataContainerBottomRowLeftTableCell"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "pageFooter": {
+              "contents": {
+                "table": {
+                  "tableRows": {
+                    "tableRow": {
+                      "tableCells": {
+                        "tableCell": [
+                          {
+                            "contents": {
+                              "date": {
+                                "style": {
+                                  "dataFormat": {
+                                    "dateFormat": null
+                                  }
+                                }
+                              }
+                            },
+                            "style": {
+                              "CSS": {
+                                "+@value": "width:25%;text-align:left;vertical-align:top"
+                              },
+                              "defaultStyles": {
+                                "defaultStyle": {
+                                  "+@refStyle": "FooterDateTableCell"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "contents": {
+                              "pageNumber": null
+                            },
+                            "style": {
+                              "CSS": {
+                                "+@value": "width:50%;text-align:center;vertical-align:top"
+                              },
+                              "defaultStyles": {
+                                "defaultStyle": {
+                                  "+@refStyle": "FooterPageNumberTableCell"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "contents": {
+                              "time": {
+                                "style": {
+                                  "dataFormat": {
+                                    "timeFormat": null
+                                  }
+                                }
+                              }
+                            },
+                            "style": {
+                              "CSS": {
+                                "+@value": "width:25%;text-align:right;vertical-align:top"
+                              },
+                              "defaultStyles": {
+                                "defaultStyle": {
+                                  "+@refStyle": "FooterTimeTableCell"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "style": {
+                    "defaultStyles": {
+                      "defaultStyle": {
+                        "+@refStyle": "tb"
+                      }
+                    },
+                    "CSS": {
+                      "+@value": "width:100%;border-collapse:collapse;border-spacing:0px"
+                    }
+                  }
+                }
+              },
+              "style": {
+                "CSS": {
+                  "+@value": "padding:10px"
+                },
+                "defaultStyles": {
+                  "defaultStyle": {
+                    "+@refStyle": "FooterPageFooter"
+                  }
+                }
+              }
+            },
+            "pageHeader": {
+              "contents": {
+                "block": {
+                  "contents": {
+                    "textItem": {
+                      "dataSource": {
+                        "staticValue": null
+                      }
+                    }
+                  },
+                  "style": {
+                    "defaultStyles": {
+                      "defaultStyle": {
+                        "+@refStyle": "HeaderReportTitleTableCell"
+                      }
+                    },
+                    "CSS": {
+                      "+@value": "text-align:center"
+                    }
+                  }
+                }
+              },
+              "style": {
+                "defaultStyles": {
+                  "defaultStyle": {
+                    "+@refStyle": "ph"
+                  }
+                }
+              }
+            },
+            "XMLAttributes": {
+              "XMLAttribute": {
+                "+@output": "no",
+                "+@name": "RS_legacyDrillDown",
+                "+@value": "0"
+              }
+            }
+          }
+        }
+      }
+    },
+    "XMLAttributes": {
+      "XMLAttribute": [
+        {
+          "+@name": "RS_CreateExtendedDataItems",
+          "+@output": "no",
+          "+@value": "true"
+        },
+        {
+          "+@name": "listSeparator",
+          "+@output": "no",
+          "+@value": ","
+        },
+        {
+          "+@name": "RS_modelModificationTime",
+          "+@output": "no",
+          "+@value": "2025-08-19T17:31:49.310Z"
+        },
+        {
+          "+@name": "decimalSeparator",
+          "+@output": "no",
+          "+@value": "."
+        }
+      ]
+    },
+    "queries": {
+      "query": {
+        "+@name": "Query1",
+        "source": {
+          "model": null
+        },
+        "selection": {
+          "dataItem": [
+            {
+              "+@aggregate": "total",
+              "+@name": "SALES_TARGET",
+              "expression": "[great_outdoors_sales].[SALES_TARGET].[SALES_TARGET]",
+              "XMLAttributes": {
+                "XMLAttribute": [
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataType",
+                    "+@value": "2"
+                  },
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataUsage",
+                    "+@value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "+@aggregate": "none",
+              "+@rollupAggregate": "none",
+              "+@name": "QUARTER_KEY",
+              "expression": "[great_outdoors_sales].[Order_Date].[QUARTER_KEY]",
+              "XMLAttributes": {
+                "XMLAttribute": [
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataType",
+                    "+@value": "1"
+                  },
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataUsage",
+                    "+@value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "+@aggregate": "none",
+              "+@rollupAggregate": "none",
+              "+@name": "CURRENT_YEAR",
+              "expression": "[great_outdoors_sales].[Order_Date].[CURRENT_YEAR]",
+              "XMLAttributes": {
+                "XMLAttribute": [
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataType",
+                    "+@value": "1"
+                  },
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataUsage",
+                    "+@value": "1"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "detailFilters": {
+          "detailFilter": {
+            "+@postAutoAggregation": "true",
+            "filterDefinition": {
+              "filterNulls": {
+                "+@not": "true",
+                "+@refDataItem": "SALES_TARGET",
+                "+@dataType": "decimal"
+              }
+            }
+          }
+        }
+      }
+    },
+    "modelPath": "/content/folder[@name='CA to PBI Testing']/package[@name='CA_to_PBI_Test_PKG_1']/model[@name='model']",
+    "reportName": "Single List at lower grain with determinants"
+  }
+}

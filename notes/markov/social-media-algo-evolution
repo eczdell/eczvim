@@ -1,0 +1,145 @@
+📊 Social Media Algorithm Evolution (with Examples)
+🟦 2005–2012 — Rules + Markov Chains
+
+What it was
+
+Hand-written rules
+
+Simple probability models (Markov chains)
+
+Mostly chronological feeds
+
+How it worked
+
+IF user follows page → show post
+IF post is new → boost
+Next action depends on last action (Markov)
+
+
+Example
+
+If you liked sports, next post likely sports
+
+Email / feed prediction:
+
+P(next_click = sports | last_click = sports) = 0.6
+
+
+Platforms
+
+Early Facebook
+
+Yahoo Mail
+
+Early Google Search / Gmail
+
+Limit
+❌ No deep personalization
+❌ Easy to game
+
+🟨 2012–2018 — Logistic Regression (ML Era Begins)
+
+What it was
+
+Statistical machine learning
+
+Weighted features
+
+Score-based ranking
+
+How it worked
+Each post gets a score:
+
+Score = w1*likes + w2*comments + w3*clicks − w4*age
+
+
+Probability model:
+
+P(like | user, post)
+
+
+Example
+
+Post A: 70% chance you like
+
+Post B: 30% chance you like
+→ Show Post A first
+
+Platforms
+
+Facebook News Feed
+
+Twitter ranking
+
+YouTube recommendations
+
+Why it was better
+✅ Learns from data
+✅ Personalization improves
+
+Limit
+❌ Linear relationships only
+❌ Can’t understand images/videos deeply
+
+🟥 2018–Now — Deep Learning + Reinforcement Learning
+
+What it is
+
+Neural networks
+
+Transformers
+
+Reinforcement learning (reward-based)
+
+How it works
+Model predicts:
+
+Watch time
+Like
+Share
+Comment
+
+
+RL feedback loop:
+
+Show content → Measure engagement → Reward model → Update feed
+
+
+Example (TikTok)
+
+Show video to 100 users
+
+If watch time > 80% → push to 10,000 users
+
+If strong → goes viral
+
+Platforms
+
+TikTok
+
+Instagram Reels
+
+YouTube Shorts
+
+Facebook modern feed
+
+Why it dominates
+✅ Understands video/audio/text
+✅ Adapts in real time
+✅ Extremely personalized
+
+Limit
+❌ Addictive
+❌ Hard to explain (black box)
+
+🧠 One-Line Summary
+Era	One-liner
+2005–2012	Rules decide what you see
+2012–2018	Probabilities rank content
+2018–now	AI learns what hooks you
+🔐 Security Analogy (for you)
+Social Media	IDS / SIEM
+Engagement score	Risk score
+Viral content	High-severity alert
+User behavior	Attack pattern
+RL optimization	Adaptive detection

@@ -1,0 +1,5671 @@
+{
+  "project": {
+    "+@containsDynamicContent": "false",
+    "+@queryMode": "dynamic",
+    "+@xmlns": "http://www.developer.cognos.com/schemas/bmt/60/12",
+    "+@xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "+@xsi:schemaLocation": "http://www.developer.cognos.com/schemas/bmt/60/12 BMTModelSpecification.xsd",
+    "name": "Project",
+    "property": {
+      "+content": "true",
+      "+@name": "included",
+      "+@type": "hidden"
+    },
+    "locales": {
+      "locale": "en"
+    },
+    "defaultLocale": "en",
+    "physicalSources": null,
+    "namespace": {
+      "name": {
+        "+content": "great_outdoors_sales",
+        "+@locale": "en"
+      },
+      "lastChanged": "2025-08-12T10:50:28",
+      "lastChangedBy": "Randy Dawson",
+      "property": {
+        "+content": "true",
+        "+@name": "included",
+        "+@type": "hidden"
+      },
+      "querySubject": [
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "BRANCH",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-07-24T20:48:26",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_sales]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_sales].BRANCH"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": null,
+          "queryItem": [
+            {
+              "name": {
+                "+content": "BRANCH_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "BRANCH_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "ADDRESS1",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ADDRESS1",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ADDRESS1_MB",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ADDRESS1_MB",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "nullable": "true",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ADDRESS2",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ADDRESS2",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "nullable": "true",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ADDRESS2_MB",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ADDRESS2_MB",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "nullable": "true",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "CITY",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "CITY",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "20",
+              "size": "20",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "CITY_MB",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "CITY_MB",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "20",
+              "size": "20",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PROV_STATE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PROV_STATE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "20",
+              "size": "20",
+              "nullable": "true",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PROV_STATE_MB",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PROV_STATE_MB",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "20",
+              "size": "20",
+              "nullable": "true",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "POSTAL_ZONE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "POSTAL_ZONE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "10",
+              "size": "10",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "ORGANIZATION_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORGANIZATION_CODE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "10",
+              "size": "10",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "WAREHOUSE_BRANCH_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "WAREHOUSE_BRANCH_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            }
+          ]
+        },
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "COUNTRY",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-07-24T20:48:26",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_sales]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_sales].COUNTRY"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": null,
+          "queryItem": [
+            {
+              "name": {
+                "+content": "COUNTRY_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_EN",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_EN",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_AR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_AR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_CS",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_CS",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_DA",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_DA",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_DE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_DE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_EL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_EL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_ES",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_ES",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_FI",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_FI",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_FR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_FR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_HR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_HR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_HU",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_HU",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_ID",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_ID",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_IT",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_IT",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_JA",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_JA",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_KK",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_KK",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_KO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_KO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_MS",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_MS",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_NL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_NL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_NO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_NO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_PL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_PL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_PT",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_PT",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_RO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_RO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_RU",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_RU",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_SC",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_SC",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_SL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_SL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_SV",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_SV",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_TC",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_TC",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_TH",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_TH",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_TR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_TR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "FLAG_IMAGE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "FLAG_IMAGE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "15",
+              "size": "15",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "SALES_REGION_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "SALES_REGION_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "ISO_THREE_LETTER_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ISO_THREE_LETTER_CODE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "3",
+              "size": "3",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ISO_TWO_LETTER_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ISO_TWO_LETTER_CODE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "2",
+              "size": "2",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ISO_THREE_DIGIT_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ISO_THREE_DIGIT_CODE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "3",
+              "size": "3",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "EURO_IN_USE_SINCE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "EURO_IN_USE_SINCE",
+              "usage": "identifier",
+              "datatype": "dateTime",
+              "precision": "0",
+              "scale": "6",
+              "size": "12",
+              "nullable": "true",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            }
+          ]
+        },
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "ORDER_DETAILS",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-07-24T20:48:26",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_sales]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_sales].ORDER_DETAILS"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": null,
+          "queryItem": [
+            {
+              "name": {
+                "+content": "ORDER_DETAIL_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:45:02",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_DETAIL_CODE",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_NUMBER",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:47:37",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_NUMBER",
+              "usage": "attribute",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "SHIP_DATE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "SHIP_DATE",
+              "usage": "identifier",
+              "datatype": "dateTime",
+              "precision": "0",
+              "scale": "6",
+              "size": "12",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_NUMBER",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_NUMBER",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "PROMOTION_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PROMOTION_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "QUANTITY",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "QUANTITY",
+              "usage": "fact",
+              "datatype": "int64",
+              "precision": "19",
+              "scale": "0",
+              "size": "8",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "UNIT_COST",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "UNIT_COST",
+              "usage": "fact",
+              "datatype": "decimal",
+              "precision": "19",
+              "scale": "2",
+              "size": "10",
+              "nullable": "true",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "UNIT_PRICE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "UNIT_PRICE",
+              "usage": "fact",
+              "datatype": "decimal",
+              "precision": "19",
+              "scale": "2",
+              "size": "10",
+              "nullable": "true",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "UNIT_SALE_PRICE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "UNIT_SALE_PRICE",
+              "usage": "fact",
+              "datatype": "decimal",
+              "precision": "19",
+              "scale": "2",
+              "size": "10",
+              "nullable": "true",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            }
+          ]
+        },
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "ORDER_HEADER",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-07-24T20:48:26",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_sales]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_sales].ORDER_HEADER"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": null,
+          "queryItem": [
+            {
+              "name": {
+                "+content": "ORDER_NUMBER",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:46",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_NUMBER",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "RETAILER_NAME",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "RETAILER_NAME",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "50",
+              "size": "50",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "RETAILER_NAME_MB",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "RETAILER_NAME_MB",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "50",
+              "size": "50",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "RETAILER_SITE_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "RETAILER_SITE_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "RETAILER_CONTACT_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "RETAILER_CONTACT_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "SALES_STAFF_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "SALES_STAFF_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "SALES_BRANCH_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "SALES_BRANCH_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "ORDER_DATE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_DATE",
+              "usage": "identifier",
+              "datatype": "dateTime",
+              "precision": "0",
+              "scale": "6",
+              "size": "12",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_CLOSE_DATE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_CLOSE_DATE",
+              "usage": "identifier",
+              "datatype": "dateTime",
+              "precision": "0",
+              "scale": "6",
+              "size": "12",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            }
+          ]
+        },
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "ORDER_METHOD",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-07-24T20:48:26",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_sales]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_sales].ORDER_METHOD"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": null,
+          "queryItem": [
+            {
+              "name": {
+                "+content": "ORDER_METHOD_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_EN",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_EN",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_AR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_AR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_CS",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_CS",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_DA",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_DA",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_DE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_DE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_EL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_EL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_ES",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_ES",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_FI",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_FI",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_FR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_FR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_HR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_HR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_HU",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_HU",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_ID",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_ID",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_IT",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_IT",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_JA",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_JA",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_KK",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_KK",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_KO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_KO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_MS",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_MS",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_NL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_NL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_NO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_NO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_PL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_PL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_PT",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_PT",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_RO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_RO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_RU",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_RU",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_SC",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_SC",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_SL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_SL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_SV",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_SV",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_TC",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_TC",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_TH",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_TH",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "ORDER_METHOD_TR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "ORDER_METHOD_TR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            }
+          ]
+        },
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "PRODUCT",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-07-24T20:48:26",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_sales]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_sales].PRODUCT"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": null,
+          "queryItem": [
+            {
+              "name": {
+                "+content": "PRODUCT_NUMBER",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T08:45:32",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_NUMBER",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "BASE_PRODUCT_NUMBER",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "BASE_PRODUCT_NUMBER",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "nullable": "true",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "INTRODUCTION_DATE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "INTRODUCTION_DATE",
+              "usage": "identifier",
+              "datatype": "dateTime",
+              "precision": "0",
+              "scale": "6",
+              "size": "12",
+              "nullable": "true",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "DISCONTINUED_DATE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "DISCONTINUED_DATE",
+              "usage": "identifier",
+              "datatype": "dateTime",
+              "precision": "0",
+              "scale": "6",
+              "size": "12",
+              "nullable": "true",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_COLOR_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_COLOR_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "nullable": "true",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_SIZE_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_SIZE_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "nullable": "true",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "nullable": "true",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_IMAGE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_IMAGE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "20",
+              "size": "20",
+              "nullable": "true",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            }
+          ]
+        },
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "PRODUCT_BRAND",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-07-24T20:48:26",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_sales]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_sales].PRODUCT_BRAND"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": null,
+          "queryItem": [
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_EN",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_EN",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_DE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_DE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_FR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_FR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_JA",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_JA",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_AR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_AR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_CS",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_CS",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_DA",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_DA",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_EL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_EL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_ES",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_ES",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_FI",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_FI",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_HR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_HR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_HU",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_HU",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_ID",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_ID",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_IT",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_IT",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_KK",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_KK",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_KO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_KO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_MS",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_MS",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_NL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_NL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_NO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_NO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_PL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_PL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_PT",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_PT",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_RO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_RO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_RU",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_RU",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_SC",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_SC",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_SL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_SL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_SV",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_SV",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_TC",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_TC",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_TH",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_TH",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_TR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_TR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            }
+          ]
+        },
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "PRODUCT_LINE",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-07-24T20:48:26",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_sales]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_sales].PRODUCT_LINE"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": null,
+          "queryItem": [
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_EN",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_EN",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_AR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_AR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_CS",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_CS",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_DA",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_DA",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_DE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_DE",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_EL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_EL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_ES",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_ES",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_FI",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_FI",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_FR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_FR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_HR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_HR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_HU",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_HU",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_ID",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_ID",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_IT",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_IT",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_JA",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_JA",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_KK",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_KK",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_KO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_KO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_MS",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_MS",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_NL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_NL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_NO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_NO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_PL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_PL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_PT",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_PT",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_RO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_RO",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_RU",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_RU",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_SC",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_SC",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_SL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_SL",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_SV",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_SV",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_TC",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_TC",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_TH",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_TH",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_TR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_TR",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "30",
+              "size": "30",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            }
+          ]
+        },
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "PRODUCT_TYPE",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-07-24T20:48:26",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_sales]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_sales].PRODUCT_TYPE"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": null,
+          "queryItem": [
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:21",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_CODE",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_LINE_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:48:26",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_LINE_CODE",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_EN",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:26",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_EN",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_AR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:26",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_AR",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_CS",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_CS",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_DA",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_DA",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_DE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_DE",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_EL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_EL",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_ES",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_ES",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_FI",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_FI",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_FR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_FR",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_HR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_HR",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_HU",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_HU",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_ID",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_ID",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_IT",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_IT",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_JA",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_JA",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_KK",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_KK",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_KO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_KO",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_MS",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_MS",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_NL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_NL",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_NO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_NO",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_PL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_PL",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_PT",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_PT",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_RO",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_RO",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_RU",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_RU",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_SC",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_SC",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_SL",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:28",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_SL",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_SV",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:28",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_SV",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_TC",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:28",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_TC",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_TH",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:28",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_TH",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_TR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-18T10:44:28",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_TR",
+              "usage": "identifier",
+              "datatype": "nVarChar",
+              "precision": "40",
+              "size": "40",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            }
+          ]
+        },
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "Order_Date",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-08-15T12:23:52",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_dev]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_dev].TIME_DIMENSION"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": {
+            "determinant": [
+              {
+                "name": "Year",
+                "key": {
+                  "refobj": "[great_outdoors_sales].[Order_Date].[CURRENT_YEAR]"
+                },
+                "attributes": null,
+                "canGroup": "true",
+                "identifiesRow": "false"
+              },
+              {
+                "name": "Quarter",
+                "key": {
+                  "refobj": "[great_outdoors_sales].[Order_Date].[QUARTER_KEY]"
+                },
+                "attributes": null,
+                "canGroup": "true",
+                "identifiesRow": "false"
+              },
+              {
+                "name": "Month",
+                "key": {
+                  "refobj": "[great_outdoors_sales].[Order_Date].[MONTH_KEY]"
+                },
+                "attributes": {
+                  "refobj": [
+                    "[great_outdoors_sales].[Order_Date].[MONTH_NUMBER]",
+                    "[great_outdoors_sales].[Order_Date].[MONTH_EN]"
+                  ]
+                },
+                "canGroup": "true",
+                "identifiesRow": "false"
+              },
+              {
+                "name": "Date",
+                "key": {
+                  "refobj": "[great_outdoors_sales].[Order_Date].[DAY_KEY]"
+                },
+                "attributes": {
+                  "refobj": [
+                    "[great_outdoors_sales].[Order_Date].[DAY_DATE]",
+                    "[great_outdoors_sales].[Order_Date].[MONTH_KEY]",
+                    "[great_outdoors_sales].[Order_Date].[CURRENT_MONTH]",
+                    "[great_outdoors_sales].[Order_Date].[MONTH_NUMBER]",
+                    "[great_outdoors_sales].[Order_Date].[QUARTER_KEY]",
+                    "[great_outdoors_sales].[Order_Date].[CURRENT_QUARTER]",
+                    "[great_outdoors_sales].[Order_Date].[CURRENT_YEAR]",
+                    "[great_outdoors_sales].[Order_Date].[DAY_OF_WEEK]",
+                    "[great_outdoors_sales].[Order_Date].[DAY_OF_MONTH]",
+                    "[great_outdoors_sales].[Order_Date].[DAYS_IN_MONTH]",
+                    "[great_outdoors_sales].[Order_Date].[DAY_OF_YEAR]",
+                    "[great_outdoors_sales].[Order_Date].[WEEK_OF_MONTH]",
+                    "[great_outdoors_sales].[Order_Date].[WEEK_OF_QUARTER]",
+                    "[great_outdoors_sales].[Order_Date].[WEEK_OF_YEAR]",
+                    "[great_outdoors_sales].[Order_Date].[MONTH_EN]",
+                    "[great_outdoors_sales].[Order_Date].[WEEKDAY_EN]"
+                  ]
+                },
+                "canGroup": "false",
+                "identifiesRow": "true"
+              }
+            ]
+          },
+          "queryItem": [
+            {
+              "name": {
+                "+content": "DAY_KEY",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-15T12:23:24",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "DAY_KEY",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "nullable": "false",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "DAY_DATE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "DAY_DATE",
+              "usage": "identifier",
+              "datatype": "dateTime",
+              "precision": "0",
+              "scale": "0",
+              "size": "12",
+              "nullable": "true",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "MONTH_KEY",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-15T12:23:26",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "MONTH_KEY",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "nullable": "false",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "CURRENT_MONTH",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "CURRENT_MONTH",
+              "usage": "fact",
+              "datatype": "int16",
+              "precision": "5",
+              "scale": "0",
+              "size": "2",
+              "nullable": "false",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "MONTH_NUMBER",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "MONTH_NUMBER",
+              "usage": "fact",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "nullable": "false",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "QUARTER_KEY",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-15T12:23:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "QUARTER_KEY",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "nullable": "false",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "CURRENT_QUARTER",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "CURRENT_QUARTER",
+              "usage": "fact",
+              "datatype": "int16",
+              "precision": "5",
+              "scale": "0",
+              "size": "2",
+              "nullable": "false",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "CURRENT_YEAR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-15T12:23:27",
+              "lastChangedBy": "Randy Dawson",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "CURRENT_YEAR",
+              "usage": "identifier",
+              "datatype": "int16",
+              "precision": "5",
+              "scale": "0",
+              "size": "2",
+              "nullable": "false",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "DAY_OF_WEEK",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "DAY_OF_WEEK",
+              "usage": "fact",
+              "datatype": "int16",
+              "precision": "5",
+              "scale": "0",
+              "size": "2",
+              "nullable": "false",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "DAY_OF_MONTH",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "DAY_OF_MONTH",
+              "usage": "fact",
+              "datatype": "int16",
+              "precision": "5",
+              "scale": "0",
+              "size": "2",
+              "nullable": "false",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "DAYS_IN_MONTH",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "DAYS_IN_MONTH",
+              "usage": "fact",
+              "datatype": "int16",
+              "precision": "5",
+              "scale": "0",
+              "size": "2",
+              "nullable": "false",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "DAY_OF_YEAR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "DAY_OF_YEAR",
+              "usage": "fact",
+              "datatype": "int16",
+              "precision": "5",
+              "scale": "0",
+              "size": "2",
+              "nullable": "false",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "WEEK_OF_MONTH",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "WEEK_OF_MONTH",
+              "usage": "fact",
+              "datatype": "int16",
+              "precision": "5",
+              "scale": "0",
+              "size": "2",
+              "nullable": "false",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "WEEK_OF_QUARTER",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "WEEK_OF_QUARTER",
+              "usage": "fact",
+              "datatype": "int16",
+              "precision": "5",
+              "scale": "0",
+              "size": "2",
+              "nullable": "false",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "WEEK_OF_YEAR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "WEEK_OF_YEAR",
+              "usage": "fact",
+              "datatype": "int16",
+              "precision": "5",
+              "scale": "0",
+              "size": "2",
+              "nullable": "false",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            },
+            {
+              "name": {
+                "+content": "MONTH_EN",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "MONTH_EN",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "25",
+              "scale": "0",
+              "size": "52",
+              "nullable": "false",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "WEEKDAY_EN",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-07-24T20:55:20",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "WEEKDAY_EN",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "20",
+              "scale": "0",
+              "size": "42",
+              "nullable": "false",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            }
+          ]
+        },
+        {
+          "+@status": "valid",
+          "name": {
+            "+content": "SALES_TARGET",
+            "+@locale": "en"
+          },
+          "lastChanged": "2025-08-12T10:50:28",
+          "lastChangedBy": "Randy Dawson",
+          "property": {
+            "+content": "true",
+            "+@name": "included",
+            "+@type": "hidden"
+          },
+          "definition": {
+            "dbQuery": {
+              "sources": {
+                "dataSourceRef": "[].[dataSources].[great_outdoors_sales1]"
+              },
+              "sql": {
+                "+content": [
+                  "Select",
+                  "from"
+                ],
+                "+@type": "cognos",
+                "column": "*",
+                "table": "[great_outdoors_sales1].SALES_TARGET"
+              },
+              "tableType": "table",
+              "procParameters": null
+            }
+          },
+          "determinants": {
+            "determinant": {
+              "name": "COUNTRY_CODE_RETAILER_PRODUCT_BRAND_CODE_PRODUCT_TYPE_CODE_RETAILER_CODE_SALES_PERIOD_SALES_STAFF_CODE_SALES_YEAR",
+              "key": {
+                "refobj": [
+                  "[great_outdoors_sales].[SALES_TARGET].[COUNTRY_CODE_RETAILER]",
+                  "[great_outdoors_sales].[SALES_TARGET].[PRODUCT_BRAND_CODE]",
+                  "[great_outdoors_sales].[SALES_TARGET].[PRODUCT_TYPE_CODE]",
+                  "[great_outdoors_sales].[SALES_TARGET].[RETAILER_CODE]",
+                  "[great_outdoors_sales].[SALES_TARGET].[SALES_PERIOD]",
+                  "[great_outdoors_sales].[SALES_TARGET].[SALES_STAFF_CODE]",
+                  "[great_outdoors_sales].[SALES_TARGET].[SALES_YEAR]"
+                ]
+              },
+              "attributes": {
+                "refobj": [
+                  "[great_outdoors_sales].[SALES_TARGET].[RETAILER_NAME]",
+                  "[great_outdoors_sales].[SALES_TARGET].[SALES_TARGET]"
+                ]
+              },
+              "canGroup": "false",
+              "identifiesRow": "true"
+            }
+          },
+          "queryItem": [
+            {
+              "name": {
+                "+content": "SALES_YEAR",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-12T10:50:28",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "SALES_YEAR",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "SALES_PERIOD",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-12T10:50:28",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "SALES_PERIOD",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "COUNTRY_CODE_RETAILER",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-12T10:50:28",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "COUNTRY_CODE_RETAILER",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "SALES_STAFF_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-12T10:50:28",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "SALES_STAFF_CODE",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "RETAILER_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-12T10:50:28",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "RETAILER_CODE",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "RETAILER_NAME",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-12T10:50:28",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "RETAILER_NAME",
+              "usage": "attribute",
+              "datatype": "nVarChar",
+              "precision": "50",
+              "size": "50",
+              "regularAggregate": "unsupported",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_TYPE_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-12T10:50:28",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_TYPE_CODE",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "PRODUCT_BRAND_CODE",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-12T10:50:28",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "PRODUCT_BRAND_CODE",
+              "usage": "identifier",
+              "datatype": "int32",
+              "precision": "10",
+              "scale": "0",
+              "size": "4",
+              "regularAggregate": "count",
+              "semiAggregate": "unsupported"
+            },
+            {
+              "name": {
+                "+content": "SALES_TARGET",
+                "+@locale": "en"
+              },
+              "lastChanged": "2025-08-12T10:50:28",
+              "property": {
+                "+content": "true",
+                "+@name": "included",
+                "+@type": "hidden"
+              },
+              "externalName": "SALES_TARGET",
+              "usage": "fact",
+              "datatype": "decimal",
+              "precision": "19",
+              "scale": "2",
+              "size": "10",
+              "nullable": "true",
+              "regularAggregate": "sum",
+              "semiAggregate": "sum"
+            }
+          ]
+        }
+      ],
+      "relationship": [
+        {
+          "+@status": "invalid",
+          "name": "New Relationship",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[PRODUCT].[PRODUCT_TYPE_CODE]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_CODE]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[PRODUCT]",
+            "mincard": "one",
+            "maxcard": "many"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[PRODUCT_TYPE]",
+            "mincard": "one",
+            "maxcard": "one"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "PRODUCT_TYPE <--> PRODUCT_LINE",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_LINE_CODE]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_CODE]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[PRODUCT_TYPE]",
+            "mincard": "one",
+            "maxcard": "many"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[PRODUCT_LINE]",
+            "mincard": "one",
+            "maxcard": "one"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "ORDER_DETAILS <--> PRODUCT",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[ORDER_DETAILS].[PRODUCT_NUMBER]",
+              "[great_outdoors_sales].[PRODUCT].[PRODUCT_NUMBER]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[ORDER_DETAILS]",
+            "mincard": "zero",
+            "maxcard": "many"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[PRODUCT]",
+            "mincard": "one",
+            "maxcard": "one"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "ORDER_HEADER <--> ORDER_DETAILS",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[ORDER_HEADER].[ORDER_NUMBER]",
+              "[great_outdoors_sales].[ORDER_DETAILS].[ORDER_NUMBER]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[ORDER_HEADER]",
+            "mincard": "one",
+            "maxcard": "one"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[ORDER_DETAILS]",
+            "mincard": "one",
+            "maxcard": "many"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "ORDER_HEADER <--> BRANCH",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[ORDER_HEADER].[SALES_BRANCH_CODE]",
+              "[great_outdoors_sales].[BRANCH].[BRANCH_CODE]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[ORDER_HEADER]",
+            "mincard": "zero",
+            "maxcard": "many"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[BRANCH]",
+            "mincard": "one",
+            "maxcard": "one"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "BRANCH <--> COUNTRY",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[BRANCH].[COUNTRY_CODE]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_CODE]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[BRANCH]",
+            "mincard": "one",
+            "maxcard": "many"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[COUNTRY]",
+            "mincard": "one",
+            "maxcard": "one"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "PRODUCT <--> PRODUCT_BRAND",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[PRODUCT].[PRODUCT_BRAND_CODE]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_CODE]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[PRODUCT]",
+            "mincard": "one",
+            "maxcard": "many"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[PRODUCT_BRAND]",
+            "mincard": "one",
+            "maxcard": "one"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "ORDER_METHOD <--> ORDER_HEADER",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_CODE]",
+              "[great_outdoors_sales].[ORDER_HEADER].[ORDER_METHOD_CODE]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[ORDER_METHOD]",
+            "mincard": "one",
+            "maxcard": "one"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[ORDER_HEADER]",
+            "mincard": "one",
+            "maxcard": "many"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "ORDER_HEADER <--> TIME_DIMENSION",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[ORDER_HEADER].[ORDER_DATE]",
+              "[great_outdoors_sales].[Order_Date].[DAY_DATE]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[ORDER_HEADER]",
+            "mincard": "one",
+            "maxcard": "many"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[Order_Date]",
+            "mincard": "one",
+            "maxcard": "one"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "Shortcut to TIME_DIMENSION <--> ORDER_HEADER",
+          "expression": {
+            "+content": "=",
+            "refobjViaShortcut": {
+              "refobj": [
+                "[great_outdoors_sales].[Close_Date]",
+                "[great_outdoors_sales].[Order_Date].[DAY_DATE]"
+              ]
+            },
+            "refobj": "[great_outdoors_sales].[ORDER_HEADER].[ORDER_CLOSE_DATE]"
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[Close_Date]",
+            "mincard": "one",
+            "maxcard": "one"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[ORDER_HEADER]",
+            "mincard": "one",
+            "maxcard": "many"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "New Relationship1",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[SALES_TARGET].[PRODUCT_TYPE_CODE]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_CODE]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[SALES_TARGET]",
+            "mincard": "zero",
+            "maxcard": "many"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[PRODUCT_TYPE]",
+            "mincard": "one",
+            "maxcard": "one"
+          }
+        },
+        {
+          "+@status": "invalid",
+          "name": "New Relationship2",
+          "expression": {
+            "+content": "=",
+            "refobj": [
+              "[great_outdoors_sales].[SALES_TARGET].[SALES_YEAR]",
+              "[great_outdoors_sales].[Order_Date].[CURRENT_YEAR]"
+            ]
+          },
+          "left": {
+            "refobj": "[great_outdoors_sales].[SALES_TARGET]",
+            "mincard": "one",
+            "maxcard": "many"
+          },
+          "right": {
+            "refobj": "[great_outdoors_sales].[Order_Date]",
+            "mincard": "one",
+            "maxcard": "one"
+          }
+        }
+      ],
+      "shortcut": {
+        "name": {
+          "+content": "Close_Date",
+          "+@locale": "en"
+        },
+        "lastChanged": "2025-07-24T20:57:38",
+        "lastChangedBy": "Randy Dawson",
+        "refobj": "[great_outdoors_sales].[Order_Date]",
+        "targetType": "querySubject",
+        "treatAs": "alias"
+      }
+    },
+    "dataSources": {
+      "dataSource": [
+        {
+          "name": "great_outdoors_sales",
+          "cmDataSource": "great_outdoors_sales",
+          "catalog": "GOSALES_CURRENT",
+          "schema": "gosales",
+          "type": {
+            "queryType": "relational",
+            "interface": "SS"
+          }
+        },
+        {
+          "name": "great_outdoors_dev",
+          "cmDataSource": "great_outdoors_dev",
+          "catalog": "GOSALES_CURRENT",
+          "schema": "gosales",
+          "type": {
+            "queryType": "relational",
+            "interface": "SS"
+          }
+        },
+        {
+          "name": "great_outdoors_sales1",
+          "cmDataSource": "great_outdoors_sales",
+          "catalog": "GOSALES_CURRENT",
+          "schema": "gosales",
+          "type": {
+            "queryType": "relational",
+            "interface": "SS"
+          }
+        }
+      ]
+    },
+    "parameterMaps": {
+      "parameterMap": [
+        {
+          "+@hidden": "true",
+          "name": "_env"
+        },
+        {
+          "+@hidden": "true",
+          "name": "_governor",
+          "parameterMapEntry": [
+            {
+              "key": "maxTablesPerQuery",
+              "value": "0"
+            },
+            {
+              "key": "maxRowsRetrieved",
+              "value": "0"
+            },
+            {
+              "key": "maxQueryExecutionTime",
+              "value": "0"
+            },
+            {
+              "key": "maxTextBlobCharacters",
+              "value": "0"
+            },
+            {
+              "key": "useMetadataCallback",
+              "value": "true"
+            },
+            {
+              "key": "localCache",
+              "value": "true"
+            },
+            {
+              "key": "dynamicDimensionInfo",
+              "value": "false"
+            },
+            {
+              "key": "useSQLWithClause",
+              "value": "true"
+            },
+            {
+              "key": "suppress",
+              "value": "nulls"
+            },
+            {
+              "key": "processAllModelWhenPublishing",
+              "value": "false"
+            },
+            {
+              "key": "maxPersonalDataSources",
+              "value": "1"
+            },
+            {
+              "key": "maxPersonalDataFileSize",
+              "value": "2500"
+            },
+            {
+              "key": "maxPersonalDataRowCount",
+              "value": "1000"
+            },
+            {
+              "key": "cachePolicyConnectionCommandBlocks",
+              "value": "true"
+            },
+            {
+              "key": "enablePushdownLevelLargerThan",
+              "value": "0"
+            },
+            {
+              "key": "outerJoinAllowed",
+              "value": "0"
+            },
+            {
+              "key": "crossProductAllowed",
+              "value": "2"
+            },
+            {
+              "key": "shortcutProcessing",
+              "value": "explicit"
+            },
+            {
+              "key": "useSQLJoinSyntax",
+              "value": "unknown"
+            },
+            {
+              "key": "categorizeByMeasureDimensionQueryItems",
+              "value": "unknown"
+            },
+            {
+              "key": "SQLgenerationForLevelAttributes",
+              "value": "ServerDetermined"
+            },
+            {
+              "key": "SQLgenerationForDeterminantAttributes",
+              "value": "ServerDetermined"
+            },
+            {
+              "key": "useSQLParameters",
+              "value": "unknown"
+            },
+            {
+              "key": "exactNumericDivision",
+              "value": "0"
+            },
+            {
+              "key": "cachePolicyDBAccess",
+              "value": "0"
+            },
+            {
+              "key": "cachePolicyModelSecurity",
+              "value": "0"
+            },
+            {
+              "key": "contextSensitiveJoinSelection",
+              "value": "disabled"
+            },
+            {
+              "key": "localCachePolicy",
+              "value": "0"
+            },
+            {
+              "key": "cursorMode",
+              "value": "0"
+            },
+            {
+              "key": "masterDetailOptimization",
+              "value": "0"
+            },
+            {
+              "key": "summaryQueryJoinOperator",
+              "value": "EQUAL_ALL_NOTNULL"
+            },
+            {
+              "key": "multiFactJoinOperator",
+              "value": "EQUAL_ALL_NOTNULL"
+            },
+            {
+              "key": "nestedAggregateHandling",
+              "value": "ServerDetermined"
+            },
+            {
+              "key": "formatQueryItemsForParameterMaps",
+              "value": "Off"
+            },
+            {
+              "key": "treatEmptyDMRMUN",
+              "value": "as_null"
+            }
+          ]
+        }
+      ]
+    },
+    "securityViews": {
+      "securityView": {
+        "name": "CA_to_PBI_Test_PKG_1",
+        "definition": {
+          "set": {
+            "+@includeRule": "include",
+            "refobj": [
+              "[great_outdoors_sales]",
+              "[great_outdoors_sales].[BRANCH].[BRANCH_CODE]",
+              "[great_outdoors_sales].[BRANCH].[ADDRESS1]",
+              "[great_outdoors_sales].[BRANCH].[ADDRESS1_MB]",
+              "[great_outdoors_sales].[BRANCH].[ADDRESS2]",
+              "[great_outdoors_sales].[BRANCH].[ADDRESS2_MB]",
+              "[great_outdoors_sales].[BRANCH].[CITY]",
+              "[great_outdoors_sales].[BRANCH].[CITY_MB]",
+              "[great_outdoors_sales].[BRANCH].[PROV_STATE]",
+              "[great_outdoors_sales].[BRANCH].[PROV_STATE_MB]",
+              "[great_outdoors_sales].[BRANCH].[POSTAL_ZONE]",
+              "[great_outdoors_sales].[BRANCH].[COUNTRY_CODE]",
+              "[great_outdoors_sales].[BRANCH].[ORGANIZATION_CODE]",
+              "[great_outdoors_sales].[BRANCH].[WAREHOUSE_BRANCH_CODE]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_CODE]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_EN]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_AR]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_CS]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_DA]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_DE]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_EL]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_ES]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_FI]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_FR]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_HR]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_HU]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_ID]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_IT]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_JA]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_KK]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_KO]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_MS]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_NL]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_NO]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_PL]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_PT]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_RO]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_RU]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_SC]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_SL]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_SV]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_TC]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_TH]",
+              "[great_outdoors_sales].[COUNTRY].[COUNTRY_TR]",
+              "[great_outdoors_sales].[COUNTRY].[FLAG_IMAGE]",
+              "[great_outdoors_sales].[COUNTRY].[SALES_REGION_CODE]",
+              "[great_outdoors_sales].[COUNTRY].[ISO_THREE_LETTER_CODE]",
+              "[great_outdoors_sales].[COUNTRY].[ISO_TWO_LETTER_CODE]",
+              "[great_outdoors_sales].[COUNTRY].[ISO_THREE_DIGIT_CODE]",
+              "[great_outdoors_sales].[COUNTRY].[EURO_IN_USE_SINCE]",
+              "[great_outdoors_sales].[ORDER_DETAILS].[ORDER_DETAIL_CODE]",
+              "[great_outdoors_sales].[ORDER_DETAILS].[ORDER_NUMBER]",
+              "[great_outdoors_sales].[ORDER_DETAILS].[SHIP_DATE]",
+              "[great_outdoors_sales].[ORDER_DETAILS].[PRODUCT_NUMBER]",
+              "[great_outdoors_sales].[ORDER_DETAILS].[PROMOTION_CODE]",
+              "[great_outdoors_sales].[ORDER_DETAILS].[QUANTITY]",
+              "[great_outdoors_sales].[ORDER_DETAILS].[UNIT_COST]",
+              "[great_outdoors_sales].[ORDER_DETAILS].[UNIT_PRICE]",
+              "[great_outdoors_sales].[ORDER_DETAILS].[UNIT_SALE_PRICE]",
+              "[great_outdoors_sales].[ORDER_HEADER].[ORDER_NUMBER]",
+              "[great_outdoors_sales].[ORDER_HEADER].[RETAILER_NAME]",
+              "[great_outdoors_sales].[ORDER_HEADER].[RETAILER_NAME_MB]",
+              "[great_outdoors_sales].[ORDER_HEADER].[RETAILER_SITE_CODE]",
+              "[great_outdoors_sales].[ORDER_HEADER].[RETAILER_CONTACT_CODE]",
+              "[great_outdoors_sales].[ORDER_HEADER].[SALES_STAFF_CODE]",
+              "[great_outdoors_sales].[ORDER_HEADER].[SALES_BRANCH_CODE]",
+              "[great_outdoors_sales].[ORDER_HEADER].[ORDER_DATE]",
+              "[great_outdoors_sales].[ORDER_HEADER].[ORDER_CLOSE_DATE]",
+              "[great_outdoors_sales].[ORDER_HEADER].[ORDER_METHOD_CODE]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_CODE]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_EN]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_AR]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_CS]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_DA]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_DE]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_EL]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_ES]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_FI]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_FR]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_HR]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_HU]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_ID]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_IT]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_JA]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_KK]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_KO]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_MS]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_NL]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_NO]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_PL]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_PT]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_RO]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_RU]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_SC]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_SL]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_SV]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_TC]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_TH]",
+              "[great_outdoors_sales].[ORDER_METHOD].[ORDER_METHOD_TR]",
+              "[great_outdoors_sales].[PRODUCT].[PRODUCT_NUMBER]",
+              "[great_outdoors_sales].[PRODUCT].[BASE_PRODUCT_NUMBER]",
+              "[great_outdoors_sales].[PRODUCT].[INTRODUCTION_DATE]",
+              "[great_outdoors_sales].[PRODUCT].[DISCONTINUED_DATE]",
+              "[great_outdoors_sales].[PRODUCT].[PRODUCT_TYPE_CODE]",
+              "[great_outdoors_sales].[PRODUCT].[PRODUCT_COLOR_CODE]",
+              "[great_outdoors_sales].[PRODUCT].[PRODUCT_SIZE_CODE]",
+              "[great_outdoors_sales].[PRODUCT].[PRODUCT_BRAND_CODE]",
+              "[great_outdoors_sales].[PRODUCT].[PRODUCT_IMAGE]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_CODE]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_EN]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_DE]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_FR]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_JA]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_AR]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_CS]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_DA]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_EL]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_ES]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_FI]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_HR]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_HU]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_ID]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_IT]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_KK]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_KO]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_MS]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_NL]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_NO]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_PL]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_PT]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_RO]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_RU]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_SC]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_SL]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_SV]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_TC]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_TH]",
+              "[great_outdoors_sales].[PRODUCT_BRAND].[PRODUCT_BRAND_TR]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_CODE]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_EN]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_AR]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_CS]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_DA]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_DE]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_EL]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_ES]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_FI]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_FR]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_HR]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_HU]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_ID]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_IT]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_JA]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_KK]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_KO]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_MS]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_NL]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_NO]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_PL]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_PT]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_RO]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_RU]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_SC]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_SL]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_SV]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_TC]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_TH]",
+              "[great_outdoors_sales].[PRODUCT_LINE].[PRODUCT_LINE_TR]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_CODE]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_LINE_CODE]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_EN]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_AR]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_CS]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_DA]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_DE]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_EL]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_ES]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_FI]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_FR]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_HR]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_HU]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_ID]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_IT]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_JA]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_KK]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_KO]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_MS]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_NL]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_NO]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_PL]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_PT]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_RO]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_RU]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_SC]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_SL]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_SV]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_TC]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_TH]",
+              "[great_outdoors_sales].[PRODUCT_TYPE].[PRODUCT_TYPE_TR]",
+              "[great_outdoors_sales].[Order_Date].[DAY_KEY]",
+              "[great_outdoors_sales].[Order_Date].[DAY_DATE]",
+              "[great_outdoors_sales].[Order_Date].[MONTH_KEY]",
+              "[great_outdoors_sales].[Order_Date].[CURRENT_MONTH]",
+              "[great_outdoors_sales].[Order_Date].[MONTH_NUMBER]",
+              "[great_outdoors_sales].[Order_Date].[QUARTER_KEY]",
+              "[great_outdoors_sales].[Order_Date].[CURRENT_QUARTER]",
+              "[great_outdoors_sales].[Order_Date].[CURRENT_YEAR]",
+              "[great_outdoors_sales].[Order_Date].[DAY_OF_WEEK]",
+              "[great_outdoors_sales].[Order_Date].[DAY_OF_MONTH]",
+              "[great_outdoors_sales].[Order_Date].[DAYS_IN_MONTH]",
+              "[great_outdoors_sales].[Order_Date].[DAY_OF_YEAR]",
+              "[great_outdoors_sales].[Order_Date].[WEEK_OF_MONTH]",
+              "[great_outdoors_sales].[Order_Date].[WEEK_OF_QUARTER]",
+              "[great_outdoors_sales].[Order_Date].[WEEK_OF_YEAR]",
+              "[great_outdoors_sales].[Order_Date].[MONTH_EN]",
+              "[great_outdoors_sales].[Order_Date].[WEEKDAY_EN]",
+              "[great_outdoors_sales].[SALES_TARGET].[SALES_YEAR]",
+              "[great_outdoors_sales].[SALES_TARGET].[SALES_PERIOD]",
+              "[great_outdoors_sales].[SALES_TARGET].[COUNTRY_CODE_RETAILER]",
+              "[great_outdoors_sales].[SALES_TARGET].[SALES_STAFF_CODE]",
+              "[great_outdoors_sales].[SALES_TARGET].[RETAILER_CODE]",
+              "[great_outdoors_sales].[SALES_TARGET].[RETAILER_NAME]",
+              "[great_outdoors_sales].[SALES_TARGET].[PRODUCT_TYPE_CODE]",
+              "[great_outdoors_sales].[SALES_TARGET].[PRODUCT_BRAND_CODE]",
+              "[great_outdoors_sales].[SALES_TARGET].[SALES_TARGET]",
+              "[great_outdoors_sales].[BRANCH]",
+              "[great_outdoors_sales].[COUNTRY]",
+              "[great_outdoors_sales].[ORDER_DETAILS]",
+              "[great_outdoors_sales].[ORDER_HEADER]",
+              "[great_outdoors_sales].[ORDER_METHOD]",
+              "[great_outdoors_sales].[PRODUCT]",
+              "[great_outdoors_sales].[PRODUCT_BRAND]",
+              "[great_outdoors_sales].[PRODUCT_LINE]",
+              "[great_outdoors_sales].[PRODUCT_TYPE]",
+              "[great_outdoors_sales].[Order_Date]",
+              "[great_outdoors_sales].[SALES_TARGET]",
+              "[great_outdoors_sales].[Close_Date]"
+            ]
+          }
+        },
+        "access": null,
+        "functionSets": {
+          "functionSet": [
+            {
+              "functionSetID": "V_DB2"
+            },
+            {
+              "functionSetID": "V_Exasol"
+            },
+            {
+              "functionSetID": "V_Greenplum"
+            },
+            {
+              "functionSetID": "V_Informix"
+            },
+            {
+              "functionSetID": "V_MySQL"
+            },
+            {
+              "functionSetID": "V_Netezza"
+            },
+            {
+              "functionSetID": "V_Oracle"
+            },
+            {
+              "functionSetID": "V_Postgres"
+            },
+            {
+              "functionSetID": "V_SAPBW"
+            },
+            {
+              "functionSetID": "V_SQLServer"
+            },
+            {
+              "functionSetID": "V_Sybase"
+            },
+            {
+              "functionSetID": "V_Teradata"
+            },
+            {
+              "functionSetID": "V_Vertica"
+            }
+          ]
+        },
+        "qosOverrides": null
+      }
+    },
+    "packages": {
+      "package": {
+        "name": {
+          "+content": "CA_to_PBI_Test_PKG_1",
+          "+@locale": "en"
+        },
+        "description": {
+          "+@locale": "en"
+        },
+        "lastChanged": "2025-08-19T12:22:48",
+        "lastChangedBy": "Randy Dawson",
+        "screenTip": {
+          "+@locale": "en"
+        },
+        "lastPublished": "2025-08-18T08:46:27",
+        "lastPublishedCMPath": "/content/folder[@name='CA to PBI Testing']",
+        "locales": {
+          "locale": "en"
+        },
+        "definition": {
+          "viewref": "[].[securityViews].[CA_to_PBI_Test_PKG_1]"
+        },
+        "adminAccess": null,
+        "useV5DataServer": "true"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+✅ Why Prefix a Field with _?
+1. Suppress “unused variable/field” warnings
+
+Rust will warn you if a field or variable is never read or used.
+If you name the field starting with an underscore, you’re telling the compiler:
+
+“This field might exist for structural reasons but I intentionally don’t use it right now.”
+
+That suppresses the unused‑field warning without other changes. 
+Abdul Wahab Junaid
++1
+
+Example:
+
+pub struct Config {
+    pub host: String,
+    pub _log_level: String, // avoids unused warning
+}

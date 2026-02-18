@@ -1,0 +1,463 @@
+{
+  "report": {
+    "+@xmlns": "http://developer.cognos.com/schemas/report/17.3/",
+    "+@expressionLocale": "en",
+    "+@useStyleVersion": "11.6",
+    "drillBehavior": null,
+    "layouts": {
+      "layout": {
+        "reportPages": {
+          "page": {
+            "+@name": "Page1",
+            "style": {
+              "defaultStyles": {
+                "defaultStyle": {
+                  "+@refStyle": "pg"
+                }
+              }
+            },
+            "pageBody": {
+              "style": {
+                "defaultStyles": {
+                  "defaultStyle": {
+                    "+@refStyle": "pb"
+                  }
+                }
+              },
+              "contents": {
+                "table": {
+                  "style": {
+                    "defaultStyles": {
+                      "defaultStyle": {
+                        "+@refStyle": "tb"
+                      }
+                    },
+                    "CSS": {
+                      "+@value": "width:100%;border-spacing:0;height:100%"
+                    }
+                  },
+                  "tableRows": {
+                    "tableRow": {
+                      "tableCells": {
+                        "tableCell": {
+                          "contents": {
+                            "crosstab": {
+                              "+@horizontalPagination": "true",
+                              "+@name": "Crosstab1",
+                              "+@refQuery": "Query1",
+                              "crosstabCorner": {
+                                "contents": {
+                                  "textItem": {
+                                    "dataSource": {
+                                      "dataItemLabel": {
+                                        "+@refDataItem": "Unit Sale Price"
+                                      }
+                                    }
+                                  }
+                                },
+                                "style": {
+                                  "defaultStyles": {
+                                    "defaultStyle": {
+                                      "+@refStyle": "xm"
+                                    }
+                                  }
+                                }
+                              },
+                              "noDataHandler": {
+                                "contents": {
+                                  "block": {
+                                    "contents": {
+                                      "textItem": {
+                                        "dataSource": {
+                                          "staticValue": "No Data Available"
+                                        }
+                                      }
+                                    },
+                                    "style": {
+                                      "CSS": {
+                                        "+@value": "padding:16px;"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "style": {
+                                "CSS": {
+                                  "+@value": "border-collapse:collapse"
+                                },
+                                "defaultStyles": {
+                                  "defaultStyle": {
+                                    "+@refStyle": "xt"
+                                  }
+                                }
+                              },
+                              "crosstabRows": {
+                                "crosstabNode": {
+                                  "crosstabNestedNodes": {
+                                    "crosstabNode": {
+                                      "crosstabNodeMembers": {
+                                        "crosstabNodeMember": {
+                                          "+@refDataItem": "City",
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "ml"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "memberCaption": null
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "crosstabNodeMembers": {
+                                    "crosstabNodeMember": {
+                                      "+@refDataItem": "Country En",
+                                      "style": {
+                                        "defaultStyles": {
+                                          "defaultStyle": {
+                                            "+@refStyle": "ml"
+                                          }
+                                        }
+                                      },
+                                      "contents": {
+                                        "textItem": {
+                                          "dataSource": {
+                                            "memberCaption": null
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "defaultMeasure": {
+                                "+@refDataItem": "Unit Sale Price"
+                              },
+                              "crosstabFactCell": {
+                                "contents": {
+                                  "textItem": {
+                                    "dataSource": {
+                                      "cellValue": null
+                                    }
+                                  }
+                                },
+                                "style": {
+                                  "defaultStyles": {
+                                    "defaultStyle": {
+                                      "+@refStyle": "mv"
+                                    }
+                                  }
+                                }
+                              },
+                              "crosstabColumns": {
+                                "crosstabNode": {
+                                  "crosstabNodeMembers": {
+                                    "crosstabNodeMember": {
+                                      "+@refDataItem": "Data Item1",
+                                      "style": {
+                                        "defaultStyles": {
+                                          "defaultStyle": {
+                                            "+@refStyle": "cl"
+                                          }
+                                        }
+                                      },
+                                      "contents": {
+                                        "textItem": {
+                                          "dataSource": {
+                                            "dataItemValue": {
+                                              "+@refDataItem": "Data Item1"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "factCell": {
+                                        "style": {
+                                          "defaultStyles": {
+                                            "defaultStyle": {
+                                              "+@refStyle": "cv"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "style": {
+                            "CSS": {
+                              "+@value": "height:100%;width:100%"
+                            },
+                            "defaultStyles": {
+                              "defaultStyle": {
+                                "+@refStyle": "ContentDataContainerBottomRowLeftTableCell"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "pageFooter": {
+              "contents": {
+                "table": {
+                  "tableRows": {
+                    "tableRow": {
+                      "tableCells": {
+                        "tableCell": [
+                          {
+                            "contents": {
+                              "date": {
+                                "style": {
+                                  "dataFormat": {
+                                    "dateFormat": null
+                                  }
+                                }
+                              }
+                            },
+                            "style": {
+                              "CSS": {
+                                "+@value": "width:25%;text-align:left;vertical-align:top"
+                              },
+                              "defaultStyles": {
+                                "defaultStyle": {
+                                  "+@refStyle": "FooterDateTableCell"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "contents": {
+                              "pageNumber": null
+                            },
+                            "style": {
+                              "CSS": {
+                                "+@value": "width:50%;text-align:center;vertical-align:top"
+                              },
+                              "defaultStyles": {
+                                "defaultStyle": {
+                                  "+@refStyle": "FooterPageNumberTableCell"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "contents": {
+                              "time": {
+                                "style": {
+                                  "dataFormat": {
+                                    "timeFormat": null
+                                  }
+                                }
+                              }
+                            },
+                            "style": {
+                              "CSS": {
+                                "+@value": "width:25%;text-align:right;vertical-align:top"
+                              },
+                              "defaultStyles": {
+                                "defaultStyle": {
+                                  "+@refStyle": "FooterTimeTableCell"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "style": {
+                    "defaultStyles": {
+                      "defaultStyle": {
+                        "+@refStyle": "tb"
+                      }
+                    },
+                    "CSS": {
+                      "+@value": "width:100%;border-collapse:collapse;border-spacing:0px"
+                    }
+                  }
+                }
+              },
+              "style": {
+                "CSS": {
+                  "+@value": "padding:10px"
+                },
+                "defaultStyles": {
+                  "defaultStyle": {
+                    "+@refStyle": "FooterPageFooter"
+                  }
+                }
+              }
+            },
+            "pageHeader": {
+              "contents": {
+                "block": {
+                  "contents": {
+                    "textItem": {
+                      "dataSource": {
+                        "staticValue": null
+                      }
+                    }
+                  },
+                  "style": {
+                    "defaultStyles": {
+                      "defaultStyle": {
+                        "+@refStyle": "HeaderReportTitleTableCell"
+                      }
+                    },
+                    "CSS": {
+                      "+@value": "text-align:center"
+                    }
+                  }
+                }
+              },
+              "style": {
+                "defaultStyles": {
+                  "defaultStyle": {
+                    "+@refStyle": "ph"
+                  }
+                }
+              }
+            },
+            "XMLAttributes": {
+              "XMLAttribute": {
+                "+@output": "no",
+                "+@name": "RS_legacyDrillDown",
+                "+@value": "0"
+              }
+            }
+          }
+        }
+      }
+    },
+    "XMLAttributes": {
+      "XMLAttribute": [
+        {
+          "+@name": "RS_CreateExtendedDataItems",
+          "+@output": "no",
+          "+@value": "true"
+        },
+        {
+          "+@name": "listSeparator",
+          "+@output": "no",
+          "+@value": ","
+        },
+        {
+          "+@name": "RS_modelModificationTime",
+          "+@output": "no",
+          "+@value": "2025-08-04T19:09:29.447Z"
+        },
+        {
+          "+@name": "decimalSeparator",
+          "+@output": "no",
+          "+@value": "."
+        }
+      ]
+    },
+    "queries": {
+      "query": {
+        "+@name": "Query1",
+        "source": {
+          "model": null
+        },
+        "selection": {
+          "dataItem": [
+            {
+              "+@aggregate": "none",
+              "+@rollupAggregate": "none",
+              "+@name": "Country En",
+              "expression": "[C].[C_CA_to_PBI_data_module].[COUNTRY].[COUNTRY_EN]",
+              "XMLAttributes": {
+                "XMLAttribute": [
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataType",
+                    "+@value": "3"
+                  },
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataUsage",
+                    "+@value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "+@aggregate": "none",
+              "+@rollupAggregate": "none",
+              "+@name": "City",
+              "expression": "[C].[C_CA_to_PBI_data_module].[BRANCH].[CITY]",
+              "XMLAttributes": {
+                "XMLAttribute": [
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataType",
+                    "+@value": "3"
+                  },
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataUsage",
+                    "+@value": "1"
+                  }
+                ]
+              }
+            },
+            {
+              "+@aggregate": "average",
+              "+@name": "Unit Sale Price",
+              "expression": "[C].[C_CA_to_PBI_data_module].[ORDER_DETAILS].[UNIT_SALE_PRICE]",
+              "XMLAttributes": {
+                "XMLAttribute": [
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataType",
+                    "+@value": "9"
+                  },
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataUsage",
+                    "+@value": "2"
+                  }
+                ]
+              }
+            },
+            {
+              "+@name": "Data Item1",
+              "expression": "year([C].[C_CA_to_PBI_data_module].[ORDER_HEADER].[ORDER_DATE])",
+              "XMLAttributes": {
+                "XMLAttribute": [
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataType",
+                    "+@value": "3"
+                  },
+                  {
+                    "+@output": "no",
+                    "+@name": "RS_dataUsage",
+                    "+@value": "1"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    "modelPath": {
+      "+content": "/content/folder[@name='CA to PBI Testing']/module[@name='CA to PBI data module']",
+      "+@type": "module"
+    },
+    "reportName": "Data Module - Crosstab"
+  }
+}

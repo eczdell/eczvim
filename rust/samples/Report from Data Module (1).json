@@ -1,0 +1,729 @@
+{
+  "report": {
+    "+@xmlns": "http://developer.cognos.com/schemas/report/17.3/",
+    "+@useStyleVersion": "11.5",
+    "+@expressionLocale": "en",
+    "drillBehavior": null,
+    "queries": {
+      "query": [
+        {
+          "+@name": "Query1",
+          "source": {
+            "model": null
+          },
+          "selection": {
+            "dataItem": [
+              {
+                "+@aggregate": "average",
+                "+@name": "Unit Sale Price",
+                "expression": "[C].[C_CA_to_PBI_data_module].[ORDER_DETAILS].[UNIT_SALE_PRICE]",
+                "XMLAttributes": {
+                  "XMLAttribute": [
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataType",
+                      "+@value": "9"
+                    },
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataUsage",
+                      "+@value": "2"
+                    }
+                  ]
+                }
+              },
+              {
+                "+@aggregate": "total",
+                "+@name": "Quantity",
+                "expression": "[C].[C_CA_to_PBI_data_module].[ORDER_DETAILS].[QUANTITY]",
+                "XMLAttributes": {
+                  "XMLAttribute": [
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataType",
+                      "+@value": "2"
+                    },
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataUsage",
+                      "+@value": "2"
+                    }
+                  ]
+                }
+              },
+              {
+                "+@aggregate": "none",
+                "+@rollupAggregate": "none",
+                "+@name": "Product Line En",
+                "expression": "[C].[C_CA_to_PBI_data_module].[PRODUCT_LINE].[PRODUCT_LINE_EN]",
+                "XMLAttributes": {
+                  "XMLAttribute": [
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataType",
+                      "+@value": "3"
+                    },
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataUsage",
+                      "+@value": "1"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "+@name": "Query2",
+          "source": {
+            "model": null
+          },
+          "selection": {
+            "+@autoSummary": "false",
+            "dataItem": [
+              {
+                "+@aggregate": "none",
+                "+@rollupAggregate": "none",
+                "+@name": "Product Line En",
+                "expression": "[C].[C_CA_to_PBI_data_module].[PRODUCT_LINE].[PRODUCT_LINE_EN]",
+                "XMLAttributes": {
+                  "XMLAttribute": [
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataType",
+                      "+@value": "3"
+                    },
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataUsage",
+                      "+@value": "1"
+                    }
+                  ]
+                }
+              },
+              {
+                "+@aggregate": "average",
+                "+@name": "Unit Sale Price",
+                "expression": "[C].[C_CA_to_PBI_data_module].[ORDER_DETAILS].[UNIT_SALE_PRICE]",
+                "XMLAttributes": {
+                  "XMLAttribute": [
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataType",
+                      "+@value": "2"
+                    },
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataUsage",
+                      "+@value": "2"
+                    }
+                  ]
+                }
+              },
+              {
+                "+@aggregate": "total",
+                "+@name": "Quantity",
+                "expression": "[C].[C_CA_to_PBI_data_module].[ORDER_DETAILS].[QUANTITY]",
+                "XMLAttributes": {
+                  "XMLAttribute": [
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataType",
+                      "+@value": "2"
+                    },
+                    {
+                      "+@output": "no",
+                      "+@name": "RS_dataUsage",
+                      "+@value": "2"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "layouts": {
+      "layout": {
+        "reportPages": {
+          "page": {
+            "+@name": "Page1",
+            "style": {
+              "defaultStyles": {
+                "defaultStyle": {
+                  "+@refStyle": "pg"
+                }
+              }
+            },
+            "pageBody": {
+              "style": {
+                "defaultStyles": {
+                  "defaultStyle": {
+                    "+@refStyle": "pb"
+                  }
+                }
+              },
+              "contents": {
+                "table": {
+                  "style": {
+                    "defaultStyles": {
+                      "defaultStyle": {
+                        "+@refStyle": "tb"
+                      }
+                    },
+                    "CSS": {
+                      "+@value": "border-collapse:collapse;width:100%"
+                    }
+                  },
+                  "tableRows": {
+                    "tableRow": [
+                      {
+                        "tableCells": {
+                          "tableCell": [
+                            {
+                              "contents": {
+                                "list": {
+                                  "+@refQuery": "Query1",
+                                  "+@horizontalPagination": "true",
+                                  "+@name": "List1",
+                                  "noDataHandler": {
+                                    "contents": {
+                                      "block": {
+                                        "contents": {
+                                          "textItem": {
+                                            "dataSource": {
+                                              "staticValue": "No Data Available"
+                                            }
+                                          }
+                                        },
+                                        "style": {
+                                          "CSS": {
+                                            "+@value": "padding:16px;"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "style": {
+                                    "CSS": {
+                                      "+@value": "border-collapse:collapse"
+                                    },
+                                    "defaultStyles": {
+                                      "defaultStyle": [
+                                        {
+                                          "+@refStyle": "ls"
+                                        },
+                                        {
+                                          "+@refStyle": "GuidedLayoutMargin"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "listColumns": {
+                                    "listColumn": [
+                                      {
+                                        "listColumnTitle": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lt"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemLabel": {
+                                                  "+@refDataItem": "Product Line En"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "listColumnBody": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lc"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemValue": {
+                                                  "+@refDataItem": "Product Line En"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "listColumnTitle": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lt"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemLabel": {
+                                                  "+@refDataItem": "Unit Sale Price"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "listColumnBody": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lm"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemValue": {
+                                                  "+@refDataItem": "Unit Sale Price"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "listColumnTitle": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lt"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemLabel": {
+                                                  "+@refDataItem": "Quantity"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "listColumnBody": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lm"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemValue": {
+                                                  "+@refDataItem": "Quantity"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "contents": null
+                            },
+                            {
+                              "contents": {
+                                "list": {
+                                  "+@horizontalPagination": "true",
+                                  "+@refQuery": "Query2",
+                                  "+@name": "List2",
+                                  "noDataHandler": {
+                                    "contents": {
+                                      "block": {
+                                        "contents": {
+                                          "textItem": {
+                                            "dataSource": {
+                                              "staticValue": "No Data Available"
+                                            }
+                                          }
+                                        },
+                                        "style": {
+                                          "CSS": {
+                                            "+@value": "padding:16px;"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "style": {
+                                    "CSS": {
+                                      "+@value": "border-collapse:collapse"
+                                    },
+                                    "defaultStyles": {
+                                      "defaultStyle": {
+                                        "+@refStyle": "ls"
+                                      }
+                                    }
+                                  },
+                                  "listColumns": {
+                                    "listColumn": [
+                                      {
+                                        "listColumnTitle": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lt"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemLabel": {
+                                                  "+@refDataItem": "Product Line En"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "listColumnBody": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lc"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemValue": {
+                                                  "+@refDataItem": "Product Line En"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "listColumnTitle": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lt"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemLabel": {
+                                                  "+@refDataItem": "Unit Sale Price"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "listColumnBody": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lm"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemValue": {
+                                                  "+@refDataItem": "Unit Sale Price"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "listColumnTitle": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lt"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemLabel": {
+                                                  "+@refDataItem": "Quantity"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "listColumnBody": {
+                                          "style": {
+                                            "defaultStyles": {
+                                              "defaultStyle": {
+                                                "+@refStyle": "lm"
+                                              }
+                                            }
+                                          },
+                                          "contents": {
+                                            "textItem": {
+                                              "dataSource": {
+                                                "dataItemValue": {
+                                                  "+@refDataItem": "Quantity"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "tableCells": {
+                          "tableCell": [
+                            {
+                              "contents": null
+                            },
+                            {
+                              "contents": null
+                            },
+                            {
+                              "contents": null
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "tableCells": {
+                          "tableCell": [
+                            {
+                              "contents": null
+                            },
+                            {
+                              "contents": null
+                            },
+                            {
+                              "contents": null
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "pageHeader": {
+              "contents": {
+                "block": {
+                  "style": {
+                    "defaultStyles": {
+                      "defaultStyle": {
+                        "+@refStyle": "ta"
+                      }
+                    }
+                  },
+                  "contents": {
+                    "textItem": {
+                      "style": {
+                        "defaultStyles": {
+                          "defaultStyle": {
+                            "+@refStyle": "tt"
+                          }
+                        }
+                      },
+                      "dataSource": {
+                        "staticValue": "Auto-Group v No Auto-Group"
+                      }
+                    }
+                  }
+                }
+              },
+              "style": {
+                "defaultStyles": {
+                  "defaultStyle": {
+                    "+@refStyle": "ph"
+                  }
+                },
+                "CSS": {
+                  "+@value": "padding-bottom:10px"
+                }
+              }
+            },
+            "pageFooter": {
+              "contents": {
+                "table": {
+                  "tableRows": {
+                    "tableRow": {
+                      "tableCells": {
+                        "tableCell": [
+                          {
+                            "contents": {
+                              "date": {
+                                "style": {
+                                  "dataFormat": {
+                                    "dateFormat": null
+                                  }
+                                }
+                              }
+                            },
+                            "style": {
+                              "CSS": {
+                                "+@value": "vertical-align:top;text-align:left;width:25%"
+                              }
+                            }
+                          },
+                          {
+                            "contents": {
+                              "pageNumber": null
+                            },
+                            "style": {
+                              "CSS": {
+                                "+@value": "vertical-align:top;text-align:center;width:50%"
+                              }
+                            }
+                          },
+                          {
+                            "contents": {
+                              "time": {
+                                "style": {
+                                  "dataFormat": {
+                                    "timeFormat": null
+                                  }
+                                }
+                              }
+                            },
+                            "style": {
+                              "CSS": {
+                                "+@value": "vertical-align:top;text-align:right;width:25%"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "style": {
+                    "defaultStyles": {
+                      "defaultStyle": {
+                        "+@refStyle": "tb"
+                      }
+                    },
+                    "CSS": {
+                      "+@value": "border-collapse:collapse;width:100%"
+                    }
+                  }
+                }
+              },
+              "style": {
+                "defaultStyles": {
+                  "defaultStyle": {
+                    "+@refStyle": "pf"
+                  }
+                },
+                "CSS": {
+                  "+@value": "padding-top:10px"
+                }
+              }
+            },
+            "XMLAttributes": {
+              "XMLAttribute": {
+                "+@output": "no",
+                "+@name": "RS_legacyDrillDown",
+                "+@value": "0"
+              }
+            }
+          }
+        }
+      }
+    },
+    "XMLAttributes": {
+      "XMLAttribute": [
+        {
+          "+@output": "no",
+          "+@name": "RS_CreateExtendedDataItems",
+          "+@value": "true"
+        },
+        {
+          "+@output": "no",
+          "+@name": "RS_modelModificationTime",
+          "+@value": "2025-08-04T19:09:29.447Z"
+        },
+        {
+          "+@output": "no",
+          "+@name": "listSeparator",
+          "+@value": ","
+        },
+        {
+          "+@output": "no",
+          "+@name": "decimalSeparator",
+          "+@value": "."
+        }
+      ]
+    },
+    "classStyles": {
+      "classStyle": [
+        {
+          "+@name": "GuidedLayoutLeftPadding",
+          "CSS": {
+            "+@value": "padding-left:5px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px"
+          }
+        },
+        {
+          "+@name": "GuidedLayoutTopPadding",
+          "CSS": {
+            "+@value": "padding-top:5px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px"
+          }
+        },
+        {
+          "+@name": "GuidedLayoutRightPadding",
+          "CSS": {
+            "+@value": "padding-right:5px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px"
+          }
+        },
+        {
+          "+@name": "GuidedLayoutBottomPadding",
+          "CSS": {
+            "+@value": "padding-bottom:5px;border-top-width:1px;border-bottom-width:1px;border-left-width:1px;border-right-width:1px"
+          }
+        },
+        {
+          "+@name": "GuidedLayoutMargin",
+          "CSS": {
+            "+@value": "margin-bottom:10px"
+          }
+        }
+      ]
+    },
+    "modelPath": {
+      "+content": "/content/folder[@name='CA to PBI Testing']/module[@name='CA to PBI data module']",
+      "+@type": "module"
+    },
+    "reportName": "Report from Data Module"
+  }
+}

@@ -1,0 +1,88 @@
+Neural Network
+# Neural Networks & How Big Tech Uses Them
+This document explains the **main types of neural networks**, their **full forms**, **purpose**, and **how major tech companies use them**. Presented in a **flow-style for better understanding**.
+---
+## 1️⃣ Core Neural Networks
+- **ANN (Artificial Neural Network)** → Brain-inspired learning model  
+  *Used by:* Google, Yahoo  
+  *How:* Search ranking, ad scoring  
+- **DNN (Deep Neural Network)** → ANN with many layers  
+  *Used by:* Google, Facebook, Airbnb  
+  *How:* Ranking, pricing, recommendation  
+- **MLP (Multilayer Perceptron)** → Fully connected ANN  
+  *Used by:* Booking.com, Expedia  
+  *How:* Click-through prediction, user scoring  
+- **CNN (Convolutional Neural Network)** → Image & vision processing  
+  *Used by:* Google, Facebook, Instagram  
+  *How:* Face recognition, image tagging, moderation  
+- **RNN (Recurrent Neural Network)** → Sequential data processing  
+  *Used by:* Gmail, Yahoo Mail, Hotmail  
+  *How:* Email text prediction, spam filtering  
+**Memory Trick:**  
+> ANN learns → DNN deepens → MLP connects → CNN sees → RNN remembers  
+---
+## 2️⃣ Advanced Sequence & Graph Models
+- **LSTM (Long Short-Term Memory)** → RNN with long-term memory  
+  *Used by:* Google Translate, Twitter  
+  *How:* Language translation, tweet analysis  
+- **GRU (Gated Recurrent Unit)** → Lightweight LSTM  
+  *Used by:* Telegram, Snapchat  
+  *How:* Chat prediction, message ranking  
+- **GNN (Graph Neural Network)** → Graph & network data  
+  *Used by:* Facebook, LinkedIn, Twitter  
+  *How:* Friend suggestions, fraud detection  
+**Flow:**  
+Text / Sequence → LSTM / GRU → Meaning / Prediction
+Users + Connections → GNN → Influence / Similarity
+---
+## 3️⃣ Representation & Generative Models
+- **AE (Autoencoder)** → Feature learning & compression  
+  *Used by:* Google, Netflix  
+  *How:* Anomaly detection, embeddings  
+- **VAE (Variational Autoencoder)** → Probabilistic generation  
+  *Used by:* Google Research, Meta  
+  *How:* Image and text generation research  
+- **GAN (Generative Adversarial Network)** → Synthetic data generation  
+  *Used by:* Instagram, TikTok  
+  *How:* Filters, avatars, content creation  
+**Flow:**  
+Data → AE → Compressed Embeddings
+Noise → VAE / GAN → Synthetic Data
+---
+## 4️⃣ Attention & Reinforcement Models
+- **ViT (Vision Transformer)** → Images using attention  
+  *Used by:* Google, Meta  
+  *How:* Image understanding without CNNs  
+- **DQN (Deep Q-Network)** → Reinforcement learning agent  
+  *Used by:* Google, Airbnb  
+  *How:* Ad bidding, dynamic pricing  
+**Memory Trick:**  
+> Transformer focuses → DQN decides
+---
+## 5️⃣ Recommendation Systems (Real Platforms)
+- **TikTok** → Transformers + RL + GNN  
+  *How:* Watch-time prediction, feed ranking  
+- **Instagram / Facebook** → CNN + GNN + Transformer  
+  *How:* Feed ranking, reels, ads  
+- **Booking / Expedia / Airbnb** → DNN + RL  
+  *How:* Search ranking, price optimization  
+**Programmatic Flow:**  
+User → Embedding → Transformer → Rank → RL Feedback → Personalized Feed
+---
+## 6️⃣ One-Line Summary
+CNN sees → RNN remembers → Transformer focuses → GNN connects → RL decides
+**Use Case Mapping:**  
+- Vision → CNN, ViT  
+- Text / Sequence → RNN, LSTM, GRU, Transformer  
+- Graph / Relations → GNN  
+- Generation → AE, VAE, GAN  
+- Decision / Recommendation → DNN, RL  
+---
+## 7️⃣ Tips for Understanding
+1. **Think visually:** CNN for images, ViT for attention-based vision.  
+2. **Think sequentially:** RNN/LSTM/GRU for anything time-based (text, speech).  
+3. **Think relationally:** GNN for graph or network-based problems.  
+4. **Think generatively:** AE, VAE, GAN for creating or compressing data.  
+5. **Think decision-making:** RL networks for games, bidding, ranking.  
+---
+> This README is designed for **students, engineers, and tech enthusiasts** to quickly map **neural network types → their tech usage → real-world applications**.

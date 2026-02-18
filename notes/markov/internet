@@ -1,0 +1,94 @@
+🔹 Example (1st-order Markov)
+
+From email data:
+
+Current word	Next word	Probability
+I	am	0.4
+I	have	0.3
+I	will	0.3
+am	fine	0.6
+am	busy	0.4
+
+So when you type:
+
+“I”
+
+The model predicts:
+
+“am”
+
+“have”
+
+“will”
+
+based on probabilities.
+
+🔹 Higher-order Markov (used in Gmail)
+
+Instead of 1 word, Gmail used n-grams:
+
+Bigram (2 words) → depends on last 1 word
+
+Trigram (3 words) → depends on last 2 words
+
+Example:
+
+P(word3 | word1, word2)
+
+
+Typing:
+
+“Hope you are”
+
+Prediction:
+
+“doing”, “well”, “free”
+------------------------------
+
+🔹 States
+
+Each web page = a state
+
+Example:
+
+Page A → Page B → Page C
+
+
+Transition probabilities:
+
+P(B | A) = 0.5
+P(C | A) = 0.5
+
+🔹 PageRank formula (simplified)
+PR(P) = (1 − d)/N + d * Σ(PR(incoming pages) / outgoing links)
+
+
+Where:
+
+d = damping factor (~0.85)
+
+N = total pages
+
+This computes the steady-state probability of being on a page.
+---------------------
+Use case	Markov State	Transition
+Gmail prediction	Word / phrase	Next word probability
+Yahoo Mail	Word sequence	Email language patterns
+Google PageRank	Web page	Link clicks
+IDS / Logs (your domain 😉)	Event	Next event
+
+You can apply Markov chains to:
+
+Command sequences (normal vs malicious)
+
+Network flow transitions
+
+User behavior profiling
+
+Alert correlation
+
+Example:
+
+Login → Read → Logout (normal)
+Login → Read → Download → Exfil (suspicious)
+
