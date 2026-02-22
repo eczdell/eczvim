@@ -1,0 +1,115 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "6f747c2a-5c2f-43ae-b106-3b5bad31f41c",
+  "position": {
+    "x": 12.631671696367603,
+    "y": 12.631671696367603,
+    "z": 0,
+    "height": 279.70130184813974,
+    "width": 978.0522942044629,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "gosales ORDER_DETAILS"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "SHIP_DATE"
+                        }
+                      },
+                      "Hierarchy": "Date Hierarchy"
+                    }
+                  },
+                  "Level": "Year"
+                }
+              },
+              "queryRef": "gosales ORDER_DETAILS.SHIP_DATE.Variation.Date Hierarchy.Year",
+              "nativeQueryRef": "SHIP_DATE Year"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gosales ORDER_DETAILS"
+                    }
+                  },
+                  "Property": "ORDER_NUMBER"
+                }
+              },
+              "queryRef": "gosales ORDER_DETAILS.ORDER_NUMBER",
+              "nativeQueryRef": "ORDER_NUMBER"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gosales ORDER_DETAILS"
+                        }
+                      },
+                      "Property": "QUANTITY"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(gosales ORDER_DETAILS.QUANTITY)",
+              "nativeQueryRef": "Sum of QUANTITY"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "gosales ORDER_DETAILS"
+                        }
+                      },
+                      "Property": "UNIT_SALE_PRICE"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(gosales ORDER_DETAILS.UNIT_SALE_PRICE)",
+              "nativeQueryRef": "Sum of UNIT_SALE_PRICE"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "gosales ORDER_DETAILS"
+                    }
+                  },
+                  "Property": "Rev"
+                }
+              },
+              "queryRef": "gosales ORDER_DETAILS.Rev",
+              "nativeQueryRef": "Rev"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

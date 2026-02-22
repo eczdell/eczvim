@@ -1,0 +1,51 @@
+table filter
+	lineageTag: 7bf6416a-e3a4-4195-b90d-c94473cd45ca
+
+	measure Measure = "test"
+		lineageTag: 6bb2ff27-9a54-4a58-a8f4-27efc558650e
+
+	column filter
+		lineageTag: 2f8d850d-53d2-46ff-af41-51be8cd7ae0c
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'filter Order'
+
+		relatedColumnDetails
+			groupByColumn: 'filter Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'filter Fields'
+		isHidden
+		lineageTag: 1d5bc8a9-ab12-45cd-94b9-9b0bcb28dff2
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'filter Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'filter Order'
+		isHidden
+		formatString: 0
+		lineageTag: 8cd9f10a-c18e-465b-9c7f-da9d266e24c4
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition filter = calculated
+		mode: import
+		source =
+				{
+				    ("ORDER_NUMBER", NAMEOF('gosales ORDER_DETAILS'[ORDER_NUMBER]), 0),
+				    ("QUANTITY", NAMEOF('gosales ORDER_DETAILS'[QUANTITY]), 1)
+				}
+
+	annotation PBI_Id = b05f3fadf48b4677af48b16df73ed017
+

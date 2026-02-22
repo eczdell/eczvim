@@ -1,0 +1,19 @@
+relationship d2edcddf-a4d9-44d5-b465-5fac4d0238e2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gosales ORDER_HEADER'.ORDER_DATE
+	toColumn: LocalDateTable_82911f51-90db-44ae-a837-3a444a8a4873.Date
+
+relationship 26795638-b084-4650-9205-45f46f668991
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gosales ORDER_HEADER'.ORDER_CLOSE_DATE
+	toColumn: LocalDateTable_db52fc8c-6a93-4fd1-b83f-ce2acc076895.Date
+
+relationship e0b6ec9c-d5b4-43e5-80a3-7ebc37bd753d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'gosales ORDER_DETAILS'.SHIP_DATE
+	toColumn: LocalDateTable_7e939a0d-2369-4751-92c9-2fe8db4f5812.Date
+
+relationship AutoDetected_fdc2410c-fd8a-4ee3-9936-f731d8e96aec
+	fromColumn: 'gosales ORDER_DETAILS'.ORDER_NUMBER
+	toColumn: 'gosales ORDER_HEADER'.ORDER_NUMBER
+

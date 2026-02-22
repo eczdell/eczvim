@@ -1,0 +1,107 @@
+table 'gosales ORDER_DETAILS'
+	lineageTag: ce56ce4b-8c20-4cda-bb35-7a283673d46c
+
+	measure Rev = SUMX('gosales ORDER_DETAILS','gosales ORDER_DETAILS'[QUANTITY] *'gosales ORDER_DETAILS'[UNIT_SALE_PRICE])
+		lineageTag: 1b77c383-445e-4eb4-bff2-b2344c5757af
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ORDER_DETAIL_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: c2adc176-37ff-4ce5-a72e-e87336970c10
+		summarizeBy: sum
+		sourceColumn: ORDER_DETAIL_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDER_NUMBER
+		dataType: int64
+		formatString: 0
+		lineageTag: 4eb83b4d-1abd-440a-9457-0ca7beccc008
+		summarizeBy: none
+		sourceColumn: ORDER_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column SHIP_DATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9a28d9ad-6a22-45d2-83f8-920579e905d1
+		summarizeBy: none
+		sourceColumn: SHIP_DATE
+
+		variation Variation
+			isDefault
+			relationship: e0b6ec9c-d5b4-43e5-80a3-7ebc37bd753d
+			defaultHierarchy: LocalDateTable_7e939a0d-2369-4751-92c9-2fe8db4f5812.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column PRODUCT_NUMBER
+		dataType: int64
+		formatString: 0
+		lineageTag: dc73c236-d68d-49f9-a0a7-22ea5fc2c29c
+		summarizeBy: sum
+		sourceColumn: PRODUCT_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column PROMOTION_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: b7bee17f-b30e-4484-8969-1f7c30d31e84
+		summarizeBy: sum
+		sourceColumn: PROMOTION_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column QUANTITY
+		dataType: int64
+		formatString: 0
+		lineageTag: 16c8becc-3fe5-4a4e-9c8e-d532ff404fad
+		summarizeBy: sum
+		sourceColumn: QUANTITY
+
+		annotation SummarizationSetBy = Automatic
+
+	column UNIT_COST
+		dataType: double
+		lineageTag: 4edb97b8-b648-486f-88c6-ada69a13cfd7
+		summarizeBy: sum
+		sourceColumn: UNIT_COST
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UNIT_PRICE
+		dataType: double
+		lineageTag: b4c87733-b6c3-45d8-b0d8-c2042e6e3511
+		summarizeBy: sum
+		sourceColumn: UNIT_PRICE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UNIT_SALE_PRICE
+		dataType: double
+		lineageTag: e76c9c2f-7870-4e3f-b2c5-621cef2c7c72
+		summarizeBy: sum
+		sourceColumn: UNIT_SALE_PRICE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'gosales ORDER_DETAILS' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("pm2-mssql-rds.cbzd1iging2x.us-east-1.rds.amazonaws.com"),
+				    GOSALES_CURRENT = Source{[Name="GOSALES_CURRENT"]}[Data],
+				    gosales_ORDER_DETAILS = GOSALES_CURRENT{[Schema="gosales",Item="ORDER_DETAILS"]}[Data]
+				in
+				    gosales_ORDER_DETAILS
+

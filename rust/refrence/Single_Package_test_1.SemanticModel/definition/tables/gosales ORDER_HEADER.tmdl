@@ -1,0 +1,111 @@
+table 'gosales ORDER_HEADER'
+	lineageTag: 5ce74188-946b-4692-a2bc-9c57aafb968e
+
+	column ORDER_NUMBER
+		dataType: int64
+		formatString: 0
+		lineageTag: 03694c66-62c4-422f-acf9-fd3a3304c901
+		summarizeBy: none
+		sourceColumn: ORDER_NUMBER
+
+		annotation SummarizationSetBy = Automatic
+
+	column RETAILER_NAME
+		dataType: string
+		lineageTag: 8f2acaff-6205-4809-a833-afc52edc69fb
+		summarizeBy: none
+		sourceColumn: RETAILER_NAME
+
+		annotation SummarizationSetBy = Automatic
+
+	column RETAILER_NAME_MB
+		dataType: string
+		lineageTag: 317cf2a6-90ff-4323-929a-2a693f970683
+		summarizeBy: none
+		sourceColumn: RETAILER_NAME_MB
+
+		annotation SummarizationSetBy = Automatic
+
+	column RETAILER_SITE_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 37e1bc61-a4c9-4e46-afd2-7ba22b36d5b9
+		summarizeBy: sum
+		sourceColumn: RETAILER_SITE_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column RETAILER_CONTACT_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 082d8c40-94e3-4a24-b5f7-d6347f05d7ed
+		summarizeBy: sum
+		sourceColumn: RETAILER_CONTACT_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_STAFF_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 94a66723-c97e-4ab1-86a0-50801263b040
+		summarizeBy: sum
+		sourceColumn: SALES_STAFF_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column SALES_BRANCH_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: 9076292c-6e78-4983-8ad6-3e4ffae3e273
+		summarizeBy: sum
+		sourceColumn: SALES_BRANCH_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDER_DATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: ef506bbc-8bf6-4d7b-b067-be7ee773de0b
+		summarizeBy: none
+		sourceColumn: ORDER_DATE
+
+		variation Variation
+			isDefault
+			relationship: d2edcddf-a4d9-44d5-b465-5fac4d0238e2
+			defaultHierarchy: LocalDateTable_82911f51-90db-44ae-a837-3a444a8a4873.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDER_CLOSE_DATE
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e3d9abc5-8179-4676-9e54-2826b5267c21
+		summarizeBy: none
+		sourceColumn: ORDER_CLOSE_DATE
+
+		variation Variation
+			isDefault
+			relationship: 26795638-b084-4650-9205-45f46f668991
+			defaultHierarchy: LocalDateTable_db52fc8c-6a93-4fd1-b83f-ce2acc076895.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column ORDER_METHOD_CODE
+		dataType: int64
+		formatString: 0
+		lineageTag: ae10114e-472d-4784-a707-1497cf0ebbc2
+		summarizeBy: sum
+		sourceColumn: ORDER_METHOD_CODE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'gosales ORDER_HEADER' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("pm2-mssql-rds.cbzd1iging2x.us-east-1.rds.amazonaws.com"),
+				    GOSALES_CURRENT = Source{[Name="GOSALES_CURRENT"]}[Data],
+				    gosales_ORDER_HEADER = GOSALES_CURRENT{[Schema="gosales",Item="ORDER_HEADER"]}[Data]
+				in
+				    gosales_ORDER_HEADER
+

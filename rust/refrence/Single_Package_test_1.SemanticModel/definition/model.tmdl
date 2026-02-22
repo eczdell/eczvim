@@ -1,0 +1,27 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["gosales ORDER_HEADER","gosales ORDER_DETAILS"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'gosales ORDER_HEADER'
+ref table DateTableTemplate_45424c86-05bb-45d1-9141-4a0032120ca5
+ref table LocalDateTable_82911f51-90db-44ae-a837-3a444a8a4873
+ref table LocalDateTable_db52fc8c-6a93-4fd1-b83f-ce2acc076895
+ref table 'gosales ORDER_DETAILS'
+ref table LocalDateTable_7e939a0d-2369-4751-92c9-2fe8db4f5812
+ref table filter
+
+ref role admin
+ref role qa
+
+ref cultureInfo en-US
+

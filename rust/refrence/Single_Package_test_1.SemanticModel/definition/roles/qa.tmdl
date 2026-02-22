@@ -1,0 +1,7 @@
+role qa
+	modelPermission: read
+
+	tablePermission 'gosales ORDER_HEADER' = [ORDER_CLOSE_DATE] == dt"2026-02-02"
+
+	annotation PBI_Id = fb19387688414413afa892a8e779a735
+
