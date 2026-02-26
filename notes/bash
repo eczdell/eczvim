@@ -1,0 +1,136 @@
+# Bash Special Symbols Cheat Sheet
+
+## Positional & Special Parameters
+
+| Symbol | Meaning | Example |
+|--------|----------|----------|
+| `$0` | Script name | `echo "$0"` |
+| `$1 $2 ...` | 1st, 2nd argument | `echo "$1"` |
+| `$#` | Number of arguments | `echo "$#"` |
+| `$@` | All arguments (separate) | `"$@"` |
+| `$*` | All arguments (single string) | `"$*"` |
+| `$$` | Current process ID | `echo "$$"` |
+| `$!` | Last background PID | `sleep 10 & echo $!` |
+| `$?` | Exit status of last command | `echo "$?"` |
+| `$_` | Last argument of previous command | Useful in scripts |
+
+---
+
+## Variable Expansion (`$` family)
+
+### Basic
+
+```bash
+$name
+${name}
+
+Use {} to avoid ambiguity:
+
+echo "${file}_backup"
+Default / Fallback Values
+Syntax	Meaning
+${var:-value}	Use default if unset or empty
+${var:=value}	Set default if unset
+${var:+value}	Use value if var exists
+${var:?error}	Exit with error if unset
+
+Example:
+
+echo "${USER:-guest}"
+String Operations
+Syntax	Meaning
+${#var}	Length
+${var:3}	Substring
+${var:3:2}	Substring with length
+${var#pattern}	Remove shortest prefix
+${var##pattern}	Remove longest prefix
+${var%pattern}	Remove shortest suffix
+${var%%pattern}	Remove longest suffix
+Array Symbols
+Syntax	Meaning
+${arr[0]}	First element
+${arr[@]}	All elements separately
+${arr[*]}	All elements as one string
+${#arr[@]}	Number of elements
+Command & Arithmetic
+Command Substitution
+$(command)
+
+Example:
+
+today=$(date)
+
+Old style (avoid):
+
+`date`
+Arithmetic Expansion
+$((expression))
+
+Example:
+
+echo $((5 + 3))
+Quoting Symbols
+Symbol	Meaning
+" "	Allow variable expansion
+' '	Literal text (no expansion)
+\	Escape next character
+
+Example:
+
+echo "$HOME"   # expands
+echo '$HOME'   # prints literally
+Redirection & Pipes
+Symbol	Meaning
+>	Redirect output (overwrite)
+>>	Append output
+<	Redirect input
+`	`
+2>	Redirect errors
+&>	Redirect stdout + stderr
+Background & Control
+Symbol	Meaning
+&	Run in background
+;	Command separator
+&&	Run next if success
+`	
+
+Example:
+
+make && echo "Build OK"
+Wildcards (Globbing)
+Symbol	Meaning
+*	Any characters
+?	Single character
+[abc]	One of listed
+[a-z]	Range
+
+Example:
+
+ls *.txt
+Test / Condition Symbols
+
+Used in [[ ... ]] or [ ... ]
+
+Symbol	Meaning
+-f	File exists
+-d	Directory exists
+-z	String empty
+-n	String not empty
+==	String equals
+!=	Not equal
+-eq -ne -lt -gt	Numeric comparisons
+Most Important to Learn First
+
+$@ vs $*
+
+${var} expansions
+
+$(command)
+
+$((math))
+
+> >> | redirection
+
+&& || logic
+
+* wildcards
