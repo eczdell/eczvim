@@ -20,7 +20,6 @@
 
 ### Basic
 
-```bash
 $name
 ${name}
 
@@ -35,7 +34,6 @@ ${var:+value}	Use value if var exists
 ${var:?error}	Exit with error if unset
 
 Example:
-
 echo "${USER:-guest}"
 String Operations
 Syntax	Meaning
@@ -57,7 +55,6 @@ Command Substitution
 $(command)
 
 Example:
-
 today=$(date)
 
 Old style (avoid):
@@ -67,7 +64,6 @@ Arithmetic Expansion
 $((expression))
 
 Example:
-
 echo $((5 + 3))
 Quoting Symbols
 Symbol	Meaning
@@ -76,7 +72,6 @@ Symbol	Meaning
 \	Escape next character
 
 Example:
-
 echo "$HOME"   # expands
 echo '$HOME'   # prints literally
 Redirection & Pipes
@@ -95,7 +90,6 @@ Symbol	Meaning
 `	
 
 Example:
-
 make && echo "Build OK"
 Wildcards (Globbing)
 Symbol	Meaning
@@ -105,7 +99,6 @@ Symbol	Meaning
 [a-z]	Range
 
 Example:
-
 ls *.txt
 Test / Condition Symbols
 
@@ -119,18 +112,12 @@ Symbol	Meaning
 ==	String equals
 !=	Not equal
 -eq -ne -lt -gt	Numeric comparisons
+
 Most Important to Learn First
-
 $@ vs $*
-
 ${var} expansions
-
 $(command)
-
 $((math))
-
 > >> | redirection
-
 && || logic
-
 * wildcards
