@@ -29,6 +29,7 @@ require("mason-lspconfig").setup({
     "rust_analyzer",
     "terraformls",
     "tflint",
+    "bashls",
   },
   automatic_installation = true,
 })
@@ -45,6 +46,7 @@ local servers = {
   "terraformls",
   "tflint",
   "typescript-language-server",
+  "bashls",
 }
 
 for _, server in ipairs(servers) do
