@@ -1,0 +1,71 @@
+
+Accounting Flow (Core Idea)
+Voucher → Journal → Ledger → Trial Balance → Financial Statements
+Voucher → Journal → Ledger → Trial Balance → Profit & Loss → Balance Sheet.
+
+1. Voucher
+Definition:
+Document that proves a transaction occurred.
+Purpose:
+Source of accounting entry.
+Examples
+Sales Voucher
+Purchase Voucher
+Receipt Voucher
+Payment Voucher
+Contra Voucher
+Journal Voucher
+Debit Note
+Credit Note
+Tax Invoice
+Key Point
+Proof of transaction
+
+2. Journal
+Definition:
+Book where transactions are first recorded with debit and credit.
+Purpose:
+Convert voucher into accounting entry.
+Format
+| Date | Account | Debit | Credit |
+Example
+Account	Debit	Credit
+Cash	5,000	
+Sales		5,000
+Key Point
+First recording of transaction
+
+3. Ledger
+Definition:
+Book where journal entries are classified by account.
+Purpose:
+Shows balance of each account.
+Examples
+Cash Ledger
+Bank Ledger
+Sales Ledger
+Purchase Ledger
+Customer Ledger
+Supplier Ledger
+Key Point
+Account-wise summary
+Relationship (1 Sentence)
+Voucher creates Journal entry → Journal posts to Ledger → Ledger forms financial reports.
+Simple Memory Trick
+VJL Rule
+V → Voucher (Proof)
+J → Journal (Record)
+L → Ledger (Summary)
+One Example
+Transaction: Sold goods Rs 10,000.
+
+Voucher
+Sales Voucher
+
+Journal
+Debit Cash 10,000
+Credit Sales 10,000
+
+Ledger
+Cash Ledger → +10,000
+Sales Ledger → +10,000
