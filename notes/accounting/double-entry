@@ -1,0 +1,18 @@
+Double Entry Accounting
+
+Every transaction has at least 2 sides – debit and credit.
+Debits always equal credits.
+Accounts increase/decrease depending on their type:
+
+One account is debited (Dr)
+One account is credited (Cr)
+The total debits must always equal total credits. This ensures the accounting equation stays balanced:
+
+Assets=Liabilities+Equity
+
+Asset        ↑ Debit  | ↓ Credit
+Liability    ↑ Credit | ↓ Debit
+Equity       ↑ Credit | ↓ Debit
+Revenue      ↑ Credit | ↓ Debit
+Expense      ↑ Debit  | ↓ Credit
+
