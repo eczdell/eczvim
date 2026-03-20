@@ -36,6 +36,10 @@ vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', opts)  -- Move line up
 vim.api.nvim_set_keymap('x', '<A-j>', ":move '>+1<CR>gv=gv", opts)  -- Move selected lines down
 vim.api.nvim_set_keymap('x', '<A-k>', ":move '<-2<CR>gv=gv", opts)  -- Move selected lines up
 
+
+-- Or map to a key:
+vim.keymap.set('n', '<leader>cc', '<cmd>ClaudeCode<CR>', { desc = 'Toggle Claude Code' })
+
 -- quick fix list next and previous keybinding
 vim.api.nvim_set_keymap('n', ']q', ':cnext<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '[q', ':cprev<CR>', { noremap = true, silent = true })
@@ -145,6 +149,9 @@ vim.api.nvim_set_keymap('n', '<leader>n', ':noh<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader>nr', ':set nu! rnu!<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader><leader>ds', ':Telescope lsp_document_symbols<CR>', opts)
 vim.api.nvim_set_keymap('n', '<leader><leader>ws', ':Telescope lsp_workspace_symbols<CR>', opts)
+
+
+
 
 -- Toggle full-screen width for current window
 function _G.toggle_full_screen_width()

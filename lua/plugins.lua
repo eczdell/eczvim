@@ -51,6 +51,20 @@ return {
 ,
 
   -- ======================
+  -- Claude Plugins
+  -- ======================
+
+{
+  "greggh/claude-code.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim", -- Required for git operations
+  },
+  config = function()
+    require("claude-code").setup()
+  end
+},
+
+  -- ======================
   -- General Plugins
   -- ======================
   { "stevearc/conform.nvim",
@@ -136,6 +150,19 @@ return {
       }
   end },
 
+  {
+    "epwalsh/obsidian.nvim",
+    lazy = false,
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      workspaces = {
+        { name = "personal", path = "~/obsidian" },
+      },
+      ui = { enable = true },
+      completion = { nvim_cmp = true },
+    },
+  },
+
   { 'goolord/alpha-nvim', config = function()
       local alpha = require('alpha')
       local dashboard = require('alpha.themes.startify')
@@ -147,4 +174,11 @@ return {
       }
       alpha.setup(dashboard.config)
   end },
+
+
+  -- MCP Hub
+  {
+    "ravitemer/mcphub.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
 }

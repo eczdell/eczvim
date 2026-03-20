@@ -1,0 +1,74 @@
+cognos-to-powerbi.skill/
+│
+├── SKILL.md
+│   # Core brain of the skill (system prompt for Claude)
+│   # Defines:
+│   # - Role (Cognos → Power BI converter)
+│   # - Input/Output contract
+│   # - Step-by-step transformation pipeline
+│   # - Strict rules (no hallucination, schema compliance)
+│   # - Error handling & retry logic
+│   # - Output format (model.json, report.json, errors[])
+│
+├── rules/
+│   # Deterministic transformation logic split into focused modules
+│   # Ensures consistency and reduces hallucination
+│   # Example files:
+│   # - dax_rules.md → Cognos expressions → DAX mappings
+│   # - field_mapping.md → Cognos fields → Power BI schema
+│   # - visual_mapping.md → List/Crosstab/Chart → visuals
+│   # - naming_conventions.md → standard naming rules
+│   # - error_handling.md → fallback and correction rules
+│
+├── examples/
+│   # High-quality input → output pairs (few-shot learning)
+│   # Teaches Claude correct transformation patterns
+│   # Covers:
+│   # - Simple reports (list, table)
+│   # - Complex reports (crosstab, nested queries)
+│   # - Edge cases (calculated fields, multiple visuals)
+│   # Format: JSON with "input" (Cognos XML) and "output" (PBIP JSON)
+│
+├── agents/
+│   # Orchestration layer (pseudo-agent workflows)
+│   # Breaks conversion into explicit multi-step processes
+│   # Example:
+│   # - converter.md → end-to-end pipeline (parse → map → generate)
+│   # - validator.md → schema + DAX validation steps
+│   # - fixer.md → error correction and retry logic
+│   # Enables Claude to behave like an autonomous system
+│
+├── assets/
+│   # Reusable templates and scaffolding files
+│   # Prevents invalid structure generation
+│   # Example:
+│   # - model.template.json → base Power BI model structure
+│   # - report.template.json → report layout skeleton
+│   # - pbip_structure/ → folder/file layout reference
+│   # Ensures outputs are always schema-aligned
+│
+├── references/
+│   # Authoritative documentation and schemas
+│   # Used for grounding and validation
+│   # Example:
+│   # - pbip_schema.json → official structure reference
+│   # - dax_reference.md → DAX syntax and functions
+│   # - cognos_xml_guide.md → input format explanation
+│   # Reduces guesswork and improves accuracy
+│
+├── scripts/
+│   # Optional external utilities (not used directly by Claude unless MCP is enabled)
+│   # Supports automation outside the model
+│   # Example:
+│   # - validate_pbip.py → schema validation
+│   # - preprocess_xml.py → clean/normalize input
+│   # - postprocess_output.py → formatting/export
+│
+├── evals/
+│   # Testing and quality assurance layer
+│   # Ensures reliability and regression safety
+│   # Example:
+│   # - test_cases.json → input scenarios
+│   # - expected_outputs.json → correct outputs
+│   # - edge_cases.json → tricky/problematic inputs
+│   # Used to measure accuracy and improve the skill over time
